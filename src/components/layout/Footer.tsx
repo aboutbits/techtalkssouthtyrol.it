@@ -43,12 +43,14 @@ export function Footer() {
   return (
     <footer className="bg-navy text-white">
       <div className="mx-auto grid max-w-content grid-cols-[auto_1fr] gap-x-12 gap-y-10 border-t border-white/10 px-4 py-12 md:grid-cols-[1fr_auto_auto] md:gap-16 md:px-10 lg:gap-24">
-        <div className="col-span-2 flex items-center gap-4 md:col-span-1 md:items-start">
-          <Logo className="w-14 shrink-0" />
-          <p className="max-w-xs text-sm text-slate-muted">
-            Your quarterly tech event in South Tyrol to connect, share and
-            discuss.
-          </p>
+        <div className="col-span-2 md:col-span-1">
+          <div className="flex items-center gap-4">
+            <Logo className="w-14 shrink-0" />
+            <p className="max-w-xs text-sm text-slate-muted">
+              Your quarterly tech event in South Tyrol to connect, share and
+              discuss.
+            </p>
+          </div>
         </div>
         <FooterGroup title="Pages" label="Footer">
           {pages.map((page) => (

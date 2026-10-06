@@ -1,11 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="36 36 440 440" width="440" height="440">
-  <defs><linearGradient id="brace" x1="0" y1="0" x2="0" y2="1">
-    <stop offset="0" stop-color="#fef3ce"/>
-    <stop offset=".3" stop-color="#fbdcda"/>
-    <stop offset=".6" stop-color="#bcd5dc"/>
-    <stop offset="1" stop-color="#a0d4e0"/>
-  </linearGradient></defs>
-  <rect x="36" y="36" width="440" height="440" fill="#071b2d"/><g fill="url(#brace)">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="40 86 432 340" width="432" height="340">
+  
+  <g fill="#ffffff">
     <path d="M100 0C58 0 36 20 36 58V112C36 136 22 147 0 150C22 153 36 164 36 188V242C36 280 58 300 100 300V272C76 272 64 262 64 236V190C64 168 54 156 36 150C54 144 64 132 64 110V64C64 38 76 28 100 28Z" transform="translate(60 106)"/>
     <path d="M100 0C58 0 36 20 36 58V112C36 136 22 147 0 150C22 153 36 164 36 188V242C36 280 58 300 100 300V272C76 272 64 262 64 236V190C64 168 54 156 36 150C54 144 64 132 64 110V64C64 38 76 28 100 28Z" transform="translate(452 106) scale(-1 1)"/>
   </g>
