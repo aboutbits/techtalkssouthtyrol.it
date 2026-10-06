@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
 import { site } from '../../data/site'
-import { IconLinkedIn, IconMail, IconX } from '../icons/Icons'
+import { IconDiscord, IconLinkedIn, IconMail, IconX } from '../icons/Icons'
 import { Logo } from '../shared/Logo'
 
 const pages = [
   { href: '/', label: 'Home' },
   { href: '/#next-event', label: 'Next event' },
   { href: '/events', label: 'Past events' },
+  { href: '/#community', label: 'Community' },
   { href: '/speaker-notes', label: 'Speaker notes' },
   { href: '/host-notes', label: 'Host notes' },
 ]
@@ -24,6 +25,12 @@ const channels = [
     ),
     icon: <IconMail className="size-4" />,
     external: false,
+  },
+  {
+    href: site.discordUrl,
+    label: 'Discord',
+    icon: <IconDiscord className="size-4" />,
+    external: true,
   },
   {
     href: site.linkedInUrl,
