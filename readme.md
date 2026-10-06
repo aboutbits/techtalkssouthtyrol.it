@@ -42,3 +42,61 @@ For type checking, execute the following command:
 ```bash
 npm run typecheck
 ```
+
+## Content
+
+All content is managed in the code. There is no CMS.
+
+### Events
+
+Each episode is a Markdown file in `src/data/events`, for example `src/data/events/episode-14.md`.
+The file name is also the URL: `/events/episode-14`.
+
+The front matter holds the structured data of the event:
+
+```yaml
+---
+episode: 15
+date: '2026-12-01'          # YYYY-MM-DD, always in quotes
+startTime: '18:00'
+endTime: '20:00'
+host: 'Company that hosts the episode'
+venue:
+  name: 'Name of the venue'
+  address: 'Street 1'
+  city: 'Bozen/Bolzano'
+image: '/images/events/episode-15.jpeg'   # banner, 16:9, put the file in public/images/events
+attendees: 0
+talks:
+  - time: '18:15'
+    title: 'Title of the talk'
+    speakers:
+      - name: 'Jane Doe'
+        role: 'Software Engineer'          # optional
+        company: 'Company'                 # optional
+        companyUrl: 'https://example.com'  # optional
+    slides: '/slides/episode-15/talk-title.pdf'  # optional, a path in public/ or an external URL
+    recording: ''                                # optional, URL of a video
+    abstract: |
+      The abstract of the talk. Markdown is supported.
+---
+
+Optional Markdown content, for example arrival information. It is shown below the talks.
+```
+
+The home page shows an event as the "next event" until the end of the event day.
+After that day, the event moves to the past events.
+The pages are generated at build time, so a new deployment is necessary to move an event from "next" to "past".
+
+### Slides
+
+Put the slide files in `public/slides/<episode>/` and set the `slides` field of the talk.
+A link to an external service (for example Speaker Deck or Google Slides) also works.
+
+### Team
+
+The organizers are in `src/data/team.ts`. The photos are in `public/images/team`.
+
+### General information
+
+The e-mail address and the social media links are in `src/data/site.ts`.

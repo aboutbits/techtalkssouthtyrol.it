@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#071b2d"/>
+  <g fill="#ffffff" font-family="Inter, Helvetica, Arial, sans-serif" font-weight="500" font-size="104" letter-spacing="-2">
+    <text x="64" y="160">Tech</text>
+    <text x="64" y="262">Talks</text>
+    <text x="64" y="364">South</text>
+    <text x="64" y="466">Tyrol</text>
+  </g>
+</svg>

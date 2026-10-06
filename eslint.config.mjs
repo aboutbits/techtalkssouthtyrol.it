@@ -17,9 +17,9 @@ export default defineConfig([
     rules: {
       'better-tailwindcss/no-unknown-classes': [
         'error',
-        // The plugin does not recognize custom classes with Tailwind 3,
-        // so we ignore all custom header classes
-        { ignore: ['^header-(home|project|look)-.+$'] },
+        // The plugin does not recognize custom utilities with Tailwind 3,
+        // so we ignore the custom pastel background from globals.css
+        { ignore: ['^bg-pastel$'] },
       ],
     },
   },

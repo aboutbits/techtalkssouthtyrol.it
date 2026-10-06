@@ -1,20 +1,23 @@
-import Link from 'next/link'
+import { Layout } from '../components/layout/Layout'
+import { Meta } from '../components/layout/Meta'
+import { Brace } from '../components/shared/Brace'
+import { ButtonLink } from '../components/shared/Button'
+import { Pill } from '../components/shared/Pill'
 
 export default function Page() {
   return (
-    <div className="flex h-screen flex-col items-center justify-between bg-gray p-6 text-white md:p-20">
-      <div />
-      <div className="flex flex-col items-center justify-center gap-10">
-        <h1 className="text-center text-h5">404 Error</h1>
-        <p className="text-center text-md">This page could not be found.</p>
-        <Link
-          href="/"
-          className="mt-10 inline-block bg-white px-4 py-2 text-md text-gray outline-4 outline-offset-[0.1875rem] outline-white hover:bg-gray-10 focus-visible:outline md:text-lg"
-        >
-          Go to home
-        </Link>
-      </div>
-      <Link href="/">Logo</Link>
-    </div>
+    <Layout>
+      <Meta title="Page not found" />
+      <section className="relative min-h-[70vh] overflow-hidden bg-navy text-white">
+        <Brace className="pointer-events-none absolute inset-y-0 right-0 h-full w-12 md:w-48 lg:w-72" />
+        <div className="relative mx-auto flex max-w-content flex-col items-start gap-8 py-24 pl-4 pr-16 md:px-10 md:pr-56 lg:pr-80">
+          <Pill>404</Pill>
+          <h1 className="text-h1 font-normal tracking-tight">
+            This page could not be found.
+          </h1>
+          <ButtonLink href="/">Go to home</ButtonLink>
+        </div>
+      </section>
+    </Layout>
   )
 }

@@ -1,7 +1,29 @@
-import HomePage from '../components/pages/home/HomePage'
+import { HomePage, HomePageProps } from '../components/pages/home/HomePage'
+import { getAllEvents, splitEvents } from '../lib/events'
 
-export default function Page() {
-  return HomePage()
+export function getStaticProps(): { props: HomePageProps } {
+  const events = getAllEvents()
+  const { upcoming, past } = splitEvents(events)
+  const talks = events.flatMap((event) => event.talks)
+  const latestEpisode = Math.max(0, ...events.map((event) => event.episode))
+
+  return {
+    props: {
+      nextEvent: upcoming[0] ?? null,
+      nextEpisode: latestEpisode + 1,
+      recentEvents: past.slice(0, 3),
+      stats: {
+        episodes: past.length,
+        talks: past.flatMap((event) => event.talks).length,
+        speakers: new Set(
+          talks.flatMap((talk) => talk.speakers.map((s) => s.name)),
+        ).size,
+        cities: new Set(events.map((event) => event.venue.city)).size,
+      },
+    },
+  }
 }
 
-Page.locale = 'en'
+export default function Page(props: HomePageProps) {
+  return <HomePage {...props} />
+}

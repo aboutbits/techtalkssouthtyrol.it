@@ -2,8 +2,8 @@
   "name": "Tech Talks South Tyrol",
   "short_name": "TechTalksSouthTyrol",
   "start_url": "/",
-  "theme_color": "#191919",
-  "background_color": "#ffffff",
+  "theme_color": "#071b2d",
+  "background_color": "#071b2d",
   "display": "standalone",
   "icons": [
     {
