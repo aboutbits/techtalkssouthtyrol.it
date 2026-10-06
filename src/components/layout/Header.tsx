@@ -4,8 +4,8 @@ import { Logo } from '../shared/Logo'
 // Links with "mobile: false" show on larger screens only.
 const navigation = [
   { href: '/', label: 'Home', mobile: true },
-  { href: '/#next-event', label: 'Next event', mobile: false },
-  { href: '/events', label: 'Past events', mobile: true },
+  { href: '/#next-event', label: 'Next event', mobile: true },
+  { href: '/events', label: 'Past events', mobile: false },
   { href: '/#get-involved', label: 'Get involved', mobile: false },
 ]
 
