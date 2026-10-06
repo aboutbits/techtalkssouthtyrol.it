@@ -12,9 +12,7 @@ export default function Page() {
         <Brace className="pointer-events-none absolute inset-y-0 right-0 h-full w-12 md:w-48 lg:w-72" />
         <div className="relative mx-auto flex max-w-content flex-col items-start gap-8 py-24 pl-4 pr-16 md:px-10 md:pr-56 lg:pr-80">
           <Pill>404</Pill>
-          <h1 className="text-h1 font-normal tracking-tight">
-            This page could not be found.
-          </h1>
+          <h1 className="text-h1 font-normal">This page could not be found.</h1>
           <ButtonLink href="/">Go to home</ButtonLink>
         </div>
       </section>

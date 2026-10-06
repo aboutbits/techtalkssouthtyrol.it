@@ -33,10 +33,22 @@ const config: Config = {
       sans: ['var(--font-inter)', 'Arial', 'Helvetica', 'sans-serif'],
     },
     fontSize: {
-      display: ['clamp(3.5rem, 11vw, 9rem)', '0.95'],
-      h1: ['clamp(2.75rem, 7vw, 5.5rem)', '1'],
-      h2: ['clamp(2.25rem, 5vw, 4rem)', '1.05'],
-      h3: ['clamp(1.5rem, 3vw, 2.25rem)', '1.15'],
+      display: [
+        'clamp(3.5rem, 11vw, 9rem)',
+        { lineHeight: '0.95', letterSpacing: '-0.04em' },
+      ],
+      h1: [
+        'clamp(2.75rem, 7vw, 5.5rem)',
+        { lineHeight: '1', letterSpacing: '-0.035em' },
+      ],
+      h2: [
+        'clamp(2.25rem, 5vw, 4rem)',
+        { lineHeight: '1.05', letterSpacing: '-0.03em' },
+      ],
+      h3: [
+        'clamp(1.5rem, 3vw, 2.25rem)',
+        { lineHeight: '1.15', letterSpacing: '-0.02em' },
+      ],
       xl: ['1.75rem', '2.25rem'],
       lg: ['1.375rem', '2rem'],
       md: ['1.125rem', '1.75rem'],

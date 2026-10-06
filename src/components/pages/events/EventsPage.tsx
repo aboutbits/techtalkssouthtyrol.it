@@ -21,7 +21,7 @@ export function EventsPage({ events }: { events: Event[] }) {
         <Brace className="pointer-events-none absolute inset-y-0 right-0 h-full w-12 md:w-48 lg:w-72" />
         <div className="relative mx-auto flex max-w-content flex-col items-start gap-8 py-18 pl-4 pr-16 md:px-10 md:pr-56 lg:py-24 lg:pr-80">
           <Pill>Past events</Pill>
-          <h1 className="text-h1 font-normal tracking-tight">
+          <h1 className="text-h1 font-normal">
             {events.length} episodes,{' '}
             {events.reduce((sum, event) => sum + event.talks.length, 0)} talks
           </h1>

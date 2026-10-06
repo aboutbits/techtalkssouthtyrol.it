@@ -27,7 +27,7 @@ const features = [
 export function About({ stats }: AboutProps) {
   return (
     <Section id="about" tone="pastel">
-      <p className="max-w-5xl text-h2 font-normal tracking-tight">
+      <p className="max-w-5xl text-h2 font-normal">
         We are a <strong>group of tech lovers</strong> that meet together for
         engaging, informative and in-person <strong>talks</strong>.{' '}
         <strong>Join us for our next meetup</strong> to explore and discuss the

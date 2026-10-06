@@ -57,9 +57,7 @@ export function EventPage({
           </Link>
           <div className="flex flex-col items-start gap-6">
             <Pill>{isUpcoming ? 'Next event' : 'Past event'}</Pill>
-            <h1 className="text-h1 font-normal tracking-tight">
-              Episode {event.episode}
-            </h1>
+            <h1 className="text-h1 font-normal">Episode {event.episode}</h1>
           </div>
           <dl className="grid gap-6 text-md md:grid-cols-2">
             <div className="flex gap-3">

@@ -10,7 +10,7 @@ export function Hero() {
       <div className="relative mx-auto flex min-h-[min(calc(100svh-4.25rem),56rem)] max-w-content flex-col justify-between gap-16 py-12 pl-4 pr-20 md:px-10 md:pr-[28vw] lg:py-18 xl:pr-[26rem]">
         <div className="flex flex-col items-start gap-10 lg:gap-14">
           <Pill className="text-lg">Meetup</Pill>
-          <h1 className="text-display font-normal tracking-tight">
+          <h1 className="text-display font-normal">
             Tech Talks
             <br />
             South Tyrol
