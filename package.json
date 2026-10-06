@@ -1,0 +1,58 @@
+{
+  "name": "techtalkssouthtyrol.it",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "npm": "^10",
+    "node": "^22"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint --cache",
+    "lint:fix": "npm run lint -- --fix",
+    "typecheck": "tsc --noEmit",
+    "postbuild": "next-sitemap"
+  },
+  "prettier": "@aboutbits/prettier-config",
+  "dependencies": {
+    "@aboutbits/internationalization": "^0.3.5",
+    "@aboutbits/react-toolbox": "^0.2.7",
+    "@headlessui/react": "^2.2.0",
+    "@vercel/og": "^0.6.4",
+    "classnames": "^2.5.1",
+    "gray-matter": "^4.0.3",
+    "next": "15.0.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-intl": "^7.0.0",
+    "react-markdown": "^9.0.1",
+    "react-syntax-highlighter": "^15.6.1",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.0",
+    "swr": "~2.3.4"
+  },
+  "devDependencies": {
+    "@aboutbits/eslint-config": "^5.1.0",
+    "@aboutbits/prettier-config": "^2.0.2",
+    "@aboutbits/ts-config": "^1.1.16",
+    "@formatjs/cli": "^6.3.2",
+    "@types/node": "^22",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-syntax-highlighter": "^15.5.13",
+    "autoprefixer": "^10.4.20",
+    "eslint": "^9.39.0",
+    "json-diff": "^1.0.6",
+    "next-sitemap": "^4.2.3",
+    "postcss": "^8",
+    "prettier-plugin-tailwindcss": "^0.6.8",
+    "raw-loader": "^4.0.2",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  },
+  "overrides": {
+    "@unicode/unicode-17.0.0": "2.0.6"
+  }
+}

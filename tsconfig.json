@@ -1,0 +1,28 @@
+{
+  "extends": "@aboutbits/ts-config/react",
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "noEmit": true,
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "allowJs": true
+  },
+  "include": [
+    "**/**.js",
+    "**/**.json",
+    "**/**.mdx",
+    "**/**.mjs",
+    "**/**.ts",
+    "**/**.tsx",
+    "next-env.d.ts",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": ["node_modules"]
+}

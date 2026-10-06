@@ -1,0 +1,78 @@
+name: Preview
+
+on:
+  pull_request:
+    types: [ opened, reopened, synchronize, closed ]
+
+env:
+  NODE_VERSION: 22
+  VERCEL_SCOPE: aboutbits
+  VERCEL_ORGANIZATION_ID: team_e2WfHoRuw9BQVW7oYmMSKRJ6
+  VERCEL_PROJECT_ID:
+  APP_VERSION: ${{ github.sha }}
+  PREVIEW_DOMAIN: test.techtalkssouthtyrol.it
+
+jobs:
+  test:
+    name: Tests
+    if: ${{ github.event.action == 'opened' || github.event.action == 'reopened' || github.event.action == 'synchronize' }}
+    concurrency:
+      group: ${{ github.ref }}
+      cancel-in-progress: true
+    uses: ./.github/workflows/test.yml
+    secrets: inherit
+
+  comment-link:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    if: ${{ github.event.action == 'opened' || github.event.action == 'reopened' }}
+    steps:
+      - uses: aboutbits/github-actions-base/github-pr-comment@v2
+        with:
+          comment: 'Preview link: [https://${{ github.event.pull_request.number }}.${{ env.PREVIEW_DOMAIN }}](https://${{ github.event.pull_request.number }}.${{ env.PREVIEW_DOMAIN }})'
+
+  deploy-preview:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    if: ${{ github.event.action == 'opened' || github.event.action == 'reopened' || github.event.action == 'synchronize' }}
+    concurrency:
+      group: ${{ github.ref }}-deploy
+      cancel-in-progress: true
+    steps:
+      - uses: actions/checkout@v5
+      - uses: aboutbits/github-actions-node/setup-and-install@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: 'https://npm.pkg.github.com'
+          registry-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+      - id: deploy
+        uses: aboutbits/github-actions-vercel/deploy@v1
+        env:
+          BASE_URL: https://${{ github.event.pull_request.number }}.${{ env.PREVIEW_DOMAIN }}
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-organization-id: ${{ env.VERCEL_ORGANIZATION_ID }}
+          vercel-project-id: ${{ env.VERCEL_PROJECT_ID }}
+      - uses: aboutbits/github-actions-vercel/link-domain@v1
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-scope: ${{ env.VERCEL_SCOPE }}
+          deployment-domain: ${{ steps.deploy.outputs.url }}
+          preview-domain: ${{ github.event.pull_request.number }}.${{ env.PREVIEW_DOMAIN }}
+
+  unlink-domain:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    if: ${{ github.event.action == 'closed' }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: aboutbits/github-actions-node/setup-and-install@v3
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          registry-url: 'https://npm.pkg.github.com'
+          registry-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+      - uses: aboutbits/github-actions-vercel/unlink-domain@v1
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-scope: ${{ env.VERCEL_SCOPE }}
+          preview-domain: ${{ github.event.pull_request.number }}.${{ env.PREVIEW_DOMAIN }}

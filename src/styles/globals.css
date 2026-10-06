@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Soehne';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/soehne-buch.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Soehne';
+  font-style: italic;
+  font-weight: 400;
+  src: url(/fonts/soehne-buch-kursiv.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Soehne';
+  font-style: normal;
+  font-weight: 500;
+  src: url(/fonts/soehne-kraftig.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Soehne';
+  font-style: italic;
+  font-weight: 500;
+  src: url(/fonts/soehne-kraftig-kursiv.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Soehne';
+  font-style: normal;
+  font-weight: 600;
+  src: url(/fonts/soehne-halbfett.woff2) format('woff2');
+}
+
+@font-face {
+  font-family: 'Soehne';
+  font-style: italic;
+  font-weight: 600;
+  src: url(/fonts/soehne-halbfett-kursiv.woff2) format('woff2');
+}
+
+.header-home-text-box {
+  clip-path: polygon(0% 0%, 30% 0%, 30% 60px, 100% 60px, 100% 100%, 80% 100%, 80% calc(100% - 60px), 0% calc(100% - 60px));
+  bottom: max(13svh, 120px)
+}
+
+.header-home-image-box {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+.header-project-text-box {
+  clip-path: polygon(0% 0%, 80% 0%, 80% 40px, 100% 40px, 100% 100%, 0% 100%);
+}
+
+.header-look-a-text-box {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 60% 100%, 60% calc(100% - 40px), 0% calc(100% - 40px));
+}
+
+.header-look-a-background-box {
+  clip-path: polygon(0% 0%, 60% 0%, 60% 30%, 100% 30%, 100% 100%, 0% 100%, 0% 0%);
+}
+
+.header-look-b-text-box {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 40%, calc(100% - 48px) 40%, calc(100% - 48px) 100%, 0% 100%);
+}
+
+@media screen(md) {
+  .header-project-text-box {
+    clip-path: polygon(0% 0%, 60% 0%, 60% 15%, 100% 15%, 100% 100%, 0% 100%);
+  }
+
+  .header-look-a-text-box {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 60% 100%, 60% calc(100% - 80px), 0% calc(100% - 80px));
+  }
+
+  .header-look-a-background-box {
+    clip-path: polygon(0% 0%, 60% 0%, 60% 50px, 100% 50px, 100% 100%, 40% 100%, 40% 70%, 0% 70%, 0% 0%);
+  }
+
+  .header-look-b-text-box {
+    clip-path: polygon(0% 80px, 30% 80px, 30% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  .header-look-b-background-box {
+    clip-path: polygon(0% 40%, 20% 40%, 20% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+@media screen(lg) {
+  .header-home-text-box {
+    clip-path: polygon(0% 0%, 60% 0%, 60% 10vh, 100% 10vh, 100% 100%, 60% 100%, 0% 100%);
+  }
+
+  .header-look-b-background-box {
+    clip-path: polygon(0% 40%, 20% 40%, 20% 0%, 80% 0%, 80% 20%, 100% 20%, 100% 100%, 0% 100%);
+  }
+}
