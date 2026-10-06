@@ -11,7 +11,7 @@ const navigation = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-30 bg-navy/90 text-white backdrop-blur">
+    <header className="sticky top-0 z-30 bg-navy/80 text-white backdrop-blur">
       <div className="mx-auto flex max-w-content items-center justify-between gap-6 px-4 py-3 md:px-10">
         <Link
           href="/"
