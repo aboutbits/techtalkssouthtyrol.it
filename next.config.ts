@@ -11,6 +11,11 @@ const nextConfig: NextConfig = {
       process.env.ALLOW_SEARCH_ENGINE_INDEXING ?? 'false',
     BASE_URL: process.env.BASE_URL ?? 'http://localhost:3000',
   },
+  // The pages read the event files at runtime when they revalidate.
+  outputFileTracingIncludes: {
+    '/*': ['./src/data/events/**/*'],
+    '/events/*': ['./src/data/events/**/*'],
+  },
   webpack: (config) => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
     config.module.rules.push({

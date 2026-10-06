@@ -45,9 +45,16 @@ export function getAllEvents(): Event[] {
 }
 
 /**
+ * How often the static pages that depend on the current date are built again.
+ * Without it, an event stays upcoming until the next deploy.
+ */
+export const revalidateSeconds = 60 * 60
+
+/**
  * Splits the events into upcoming and past events.
  * An event is upcoming until the end of the day on which it takes place.
- * The pages are static, so this check runs at build time.
+ * The pages are static, so this check runs at build time and again on each
+ * revalidation (see `revalidateSeconds`).
  */
 export function splitEvents(events: Event[], now = new Date()) {
   const today = now.toLocaleDateString('sv-SE', { timeZone: 'Europe/Rome' })

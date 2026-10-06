@@ -1,5 +1,5 @@
 import { EventsPage } from '../../components/pages/events/EventsPage'
-import { getAllEvents, splitEvents } from '../../lib/events'
+import { getAllEvents, revalidateSeconds, splitEvents } from '../../lib/events'
 import { Event } from '../../lib/types'
 
 export function getStaticProps() {
@@ -9,6 +9,7 @@ export function getStaticProps() {
     props: {
       events: past,
     },
+    revalidate: revalidateSeconds,
   }
 }
 

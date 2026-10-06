@@ -1,7 +1,10 @@
 import { HomePage, HomePageProps } from '../components/pages/home/HomePage'
-import { getAllEvents, splitEvents } from '../lib/events'
+import { getAllEvents, revalidateSeconds, splitEvents } from '../lib/events'
 
-export function getStaticProps(): { props: HomePageProps } {
+export function getStaticProps(): {
+  props: HomePageProps
+  revalidate: number
+} {
   const events = getAllEvents()
   const { upcoming, past } = splitEvents(events)
   const talks = events.flatMap((event) => event.talks)
@@ -21,6 +24,7 @@ export function getStaticProps(): { props: HomePageProps } {
         cities: new Set(events.map((event) => event.venue.city)).size,
       },
     },
+    revalidate: revalidateSeconds,
   }
 }
 

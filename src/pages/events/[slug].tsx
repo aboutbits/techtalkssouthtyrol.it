@@ -1,12 +1,20 @@
 import { GetStaticPropsContext } from 'next'
 import { EventPage } from '../../components/pages/event/EventPage'
-import { getAllEvents, getEventSlugs, splitEvents } from '../../lib/events'
+import {
+  getAllEvents,
+  getEventSlugs,
+  revalidateSeconds,
+  splitEvents,
+} from '../../lib/events'
 
 type Props = Parameters<typeof EventPage>[0]
 
 export function getStaticProps({
   params,
-}: GetStaticPropsContext<{ slug: string }>): { props: Props } {
+}: GetStaticPropsContext<{ slug: string }>): {
+  props: Props
+  revalidate: number
+} {
   if (params === undefined) {
     throw new Error('Error while rendering event: params is undefined')
   }
@@ -32,6 +40,7 @@ export function getStaticProps({
         : null,
       next: next ? { slug: next.slug, episode: next.episode } : null,
     },
+    revalidate: revalidateSeconds,
   }
 }
 
