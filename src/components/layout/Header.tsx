@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import { Logo } from '../shared/Logo'
 
+// Links with "mobile: false" show on larger screens only.
 const navigation = [
-  { href: '/#next-event', label: 'Next event' },
-  { href: '/events', label: 'Past events' },
-  { href: '/#team', label: 'Team' },
-  { href: '/#get-involved', label: 'Get involved' },
+  { href: '/', label: 'Home', mobile: true },
+  { href: '/#next-event', label: 'Next event', mobile: false },
+  { href: '/events', label: 'Past events', mobile: true },
+  { href: '/#get-involved', label: 'Get involved', mobile: false },
 ]
 
 export function Header() {
@@ -23,10 +24,10 @@ export function Header() {
         </Link>
         <nav aria-label="Main">
           <ul className="flex items-center gap-1 text-sm md:gap-2 md:text-base">
-            {navigation.map((item, index) => (
+            {navigation.map((item) => (
               <li
                 key={item.href}
-                className={index === 0 || index === 3 ? 'hidden md:block' : ''}
+                className={item.mobile ? undefined : 'hidden md:block'}
               >
                 <Link
                   href={item.href}
