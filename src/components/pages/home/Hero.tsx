@@ -1,5 +1,5 @@
 import { site } from '../../../data/site'
-import { IconMail, IconX } from '../../icons/Icons'
+import { IconLinkedIn, IconMail, IconX } from '../../icons/Icons'
 import { Brace } from '../../shared/Brace'
 import { IconPillLink, Pill } from '../../shared/Pill'
 
@@ -28,6 +28,15 @@ export function Hero() {
                 icon={<IconMail className="size-5" />}
                 label="E-Mail"
                 detail={site.email}
+              />
+            </li>
+            <li>
+              <IconPillLink
+                href={site.linkedInUrl}
+                icon={<IconLinkedIn className="size-4" />}
+                label="LinkedIn"
+                detail={site.linkedInName}
+                external
               />
             </li>
             <li>

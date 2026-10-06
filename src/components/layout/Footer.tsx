@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { site } from '../../data/site'
-import { IconMail, IconX } from '../icons/Icons'
+import { IconLinkedIn, IconMail, IconX } from '../icons/Icons'
 import { Logo } from '../shared/Logo'
 
 export function Footer() {
@@ -48,6 +48,17 @@ export function Footer() {
             >
               <IconX className="size-4" />
               {site.twitterHandle}
+            </a>
+          </li>
+          <li>
+            <a
+              href={site.linkedInUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 hover:underline"
+            >
+              <IconLinkedIn className="size-4" />
+              LinkedIn
             </a>
           </li>
         </ul>

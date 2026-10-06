@@ -5,8 +5,9 @@ import { Event } from '../../../lib/types'
 import {
   IconArrowRight,
   IconCalendar,
-  IconMail,
+  IconLinkedIn,
   IconPin,
+  IconX,
 } from '../../icons/Icons'
 import { ButtonLink } from '../../shared/Button'
 import { Section, SectionHeader } from '../../shared/Section'
@@ -115,14 +116,18 @@ function NextEventPlaceholder({ episode }: { episode: number }) {
         </h3>
         <p className="text-md text-slate-muted">
           We meet about once per quarter. The date, the location and the
-          speakers of the next episode follow soon. Follow us on X or write us
-          an email to stay up to date.
+          speakers of the next episode follow soon. Follow us on X or LinkedIn,
+          or write us an email to stay up to date.
         </p>
       </div>
       <div className="flex shrink-0 flex-wrap gap-3">
         <ButtonLink href={site.twitterUrl} external>
-          <IconMail className="size-4" />
-          Get updated
+          <IconX className="size-4" />
+          Follow on X
+        </ButtonLink>
+        <ButtonLink href={site.linkedInUrl} variant="outline-light" external>
+          <IconLinkedIn className="size-4" />
+          Join on LinkedIn
         </ButtonLink>
       </div>
     </div>
