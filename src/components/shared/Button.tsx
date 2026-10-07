@@ -7,6 +7,8 @@ type ButtonLinkProps = {
   children: ReactNode
   variant?: 'light' | 'dark' | 'outline-light' | 'outline-dark'
   external?: boolean
+  // Downloads the target, for example a calendar file, instead of opening it
+  download?: boolean
   className?: string
 }
 
@@ -20,38 +22,23 @@ const variants = {
 const baseClasses =
   'inline-flex items-center gap-2 rounded-full px-6 py-3 text-base font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current'
 
-type ButtonProps = {
-  children: ReactNode
-  variant?: keyof typeof variants
-  onClick?: () => void
-  className?: string
-}
-
-export function Button({
-  children,
-  variant = 'light',
-  onClick,
-  className,
-}: ButtonProps) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={classNames(baseClasses, variants[variant], className)}
-    >
-      {children}
-    </button>
-  )
-}
-
 export function ButtonLink({
   href,
   children,
   variant = 'light',
   external = false,
+  download = false,
   className,
 }: ButtonLinkProps) {
   const classes = classNames(baseClasses, variants[variant], className)
+
+  if (download) {
+    return (
+      <a href={href} download className={classes}>
+        {children}
+      </a>
+    )
+  }
 
   if (external) {
     return (

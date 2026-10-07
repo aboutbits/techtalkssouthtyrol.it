@@ -16,7 +16,7 @@ import {
 import { Layout } from '../../layout/Layout'
 import { Meta } from '../../layout/Meta'
 import { Brace } from '../../shared/Brace'
-import { Button, ButtonLink } from '../../shared/Button'
+import { ButtonLink } from '../../shared/Button'
 import { Markdown } from '../../shared/Markdown'
 import { Pill } from '../../shared/Pill'
 
@@ -172,10 +172,14 @@ export function EventPage({
                 room, the drinks and the snacks.
               </p>
             </div>
-            {/* Placeholder: the attendance registration follows later. */}
-            <Button variant="dark" className="shrink-0">
+            <ButtonLink
+              href={`/api/calendar/${event.slug}`}
+              variant="dark"
+              download
+              className="shrink-0"
+            >
               <IconCalendar className="size-5" />I will attend
-            </Button>
+            </ButtonLink>
           </div>
         </section>
       )}
