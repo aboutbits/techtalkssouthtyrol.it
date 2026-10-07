@@ -8,7 +8,7 @@ env:
   NODE_VERSION: 22
   VERCEL_SCOPE: aboutbits
   VERCEL_ORGANIZATION_ID: team_e2WfHoRuw9BQVW7oYmMSKRJ6
-  VERCEL_PROJECT_ID:
+  VERCEL_PROJECT_ID: prj_7YQv3cdkQRMMtF5nhPdNXWbeI7f3
   APP_VERSION: ${{ github.sha }}
   PREVIEW_DOMAIN: test.techtalkssouthtyrol.it
 

@@ -7,6 +7,7 @@ const navigation = [
   { href: '/', label: 'Home', mobile: true },
   { href: defaultNextEventPath, label: 'Next event', mobile: true },
   { href: '/events', label: 'All events', mobile: false },
+  { href: '/#community', label: 'Community', mobile: false },
   { href: '/#get-involved', label: 'Get involved', mobile: false },
 ]
 

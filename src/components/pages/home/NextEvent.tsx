@@ -97,16 +97,12 @@ function NextEventDetails({ event }: { event: Event }) {
         </ol>
 
         <div className="flex flex-wrap gap-3">
-          <ButtonLink href={`/events/${event.slug}`}>
+          <ButtonLink href={`/api/calendar/${event.slug}`} download>
+            <IconCalendar className="size-5" />I will attend
+          </ButtonLink>
+          <ButtonLink href={`/events/${event.slug}`} variant="outline-light">
             Event details
             <IconArrowRight className="size-5" />
-          </ButtonLink>
-          <ButtonLink
-            href={`/api/calendar/${event.slug}`}
-            variant="outline-light"
-            download
-          >
-            <IconCalendar className="size-5" />I will attend
           </ButtonLink>
         </div>
       </div>
