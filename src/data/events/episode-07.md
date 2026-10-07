@@ -21,13 +21,26 @@ talks:
     abstract: |
       In this live talk, you'll learn how Metabase simplifies business data analysis and enables informed decision-making. We’ll provide a hands-on demonstration of how you can create interactive dashboards without any technical expertise, gain valuable insights, and fully leverage the potential of your business intelligence. Discover how Metabase, as a user-friendly BI tool, helps visualize data efficiently and implement data-driven analysis in your company.
   - time: '18:50'
-    title: 'Inside Design Systems: From Vision to Implementation'
+    title: 'Copyright vs. License: Software Licensing for Developers'
     speakers:
-      - name: 'Lukas Weiss'
-        role: 'Frontend Developer'
+      - name: 'Peter Moser'
         company: 'AboutBits'
         companyUrl: 'https://aboutbits.it'
-    slides: ''
+    slides: '/slides/episode-07/licencing.pdf'
     abstract: |
-      In this talk, I’ll share our team’s experience in developing design systems. After a brief overview of what a design system is and its benefits, we’ll explore the key aspects we’ve learned about creating components and how to organize them. I’ll discuss the tools and libraries that have proven useful, along with the lessons learned and challenges we’ve faced along the way. We’ll also touch on the non-technical elements that are crucial for building a successful system. As our journey continues, I’ll highlight the areas where we aim to improve and evolve further.
+      What is the difference between copyright and a license, and why is the author not always the copyright holder? This short talk explains the basics of software licensing for developers: permissive, copyleft and proprietary licenses, dual licensing, and inbound vs. outbound licenses. It also shows how the REUSE tool and SPDX identifiers help you to keep the license information of a project complete and correct.
+  - time: '19:15'
+    title: 'Our Style Of Project Management'
+    speakers:
+      - name: 'Alex Lanz'
+        role: 'CEO & Co-Founder'
+        company: 'AboutBits'
+        companyUrl: 'https://aboutbits.it'
+        social:
+          x: 'https://x.com/alex__lanz'
+          linkedin: 'https://www.linkedin.com/in/alex-lanz'
+          github: 'https://github.com/alexlanz'
+    slides: '/slides/episode-07/our-style-of-project-management.pdf'
+    abstract: |
+      Fixed time or fixed scope? User stories, story points or hours? This short talk shows how we manage our projects at AboutBits: the lifecycle of a milestone from the preparation and the kickoff meeting to the development phase, the weekly planning, and how RFCs let the team introduce new technologies and architectures in a controlled and transparent way.
 ---
