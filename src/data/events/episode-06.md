@@ -8,7 +8,6 @@ venue:
   name: 'KONVERTO'
   address: 'Bruno-Buozzi-Straße 8'
   city: 'Bozen/Bolzano'
-image: '/images/events/episode-06.jpeg'
 attendees: 48
 talks:
   - time: '18:15'

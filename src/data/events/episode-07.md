@@ -8,7 +8,6 @@ venue:
   name: 'DUKA'
   address: 'Duka-Straße 2'
   city: 'Brixen/Bressanone'
-image: '/images/events/episode-07.jpeg'
 attendees: 27
 talks:
   - time: '18:15'

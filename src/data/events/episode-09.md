@@ -8,7 +8,6 @@ venue:
   name: 'Brandnamic'
   address: 'Satzlstraße 4'
   city: 'Brixen/Bressanone'
-image: '/images/events/episode-09.jpeg'
 attendees: 48
 talks:
   - time: '18:15'

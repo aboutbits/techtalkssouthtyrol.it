@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import { site } from '../../../data/site'
 import { formatDate, formatSpeakerNames } from '../../../lib/format'
 import { Event } from '../../../lib/types'
@@ -32,7 +31,7 @@ export function NextEvent({ event, nextEpisode }: NextEventProps) {
 
 function NextEventDetails({ event }: { event: Event }) {
   return (
-    <div className="grid gap-10 overflow-hidden rounded-3xl bg-navy-light p-6 ring-1 ring-white/10 md:p-10 lg:grid-cols-2 lg:gap-16">
+    <div className="overflow-hidden rounded-3xl bg-navy-light p-6 ring-1 ring-white/10 md:p-10">
       <div className="flex flex-col gap-8">
         <div className="flex flex-col gap-4">
           <span className="text-lg text-slate-muted">
@@ -91,18 +90,6 @@ function NextEventDetails({ event }: { event: Event }) {
           </ButtonLink>
         </div>
       </div>
-
-      {event.image && (
-        <div className="relative aspect-video self-start overflow-hidden rounded-2xl">
-          <Image
-            src={event.image}
-            alt={`Episode ${event.episode} of Tech Talks South Tyrol`}
-            fill
-            sizes="(min-width: 1024px) 40vw, 100vw"
-            className="object-cover"
-          />
-        </div>
-      )}
     </div>
   )
 }

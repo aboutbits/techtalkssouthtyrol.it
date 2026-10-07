@@ -8,7 +8,6 @@ venue:
   name: 'HGV – Hoteliers- und Gastwirteverband'
   address: 'Schlachthofstraße 59'
   city: 'Bozen/Bolzano'
-image: '/images/events/episode-05.jpeg'
 attendees: 52
 talks:
   - time: '18:15'

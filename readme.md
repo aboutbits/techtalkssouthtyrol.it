@@ -84,7 +84,6 @@ venue:
   name: 'Name of the venue'
   address: 'Street 1'
   city: 'Bozen/Bolzano'
-image: '/images/events/episode-15.jpeg'   # banner, 16:9, put the file in public/images/events
 attendees: 0
 talks:
   - time: '18:15'
@@ -94,6 +93,12 @@ talks:
         role: 'Software Engineer'          # optional
         company: 'Company'                 # optional
         companyUrl: 'https://example.com'  # optional
+        image: '/images/speakers/jane-doe.jpg'  # optional, square photo in public/images/speakers
+        social:                            # optional, every entry is optional
+          x: 'https://x.com/janedoe'
+          linkedin: 'https://www.linkedin.com/in/janedoe'
+          github: 'https://github.com/janedoe'
+          website: 'https://janedoe.dev'
     slides: '/slides/episode-15/talk-title.pdf'  # optional, a path in public/ or an external URL
     recording: ''                                # optional, URL of a video
     abstract: |

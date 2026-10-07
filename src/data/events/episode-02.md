@@ -8,7 +8,6 @@ venue:
   name: 'Marketing Factory'
   address: 'Dantestraße 24'
   city: 'Brixen/Bressanone'
-image: '/images/events/episode-02.jpeg'
 attendees: 31
 talks:
   - time: '18:10'

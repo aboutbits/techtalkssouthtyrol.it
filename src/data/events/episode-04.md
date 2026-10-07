@@ -8,7 +8,6 @@ venue:
   name: 'NOI Techpark Bruneck'
   address: 'Europastraße 9'
   city: 'Bruneck/Brunico'
-image: '/images/events/episode-04.jpeg'
 attendees: 34
 talks:
   - time: '18:15'

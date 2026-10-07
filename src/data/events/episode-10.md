@@ -8,7 +8,6 @@ venue:
   name: 'Guestnet'
   address: 'Dantestraße 24'
   city: 'Brixen/Bressanone'
-image: '/images/events/episode-10.jpeg'
 attendees: 33
 talks:
   - time: '18:15'

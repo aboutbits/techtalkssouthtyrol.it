@@ -1,9 +1,8 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { formatDate, formatSpeakerNames } from '../../../lib/format'
 import { eventOgImagePath } from '../../../lib/og'
 import { Event } from '../../../lib/types'
-import { TalkCard } from '../../events/TalkCard'
+import { TalkDetails } from '../../events/TalkDetails'
 import {
   IconArrowLeft,
   IconArrowRight,
@@ -89,30 +88,17 @@ export function EventPage({
         </div>
       </section>
 
-      <div className="bg-pastel text-navy">
+      <div className="bg-white text-navy">
         <div className="mx-auto flex max-w-content flex-col gap-10 px-4 py-18 md:px-10 lg:py-24">
-          {event.image && (
-            <div className="relative aspect-video w-full max-w-3xl overflow-hidden rounded-3xl shadow-xl">
-              <Image
-                src={event.image}
-                alt={`Episode ${event.episode} of Tech Talks South Tyrol`}
-                fill
-                priority
-                sizes="(min-width: 1024px) 48rem, 100vw"
-                className="object-cover"
-              />
-            </div>
-          )}
-
-          <h2 className="pt-8 text-h2">Talks</h2>
-          <div className="flex flex-col gap-6">
+          <h2 className="text-h2">Talks</h2>
+          <div className="flex flex-col divide-y divide-navy/10 border-y border-navy/10">
             {event.talks.map((talk) => (
-              <TalkCard key={talk.title} talk={talk} />
+              <TalkDetails key={talk.title} talk={talk} />
             ))}
           </div>
 
           {event.notes && (
-            <div className="rounded-3xl bg-white/70 p-6 md:p-10">
+            <div className="bg-pastel rounded-3xl p-6 md:p-10">
               <Markdown className="text-md">{event.notes}</Markdown>
             </div>
           )}

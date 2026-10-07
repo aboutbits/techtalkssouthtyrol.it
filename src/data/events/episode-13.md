@@ -8,7 +8,6 @@ venue:
   name: 'Progress Group'
   address: 'Julius-Durst-Straße 100'
   city: 'Brixen/Bressanone'
-image: '/images/events/episode-13.jpeg'
 attendees: 43
 talks:
   - time: '18:15'

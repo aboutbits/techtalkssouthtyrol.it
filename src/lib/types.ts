@@ -1,8 +1,17 @@
+export type SpeakerSocial = {
+  x?: string
+  linkedin?: string
+  github?: string
+  website?: string
+}
+
 export type Speaker = {
   name: string
   role?: string
   company?: string
   companyUrl?: string
+  image?: string
+  social?: SpeakerSocial
 }
 
 export type Talk = {
@@ -27,7 +36,6 @@ export type EventMeta = {
   endTime: string
   host: string
   venue: Venue
-  image?: string
   attendees?: number
   talks: Talk[]
 }

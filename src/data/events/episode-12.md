@@ -8,7 +8,6 @@ venue:
   name: 'Raiffeisen Information Service'
   address: 'Raiffeisenstraße 2'
   city: 'Bozen/Bolzano'
-image: '/images/events/episode-12.jpeg'
 attendees: 67
 talks:
   - time: '18:15'

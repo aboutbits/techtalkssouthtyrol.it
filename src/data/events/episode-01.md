@@ -8,7 +8,6 @@ venue:
   name: 'AboutBits'
   address: 'Färbergasse 12'
   city: 'Klausen/Chiusa'
-image: '/images/events/episode-01.jpeg'
 attendees: 41
 talks:
   - time: '18:10'
@@ -23,8 +22,13 @@ talks:
     title: 'Infrastructure as code with automated credentials management using 1Password'
     speakers:
       - name: 'Alex Lanz'
+        role: 'CEO & Co-Founder'
         company: 'AboutBits'
         companyUrl: 'https://aboutbits.it'
+        social:
+          x: 'https://x.com/alex__lanz'
+          linkedin: 'https://www.linkedin.com/in/alex-lanz'
+          github: 'https://github.com/alexlanz'
     slides: ''
     abstract: |
       Lots of companies started in the last couple of years to automate and document their infrastructure using infrastructure as code. Tools like Ansible, Terraform, Atlantis and many more helped them to achieve a highly automated workflow. However, one of the most challenging and dangerous parts of this whole topic is how to manage credentials when you document your entire infrastructure inside a repository. In this talk we want to show how you can manage your credentials in a very secure way by integrating 1Password connect into your automated system and what additional benefits this can bring you.

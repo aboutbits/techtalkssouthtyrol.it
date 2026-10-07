@@ -8,7 +8,6 @@ venue:
   name: 'Four Points by Sheraton'
   address: 'Bruno-Buozzi-Straße 35'
   city: 'Bozen/Bolzano'
-image: '/images/events/episode-08.jpeg'
 attendees: 58
 talks:
   - time: '18:15'

@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { formatShortDate, formatSpeakerNames } from '../../lib/format'
 import { Event } from '../../lib/types'
@@ -10,19 +9,8 @@ export function EventCard({ event }: { event: Event }) {
   return (
     <Link
       href={`/events/${event.slug}`}
-      className="group flex flex-col overflow-hidden rounded-3xl bg-white text-navy ring-1 ring-navy/10 transition-shadow hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy"
+      className="flex flex-col overflow-hidden rounded-3xl bg-white text-navy ring-1 ring-navy/10 transition-shadow hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy"
     >
-      {event.image && (
-        <div className="bg-pastel relative aspect-video overflow-hidden">
-          <Image
-            src={event.image}
-            alt=""
-            fill
-            sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        </div>
-      )}
       <div className="flex flex-1 flex-col gap-4 p-6">
         <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-slate">
           <span className="inline-flex items-center gap-1.5">

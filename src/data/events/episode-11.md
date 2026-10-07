@@ -8,7 +8,6 @@ venue:
   name: 'ADDITIVE'
   address: 'Bruno-Buozzi-Straße 2'
   city: 'Bozen/Bolzano'
-image: '/images/events/episode-11.jpeg'
 attendees: 38
 talks:
   - time: '18:15'

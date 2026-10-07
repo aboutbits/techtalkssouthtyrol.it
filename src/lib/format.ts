@@ -41,3 +41,14 @@ export function formatSpeakerNames(names: string[]) {
 
   return `${names.slice(0, -1).join(', ')} & ${names.slice(-1).join('')}`
 }
+
+/**
+ * Returns the first letter of the first and the last name, for example "AL" for "Alex Lanz".
+ */
+export function formatInitials(name: string) {
+  const parts = name.trim().split(/\s+/)
+  const first = parts[0]?.charAt(0) ?? ''
+  const last = parts.length > 1 ? (parts.at(-1)?.charAt(0) ?? '') : ''
+
+  return `${first}${last}`.toUpperCase()
+}

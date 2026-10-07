@@ -8,7 +8,6 @@ venue:
   name: 'Free University of Bozen-Bolzano'
   address: 'Bruno-Buozzi-Straße 1'
   city: 'Bozen/Bolzano'
-image: '/images/events/episode-14.jpeg'
 attendees: 37
 talks:
   - time: '18:15'
