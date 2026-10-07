@@ -8,7 +8,6 @@ venue:
   name: 'Marketing Factory'
   address: 'Dantestraße 24'
   city: 'Brixen/Bressanone'
-attendees: 31
 talks:
   - title: 'Empowering an omnichannel banking experience'
     speakers:

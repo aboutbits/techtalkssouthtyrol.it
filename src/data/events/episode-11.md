@@ -8,7 +8,6 @@ venue:
   name: 'ADDITIVE'
   address: 'Bruno-Buozzi-Straße 2'
   city: 'Bozen/Bolzano'
-attendees: 38
 talks:
   - title: 'Cloud Development'
     speakers:

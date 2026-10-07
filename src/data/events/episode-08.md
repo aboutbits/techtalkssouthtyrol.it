@@ -8,7 +8,6 @@ venue:
   name: 'Four Points by Sheraton'
   address: 'Bruno-Buozzi-Straße 35'
   city: 'Bozen/Bolzano'
-attendees: 58
 talks:
   - title: 'A Deep Dive into Smart Dato’s Laravel Architecture'
     speakers:

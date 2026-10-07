@@ -8,7 +8,6 @@ venue:
   name: 'KONVERTO'
   address: 'Bruno-Buozzi-Straße 8'
   city: 'Bozen/Bolzano'
-attendees: 48
 talks:
   - title: 'Design Pattern: Hexagonal Architecture'
     speakers:

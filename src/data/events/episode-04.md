@@ -8,7 +8,6 @@ venue:
   name: 'NOI Techpark Bruneck'
   address: 'Europastraße 9'
   city: 'Bruneck/Brunico'
-attendees: 34
 talks:
   - title: 'Monorepos: The Benefits, Challenges and Importance of Tooling Support'
     speakers:

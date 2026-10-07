@@ -8,7 +8,6 @@ venue:
   name: 'AboutBits'
   address: 'Färbergasse 12'
   city: 'Klausen/Chiusa'
-attendees: 41
 talks:
   - title: 'Streamlining Your Operations: Exploring Essential Tools'
     speakers:

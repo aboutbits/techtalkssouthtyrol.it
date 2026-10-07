@@ -8,7 +8,6 @@ venue:
   name: 'Free University of Bozen-Bolzano'
   address: 'Bruno-Buozzi-Straße 1'
   city: 'Bozen/Bolzano'
-attendees: 37
 talks:
   - title: 'Top 5 Spring Boot Testing Mistakes Developers Trap Into'
     speakers:

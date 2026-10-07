@@ -8,7 +8,6 @@ venue:
   name: 'Progress Group'
   address: 'Julius-Durst-Straße 100'
   city: 'Brixen/Bressanone'
-attendees: 43
 talks:
   - title: 'Connecting BIM and ERP: A Unified Planning Platform for Large Construction Projects'
     speakers:

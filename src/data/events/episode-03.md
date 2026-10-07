@@ -8,7 +8,6 @@ venue:
   name: 'Raiffeisen Information Service'
   address: 'Raiffeisenstraße 2'
   city: 'Bozen/Bolzano'
-attendees: 60
 talks:
   - title: 'Harnessing GPT-4: From Context to Perfect Prompts in Modern Software Integration'
     speakers:

@@ -8,7 +8,6 @@ venue:
   name: 'Raiffeisen Information Service'
   address: 'Raiffeisenstraße 2'
   city: 'Bozen/Bolzano'
-attendees: 67
 talks:
   - title: 'Powering modern data science with a cloud‑first data platform for RIS KonsGmbH'
     speakers:

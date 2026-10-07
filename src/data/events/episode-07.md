@@ -8,7 +8,6 @@ venue:
   name: 'DUKA'
   address: 'Duka-Straße 2'
   city: 'Brixen/Bressanone'
-attendees: 27
 talks:
   - title: 'Data-Driven Analysis and Business Intelligence with Metabase: A Live Talk for Informed Decision-Making'
     speakers:

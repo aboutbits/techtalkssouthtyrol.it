@@ -84,7 +84,6 @@ venue:
   name: 'Name of the venue'
   address: 'Street 1'
   city: 'Bozen/Bolzano'
-attendees: 0
 talks:
   - title: 'Title of the talk'
     speakers:

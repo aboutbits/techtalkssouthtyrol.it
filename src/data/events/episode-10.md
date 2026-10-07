@@ -8,7 +8,6 @@ venue:
   name: 'Guestnet'
   address: 'Dantestraße 24'
   city: 'Brixen/Bressanone'
-attendees: 33
 talks:
   - title: 'OpenTelemetry 101: Getting Started with Observability in your Backends'
     speakers:

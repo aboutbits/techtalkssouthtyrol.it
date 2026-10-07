@@ -8,7 +8,6 @@ venue:
   name: 'Brandnamic'
   address: 'Satzlstraße 4'
   city: 'Brixen/Bressanone'
-attendees: 48
 talks:
   - title: 'Modernizing Legacy Apps: Microfrontends Architecture, and Core-Agnostic Design'
     speakers:

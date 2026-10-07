@@ -8,7 +8,6 @@ venue:
   name: 'HGV – Hoteliers- und Gastwirteverband'
   address: 'Schlachthofstraße 59'
   city: 'Bozen/Bolzano'
-attendees: 52
 talks:
   - title: 'Thwarting the Scraper Horde: Building Defenses Against Malicious Bots'
     speakers:

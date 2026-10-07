@@ -29,7 +29,6 @@ export function getEvent(slug: string): Event {
       slides: talk.slides ?? '',
       recording: talk.recording ?? '',
     })),
-    attendees: meta.attendees ?? 0,
     slug,
     notes: document.content.trim(),
   }
