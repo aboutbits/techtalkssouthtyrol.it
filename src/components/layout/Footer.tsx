@@ -3,10 +3,11 @@ import { ReactNode } from 'react'
 import { site } from '../../data/site'
 import { IconDiscord, IconLinkedIn, IconMail, IconX } from '../icons/Icons'
 import { Logo } from '../shared/Logo'
+import { defaultNextEventPath, useNextEventPath } from './NextEventPath'
 
 const pages = [
   { href: '/', label: 'Home' },
-  { href: '/#next-event', label: 'Next event' },
+  { href: defaultNextEventPath, label: 'Next event' },
   { href: '/events', label: 'Past events' },
   { href: '/#community', label: 'Community' },
   { href: '/speaker-notes', label: 'Speaker notes' },
@@ -47,6 +48,8 @@ const channels = [
 ]
 
 export function Footer() {
+  const nextEventPath = useNextEventPath()
+
   return (
     <footer className="bg-navy text-white">
       <div className="mx-auto grid max-w-content grid-cols-[auto_1fr] gap-x-12 gap-y-10 border-t border-white/10 px-4 py-12 md:grid-cols-[1fr_auto_auto] md:gap-16 md:px-10 lg:gap-24">
@@ -62,7 +65,12 @@ export function Footer() {
         <FooterGroup title="Pages" label="Footer">
           {pages.map((page) => (
             <li key={page.href}>
-              <Link href={page.href} className="hover:underline">
+              <Link
+                href={
+                  page.href === defaultNextEventPath ? nextEventPath : page.href
+                }
+                className="hover:underline"
+              >
                 {page.label}
               </Link>
             </li>

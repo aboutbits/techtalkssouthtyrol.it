@@ -3,6 +3,14 @@ import { Meta } from '../components/layout/Meta'
 import { Brace } from '../components/shared/Brace'
 import { ButtonLink } from '../components/shared/Button'
 import { Pill } from '../components/shared/Pill'
+import { getNextEventPath, revalidateSeconds } from '../lib/events'
+
+export function getStaticProps() {
+  return {
+    props: { nextEventPath: getNextEventPath() },
+    revalidate: revalidateSeconds,
+  }
+}
 
 export default function Page() {
   return (

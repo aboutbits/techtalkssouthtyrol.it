@@ -1,15 +1,18 @@
 import Link from 'next/link'
 import { Logo } from '../shared/Logo'
+import { defaultNextEventPath, useNextEventPath } from './NextEventPath'
 
 // Links with "mobile: false" show on larger screens only.
 const navigation = [
   { href: '/', label: 'Home', mobile: true },
-  { href: '/#next-event', label: 'Next event', mobile: true },
+  { href: defaultNextEventPath, label: 'Next event', mobile: true },
   { href: '/events', label: 'Past events', mobile: false },
   { href: '/#get-involved', label: 'Get involved', mobile: false },
 ]
 
 export function Header() {
+  const nextEventPath = useNextEventPath()
+
   return (
     <header className="sticky top-0 z-30 bg-navy/80 text-white backdrop-blur">
       <div className="mx-auto flex max-w-content items-center justify-between gap-6 px-4 py-3 md:px-10">
@@ -30,7 +33,11 @@ export function Header() {
                 className={item.mobile ? undefined : 'hidden md:block'}
               >
                 <Link
-                  href={item.href}
+                  href={
+                    item.href === defaultNextEventPath
+                      ? nextEventPath
+                      : item.href
+                  }
                   className="block rounded-full px-3 py-2 transition-colors hover:bg-slate focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
                 >
                   {item.label}

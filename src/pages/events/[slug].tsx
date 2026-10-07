@@ -3,6 +3,7 @@ import { EventPage } from '../../components/pages/event/EventPage'
 import {
   getAllEvents,
   getEventSlugs,
+  getNextEventPath,
   revalidateSeconds,
   splitEvents,
 } from '../../lib/events'
@@ -12,7 +13,7 @@ type Props = Parameters<typeof EventPage>[0]
 export function getStaticProps({
   params,
 }: GetStaticPropsContext<{ slug: string }>): {
-  props: Props
+  props: Props & { nextEventPath: string }
   revalidate: number
 } {
   if (params === undefined) {
@@ -33,6 +34,7 @@ export function getStaticProps({
 
   return {
     props: {
+      nextEventPath: getNextEventPath(),
       event,
       isUpcoming: upcoming.length > 0,
       previous: previous

@@ -1,8 +1,13 @@
 import { HomePage, HomePageProps } from '../components/pages/home/HomePage'
-import { getAllEvents, revalidateSeconds, splitEvents } from '../lib/events'
+import {
+  getAllEvents,
+  getNextEventPath,
+  revalidateSeconds,
+  splitEvents,
+} from '../lib/events'
 
 export function getStaticProps(): {
-  props: HomePageProps
+  props: HomePageProps & { nextEventPath: string }
   revalidate: number
 } {
   const events = getAllEvents()
@@ -12,6 +17,7 @@ export function getStaticProps(): {
 
   return {
     props: {
+      nextEventPath: getNextEventPath(),
       nextEvent: upcoming[0] ?? null,
       nextEpisode: latestEpisode + 1,
       recentEvents: past.slice(0, 3),

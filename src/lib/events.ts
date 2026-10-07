@@ -1,6 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
+import { defaultNextEventPath } from '../components/layout/NextEventPath'
 import { Event, EventMeta } from './types'
 
 const eventsDirectory = path.join(process.cwd(), 'src/data/events')
@@ -66,4 +67,14 @@ export function splitEvents(events: Event[], now = new Date()) {
       .filter((event) => event.date < today)
       .sort((a, b) => b.episode - a.episode),
   }
+}
+
+/**
+ * Returns the link for "Next event": the details page of the upcoming event,
+ * or the next event section on the home page if no event is planned.
+ */
+export function getNextEventPath() {
+  const nextEvent = splitEvents(getAllEvents()).upcoming[0]
+
+  return nextEvent ? `/events/${nextEvent.slug}` : defaultNextEventPath
 }
