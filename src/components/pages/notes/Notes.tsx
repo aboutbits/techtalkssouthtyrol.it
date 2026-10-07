@@ -33,7 +33,7 @@ export function NotesPage({
     <Layout>
       <Meta title={label} description={description} path={path} />
       <section className="relative overflow-hidden bg-navy text-white">
-        <Brace className="pointer-events-none absolute inset-y-0 right-0 h-full w-12 md:w-48 lg:w-72" />
+        <Brace className="pointer-events-none absolute inset-y-0 right-0 aspect-[2/5] h-full max-w-12 md:max-w-48 lg:max-w-72" />
         <div className="relative mx-auto flex max-w-content flex-col items-start gap-8 py-18 pl-4 pr-16 md:px-10 md:pr-56 lg:py-24 lg:pr-80">
           <Pill>{label}</Pill>
           <h1 className="text-h1 font-normal">{title}</h1>
