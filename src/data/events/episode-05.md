@@ -4,6 +4,7 @@ date: '2024-05-23'
 startTime: '18:00'
 endTime: '20:00'
 host: 'HGV'
+hostUrl: 'https://www.hgv.it'
 venue:
   name: 'HGV – Hoteliers- und Gastwirteverband'
   address: 'Schlachthofstraße 59'

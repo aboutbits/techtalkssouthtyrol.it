@@ -4,6 +4,7 @@ date: '2026-05-27'
 startTime: '18:00'
 endTime: '20:00'
 host: 'Progress Group'
+hostUrl: 'https://www.progress.group'
 venue:
   name: 'Progress Group'
   address: 'Julius-Durst-Straße 100'

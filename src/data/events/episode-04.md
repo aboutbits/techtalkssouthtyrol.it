@@ -4,6 +4,7 @@ date: '2024-02-28'
 startTime: '18:00'
 endTime: '20:00'
 host: 'NOI Techpark Bruneck/Brunico'
+hostUrl: 'https://noi.bz.it'
 venue:
   name: 'NOI Techpark Bruneck'
   address: 'Europastraße 9'

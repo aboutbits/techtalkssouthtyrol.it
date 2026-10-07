@@ -3,9 +3,10 @@ episode: 2
 date: '2023-07-26'
 startTime: '18:00'
 endTime: '19:30'
-host: 'Marketing Factory'
+host: 'Factory'
+hostUrl: 'https://www.factory.it'
 venue:
-  name: 'Marketing Factory'
+  name: 'Factory'
   address: 'Dantestraße 24'
   city: 'Brixen/Bressanone'
 talks:

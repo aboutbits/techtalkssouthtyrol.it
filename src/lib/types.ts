@@ -34,6 +34,7 @@ export type EventMeta = {
   startTime: string
   endTime: string
   host: string
+  hostUrl?: string
   venue: Venue
   talks: Talk[]
 }

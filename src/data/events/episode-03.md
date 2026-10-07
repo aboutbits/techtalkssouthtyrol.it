@@ -4,6 +4,7 @@ date: '2023-11-22'
 startTime: '18:00'
 endTime: '20:00'
 host: 'Raiffeisen Information Service'
+hostUrl: 'https://www.ris.bz.it'
 venue:
   name: 'Raiffeisen Information Service'
   address: 'Raiffeisenstraße 2'

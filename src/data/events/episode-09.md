@@ -4,6 +4,7 @@ date: '2025-05-28'
 startTime: '18:00'
 endTime: '20:00'
 host: 'Brandnamic'
+hostUrl: 'https://www.brandnamic.com'
 venue:
   name: 'Brandnamic'
   address: 'Satzlstraße 4'

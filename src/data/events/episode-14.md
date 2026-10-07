@@ -3,7 +3,8 @@ episode: 14
 date: '2027-09-08'
 startTime: '18:00'
 endTime: '20:00'
-host: 'NOI Techpark & Free University of Bozen-Bolzano'
+host: 'Free University of Bozen-Bolzano'
+hostUrl: 'https://www.unibz.it'
 venue:
   name: 'Free University of Bozen-Bolzano'
   address: 'Bruno-Buozzi-Straße 1'

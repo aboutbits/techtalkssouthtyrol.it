@@ -4,6 +4,7 @@ date: '2023-05-17'
 startTime: '18:00'
 endTime: '19:30'
 host: 'AboutBits'
+hostUrl: 'https://aboutbits.it'
 venue:
   name: 'AboutBits'
   address: 'Färbergasse 12'

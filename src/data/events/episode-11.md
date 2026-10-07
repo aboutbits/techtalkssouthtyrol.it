@@ -4,6 +4,7 @@ date: '2025-11-11'
 startTime: '18:00'
 endTime: '20:00'
 host: 'ADDITIVE'
+hostUrl: 'https://www.additive.eu'
 venue:
   name: 'ADDITIVE'
   address: 'Bruno-Buozzi-Straße 2'

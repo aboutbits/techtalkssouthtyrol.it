@@ -4,6 +4,7 @@ date: '2025-02-25'
 startTime: '18:00'
 endTime: '21:00'
 host: 'Smart Dato'
+hostUrl: 'https://www.smart-dato.com'
 venue:
   name: 'Four Points by Sheraton'
   address: 'Bruno-Buozzi-Straße 35'

@@ -57,7 +57,24 @@ export function EventPage({
           </Link>
           <div className="flex flex-col items-start gap-6">
             <Pill>{isUpcoming ? 'Next event' : 'Past event'}</Pill>
-            <h1 className="text-h1 font-normal">Episode {event.episode}</h1>
+            <div className="flex flex-col gap-3">
+              <h1 className="text-h1 font-normal">Episode {event.episode}</h1>
+              <p className="text-lg text-slate-muted md:text-xl">
+                Hosted by{' '}
+                {event.hostUrl ? (
+                  <a
+                    href={event.hostUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-sky underline decoration-sky/40 underline-offset-4 transition-colors hover:decoration-sky"
+                  >
+                    {event.host}
+                  </a>
+                ) : (
+                  <span className="font-semibold text-sky">{event.host}</span>
+                )}
+              </p>
+            </div>
           </div>
           <dl className="grid gap-6 text-md md:grid-cols-2">
             <div className="flex gap-3">
@@ -80,8 +97,6 @@ export function EventPage({
                 <span className="text-slate-muted">
                   {event.venue.address}, {event.venue.city}
                 </span>
-                <br />
-                <span className="text-slate-muted">Hosted by {event.host}</span>
               </dd>
             </div>
           </dl>

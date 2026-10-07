@@ -80,6 +80,7 @@ date: '2026-12-01'          # YYYY-MM-DD, always in quotes
 startTime: '18:00'
 endTime: '20:00'
 host: 'Company that hosts the episode'
+hostUrl: 'https://example.com'   # optional, website of the host
 venue:
   name: 'Name of the venue'
   address: 'Street 1'

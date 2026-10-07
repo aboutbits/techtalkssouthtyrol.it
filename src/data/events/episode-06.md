@@ -4,6 +4,7 @@ date: '2024-09-11'
 startTime: '18:00'
 endTime: '20:00'
 host: 'KONVERTO'
+hostUrl: 'https://konverto.eu'
 venue:
   name: 'KONVERTO'
   address: 'Bruno-Buozzi-Straße 8'

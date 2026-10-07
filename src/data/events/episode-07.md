@@ -3,7 +3,8 @@ episode: 7
 date: '2024-11-26'
 startTime: '18:00'
 endTime: '20:00'
-host: 'Duka'
+host: 'DUKA'
+hostUrl: 'https://www.duka.it'
 venue:
   name: 'DUKA'
   address: 'Duka-Straße 2'

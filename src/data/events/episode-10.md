@@ -4,6 +4,7 @@ date: '2025-08-27'
 startTime: '18:00'
 endTime: '20:00'
 host: 'Guestnet'
+hostUrl: 'https://www.guest.net'
 venue:
   name: 'Guestnet'
   address: 'Dantestraße 24'

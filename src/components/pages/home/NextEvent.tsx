@@ -62,7 +62,21 @@ function NextEventDetails({ event }: { event: Event }) {
                 {event.venue.address}, {event.venue.city}
               </span>
               <br />
-              <span className="text-slate-muted">Hosted by {event.host}</span>
+              <span className="text-slate-muted">
+                Hosted by{' '}
+                {event.hostUrl ? (
+                  <a
+                    href={event.hostUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline underline-offset-2 hover:text-white"
+                  >
+                    {event.host}
+                  </a>
+                ) : (
+                  event.host
+                )}
+              </span>
             </dd>
           </div>
         </dl>
