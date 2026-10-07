@@ -1,9 +1,19 @@
 import Link from 'next/link'
 import { formatShortDate, formatSpeakerNames } from '../../lib/format'
 import { Event } from '../../lib/types'
-import { IconCalendar, IconPin, IconSlides } from '../icons/Icons'
+import {
+  IconCalendar,
+  IconMegaphone,
+  IconPin,
+  IconSlides,
+} from '../icons/Icons'
 
-export function EventCard({ event }: { event: Event }) {
+type EventCardProps = {
+  event: Event
+  isUpcoming?: boolean
+}
+
+export function EventCard({ event, isUpcoming = false }: EventCardProps) {
   const slidesCount = event.talks.filter((talk) => talk.slides).length
 
   return (
@@ -33,13 +43,20 @@ export function EventCard({ event }: { event: Event }) {
             </li>
           ))}
         </ul>
-        <div className="flex items-center justify-between pt-2 text-sm">
+        <div className="flex items-center justify-between gap-3 pt-2 text-sm">
           <span className="text-slate">Hosted by {event.host}</span>
-          {slidesCount > 0 && (
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-cream px-3 py-1 font-medium">
-              <IconSlides className="size-4" />
-              Slides
+          {isUpcoming ? (
+            <span className="inline-flex shrink-0 items-center gap-1.5 whitespace-nowrap rounded-full bg-sky px-3 py-1 font-medium">
+              <IconMegaphone className="size-4 shrink-0" />
+              Next event
             </span>
+          ) : (
+            slidesCount > 0 && (
+              <span className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-cream px-3 py-1 font-medium">
+                <IconSlides className="size-4" />
+                Slides
+              </span>
+            )
           )}
         </div>
       </div>

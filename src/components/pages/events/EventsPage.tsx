@@ -5,7 +5,12 @@ import { Meta } from '../../layout/Meta'
 import { Brace } from '../../shared/Brace'
 import { Pill } from '../../shared/Pill'
 
-export function EventsPage({ events }: { events: Event[] }) {
+export type EventsPageProps = {
+  events: Event[]
+  upcomingSlugs: string[]
+}
+
+export function EventsPage({ events, upcomingSlugs }: EventsPageProps) {
   const years = Array.from(
     new Set(events.map((event) => event.date.substring(0, 4))),
   )
@@ -13,21 +18,22 @@ export function EventsPage({ events }: { events: Event[] }) {
   return (
     <Layout>
       <Meta
-        title="Past events"
-        description="All past episodes of Tech Talks South Tyrol, with talks, speakers and slides."
+        title="All events"
+        description="All episodes of Tech Talks South Tyrol, with talks, speakers and slides."
         path="/events"
       />
       <section className="relative overflow-hidden bg-navy text-white">
         <Brace className="pointer-events-none absolute inset-y-0 right-0 h-full w-12 md:w-48 lg:w-72" />
         <div className="relative mx-auto flex max-w-content flex-col items-start gap-8 py-18 pl-4 pr-16 md:px-10 md:pr-56 lg:py-24 lg:pr-80">
-          <Pill>Past events</Pill>
+          <Pill>All events</Pill>
           <h1 className="text-h1 font-normal">
             {events.length} episodes,{' '}
             {events.reduce((sum, event) => sum + event.talks.length, 0)} talks
           </h1>
           <p className="max-w-2xl text-lg text-slate-muted">
-            Browse all past episodes of Tech Talks South Tyrol. Open an episode
-            to read the abstracts and to get the slides of the talks.
+            Browse all episodes of Tech Talks South Tyrol, from the next one to
+            the first one. Open an episode to read the abstracts and to get the
+            slides of the talks.
           </p>
         </div>
       </section>
@@ -41,7 +47,10 @@ export function EventsPage({ events }: { events: Event[] }) {
                   .filter((event) => event.date.startsWith(year))
                   .map((event) => (
                     <li key={event.slug} className="flex">
-                      <EventCard event={event} />
+                      <EventCard
+                        event={event}
+                        isUpcoming={upcomingSlugs.includes(event.slug)}
+                      />
                     </li>
                   ))}
               </ul>

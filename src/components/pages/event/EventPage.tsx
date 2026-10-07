@@ -53,7 +53,7 @@ export function EventPage({
             className="inline-flex items-center gap-2 self-start text-sm text-slate-muted hover:text-white"
           >
             <IconArrowLeft className="size-4" />
-            All past events
+            All events
           </Link>
           <div className="flex flex-col items-start gap-6">
             <Pill>{isUpcoming ? 'Next event' : 'Past event'}</Pill>
