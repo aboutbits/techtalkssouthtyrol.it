@@ -1,3 +1,5 @@
+import { Venue } from './types'
+
 const timeZone = 'Europe/Rome'
 
 function toDate(date: string) {
@@ -62,4 +64,13 @@ export function formatTalkTime(eventStartTime: string, talkIndex: number) {
   const total = hours * 60 + minutes + 15 + talkIndex * 35
 
   return `${String(Math.floor(total / 60) % 24).padStart(2, '0')}:${String(total % 60).padStart(2, '0')}`
+}
+
+/**
+ * Returns a Google Maps search link for a venue.
+ */
+export function googleMapsUrl(venue: Venue) {
+  const query = `${venue.name}, ${venue.address}, ${venue.city}`
+
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`
 }

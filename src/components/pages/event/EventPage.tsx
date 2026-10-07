@@ -1,5 +1,9 @@
 import Link from 'next/link'
-import { formatDate, formatSpeakerNames } from '../../../lib/format'
+import {
+  formatDate,
+  formatSpeakerNames,
+  googleMapsUrl,
+} from '../../../lib/format'
 import { eventOgImagePath } from '../../../lib/og'
 import { Event } from '../../../lib/types'
 import { TalkDetails } from '../../events/TalkDetails'
@@ -59,7 +63,7 @@ export function EventPage({
             <Pill>{isUpcoming ? 'Next event' : 'Past event'}</Pill>
             <div className="flex flex-col gap-3">
               <h1 className="text-h1 font-normal">Episode {event.episode}</h1>
-              <p className="text-lg text-slate-muted md:text-xl">
+              <p className="text-md text-slate-muted md:text-lg">
                 Hosted by{' '}
                 {event.hostUrl ? (
                   <a
@@ -92,11 +96,20 @@ export function EventPage({
               <dt className="sr-only">Location</dt>
               <IconPin className="mt-1 size-5 shrink-0 text-sky" />
               <dd>
-                {event.venue.name}
-                <br />
-                <span className="text-slate-muted">
-                  {event.venue.address}, {event.venue.city}
-                </span>
+                <a
+                  href={googleMapsUrl(event.venue)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group"
+                >
+                  <span className="underline-offset-4 group-hover:underline">
+                    {event.venue.name}
+                  </span>
+                  <br />
+                  <span className="text-slate-muted underline-offset-4 group-hover:underline">
+                    {event.venue.address}, {event.venue.city}
+                  </span>
+                </a>
               </dd>
             </div>
           </dl>
