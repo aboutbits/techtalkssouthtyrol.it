@@ -6,7 +6,6 @@ endTime: '19:30'
 host: 'Factory'
 hostUrl: 'https://www.factory.it'
 venue:
-  name: 'Factory'
   address: 'Dantestraße 24'
   city: 'Brixen/Bressanone'
 talks:

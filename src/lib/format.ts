@@ -1,4 +1,4 @@
-import { Venue } from './types'
+import { Event } from './types'
 
 const timeZone = 'Europe/Rome'
 
@@ -67,10 +67,18 @@ export function formatTalkTime(eventStartTime: string, talkIndex: number) {
 }
 
 /**
- * Returns a Google Maps search link for a venue.
+ * Returns the name of the place where the event takes place: the venue, or
+ * the host if the event takes place at the host.
  */
-export function googleMapsUrl(venue: Venue) {
-  const query = `${venue.name}, ${venue.address}, ${venue.city}`
+export function getVenueName(event: Event) {
+  return event.venue.name ?? event.host
+}
+
+/**
+ * Returns a Google Maps search link for the place of an event.
+ */
+export function googleMapsUrl(event: Event) {
+  const query = `${getVenueName(event)}, ${event.venue.address}, ${event.venue.city}`
 
   return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`
 }

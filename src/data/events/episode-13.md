@@ -6,7 +6,6 @@ endTime: '20:00'
 host: 'Progress Group'
 hostUrl: 'https://www.progress.group'
 venue:
-  name: 'Progress Group'
   address: 'Julius-Durst-Straße 100'
   city: 'Brixen/Bressanone'
 talks:

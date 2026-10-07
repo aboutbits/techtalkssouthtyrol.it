@@ -6,7 +6,6 @@ endTime: '20:00'
 host: 'Brandnamic'
 hostUrl: 'https://www.brandnamic.com'
 venue:
-  name: 'Brandnamic'
   address: 'Satzlstraße 4'
   city: 'Brixen/Bressanone'
 talks:

@@ -6,7 +6,6 @@ endTime: '20:00'
 host: 'KONVERTO'
 hostUrl: 'https://konverto.eu'
 venue:
-  name: 'KONVERTO'
   address: 'Bruno-Buozzi-Straße 8'
   city: 'Bozen/Bolzano'
 talks:

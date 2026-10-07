@@ -6,7 +6,6 @@ endTime: '19:30'
 host: 'AboutBits'
 hostUrl: 'https://aboutbits.it'
 venue:
-  name: 'AboutBits'
   address: 'Färbergasse 12'
   city: 'Klausen/Chiusa'
 talks:

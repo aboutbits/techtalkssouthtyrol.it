@@ -6,7 +6,6 @@ endTime: '20:00'
 host: 'Guestnet'
 hostUrl: 'https://www.guest.net'
 venue:
-  name: 'Guestnet'
   address: 'Dantestraße 24'
   city: 'Brixen/Bressanone'
 talks:

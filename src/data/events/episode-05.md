@@ -6,7 +6,6 @@ endTime: '20:00'
 host: 'HGV'
 hostUrl: 'https://www.hgv.it'
 venue:
-  name: 'HGV – Hoteliers- und Gastwirteverband'
   address: 'Schlachthofstraße 59'
   city: 'Bozen/Bolzano'
 talks:

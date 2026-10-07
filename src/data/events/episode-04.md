@@ -6,7 +6,6 @@ endTime: '20:00'
 host: 'NOI Techpark Bruneck/Brunico'
 hostUrl: 'https://noi.bz.it'
 venue:
-  name: 'NOI Techpark Bruneck'
   address: 'Europastraße 9'
   city: 'Bruneck/Brunico'
 talks:

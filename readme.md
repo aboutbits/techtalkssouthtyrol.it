@@ -82,7 +82,7 @@ endTime: '20:00'
 host: 'Company that hosts the episode'
 hostUrl: 'https://example.com'   # optional, website of the host
 venue:
-  name: 'Name of the venue'
+  name: 'Name of the venue'               # optional, only if the event does not take place at the host
   address: 'Street 1'
   city: 'Bozen/Bolzano'
 talks:

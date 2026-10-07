@@ -6,7 +6,6 @@ endTime: '20:00'
 host: 'ADDITIVE'
 hostUrl: 'https://www.additive.eu'
 venue:
-  name: 'ADDITIVE'
   address: 'Bruno-Buozzi-Straße 2'
   city: 'Bozen/Bolzano'
 talks:

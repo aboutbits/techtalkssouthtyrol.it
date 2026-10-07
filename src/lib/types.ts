@@ -23,7 +23,8 @@ export type Talk = {
 }
 
 export type Venue = {
-  name: string
+  // Only when the event does not take place at the host
+  name?: string
   address: string
   city: string
 }

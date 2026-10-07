@@ -3,11 +3,11 @@ import {
   formatDate,
   formatSpeakerNames,
   formatTalkTime,
+  getVenueName,
 } from '../../../lib/format'
 import { Event } from '../../../lib/types'
 import {
   IconArrowRight,
-  IconBuilding,
   IconCalendar,
   IconLinkedIn,
   IconPin,
@@ -54,23 +54,22 @@ function NextEventDetails({ event }: { event: Event }) {
             </dd>
           </div>
           <div className="flex gap-3">
-            <dt className="sr-only">Host</dt>
-            <IconBuilding className="mt-1 size-5 shrink-0 text-sky" />
-            <dd>
-              {event.host}
-              <br />
-              <span className="text-slate-muted">Host</span>
-            </dd>
-          </div>
-          <div className="flex gap-3">
             <dt className="sr-only">Location</dt>
             <IconPin className="mt-1 size-5 shrink-0 text-sky" />
             <dd>
-              {event.venue.name}
+              {getVenueName(event)}
               <br />
               <span className="text-slate-muted">
                 {event.venue.address}, {event.venue.city}
               </span>
+              {event.venue.name && (
+                <>
+                  <br />
+                  <span className="text-slate-muted">
+                    Hosted by {event.host}
+                  </span>
+                </>
+              )}
             </dd>
           </div>
         </dl>
@@ -101,6 +100,13 @@ function NextEventDetails({ event }: { event: Event }) {
           <ButtonLink href={`/events/${event.slug}`}>
             Event details
             <IconArrowRight className="size-5" />
+          </ButtonLink>
+          <ButtonLink
+            href={`/api/calendar/${event.slug}`}
+            variant="outline-light"
+            download
+          >
+            <IconCalendar className="size-5" />I will attend
           </ButtonLink>
         </div>
       </div>

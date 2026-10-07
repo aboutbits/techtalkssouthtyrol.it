@@ -6,7 +6,6 @@ endTime: '20:00'
 host: 'Raiffeisen Information Service'
 hostUrl: 'https://www.ris.bz.it'
 venue:
-  name: 'Raiffeisen Information Service'
   address: 'Raiffeisenstraße 2'
   city: 'Bozen/Bolzano'
 talks:

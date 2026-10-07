@@ -6,7 +6,6 @@ endTime: '20:00'
 host: 'Free University of Bozen-Bolzano'
 hostUrl: 'https://www.unibz.it'
 venue:
-  name: 'Free University of Bozen-Bolzano'
   address: 'Bruno-Buozzi-Straße 1'
   city: 'Bozen/Bolzano'
 talks:

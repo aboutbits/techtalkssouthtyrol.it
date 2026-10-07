@@ -1,5 +1,5 @@
 import { site } from '../data/site'
-import { formatSpeakerNames, formatTalkTime } from './format'
+import { formatSpeakerNames, formatTalkTime, getVenueName } from './format'
 import { Event } from './types'
 
 const timeZone = 'Europe/Rome'
@@ -110,7 +110,7 @@ export function buildEventCalendar(event: Event, baseUrl: string) {
     `DTSTART:${formatIcsDate(toUtc(event.date, event.startTime))}`,
     `DTEND:${formatIcsDate(toUtc(event.date, event.endTime))}`,
     `SUMMARY:${escapeIcsText(`${site.name} – Episode ${event.episode}`)}`,
-    `LOCATION:${escapeIcsText(`${event.venue.name}, ${event.venue.address}, ${event.venue.city}`)}`,
+    `LOCATION:${escapeIcsText(`${getVenueName(event)}, ${event.venue.address}, ${event.venue.city}`)}`,
     `DESCRIPTION:${escapeIcsText(description)}`,
     `URL:${url}`,
     'END:VEVENT',

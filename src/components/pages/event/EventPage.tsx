@@ -9,7 +9,6 @@ import { TalkDetails } from '../../events/TalkDetails'
 import {
   IconArrowLeft,
   IconArrowRight,
-  IconBuilding,
   IconCalendar,
   IconPin,
 } from '../../icons/Icons'
@@ -70,43 +69,46 @@ export function EventPage({
               </dd>
             </div>
             <div className="flex gap-3">
-              <dt className="sr-only">Host</dt>
-              <IconBuilding className="mt-1 size-5 shrink-0 text-sky" />
-              <dd>
-                {event.hostUrl ? (
-                  <a
-                    href={event.hostUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline-offset-4 hover:underline"
-                  >
-                    {event.host}
-                  </a>
-                ) : (
-                  event.host
-                )}
-                <br />
-                <span className="text-slate-muted">Host</span>
-              </dd>
-            </div>
-            <div className="flex gap-3">
               <dt className="sr-only">Location</dt>
               <IconPin className="mt-1 size-5 shrink-0 text-sky" />
               <dd>
-                <a
-                  href={googleMapsUrl(event.venue)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group"
-                >
-                  <span className="underline-offset-4 group-hover:underline">
-                    {event.venue.name}
-                  </span>
-                  <br />
-                  <span className="text-slate-muted underline-offset-4 group-hover:underline">
-                    {event.venue.address}, {event.venue.city}
-                  </span>
-                </a>
+                {event.venue.name ? (
+                  <a
+                    href={googleMapsUrl(event)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group"
+                  >
+                    <span className="underline-offset-4 group-hover:underline">
+                      {event.venue.name}
+                    </span>
+                    <br />
+                    <span className="text-slate-muted underline-offset-4 group-hover:underline">
+                      {event.venue.address}, {event.venue.city}
+                    </span>
+                  </a>
+                ) : (
+                  <>
+                    <HostName event={event} />
+                    <br />
+                    <a
+                      href={googleMapsUrl(event)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-slate-muted underline-offset-4 hover:underline"
+                    >
+                      {event.venue.address}, {event.venue.city}
+                    </a>
+                  </>
+                )}
+                {event.venue.name && (
+                  <>
+                    <br />
+                    <span className="text-slate-muted">
+                      Hosted by <HostName event={event} />
+                    </span>
+                  </>
+                )}
               </dd>
             </div>
           </dl>
@@ -185,5 +187,25 @@ export function EventPage({
         </Section>
       )}
     </Layout>
+  )
+}
+
+/**
+ * The name of the host, as a link to its website if there is one.
+ */
+function HostName({ event }: { event: Event }) {
+  if (!event.hostUrl) {
+    return <>{event.host}</>
+  }
+
+  return (
+    <a
+      href={event.hostUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="underline-offset-4 hover:underline"
+    >
+      {event.host}
+    </a>
   )
 }

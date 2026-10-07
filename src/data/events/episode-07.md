@@ -6,7 +6,6 @@ endTime: '20:00'
 host: 'DUKA'
 hostUrl: 'https://www.duka.it'
 venue:
-  name: 'DUKA'
   address: 'Duka-Straße 2'
   city: 'Brixen/Bressanone'
 talks:
