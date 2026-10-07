@@ -10,8 +10,7 @@ venue:
   city: 'Bozen/Bolzano'
 attendees: 52
 talks:
-  - time: '18:15'
-    title: 'Thwarting the Scraper Horde: Building Defenses Against Malicious Bots'
+  - title: 'Thwarting the Scraper Horde: Building Defenses Against Malicious Bots'
     speakers:
       - name: 'David Mair Spiess'
         role: 'Head of Development'
@@ -24,8 +23,7 @@ talks:
     slides: '/slides/episode-05/building-defenses-against-malicious-bots.pdf'
     abstract: |
       In the battle against malicious bots and web scrapers, developers and DevOps engineers are on the front lines. In this talk, we at HGV will share our first-hand experiences with invasive data collectors that have targeted our web platforms on a significant scale, even causing temporary disruptions of our services. Our aim is to raise awareness of this potential threat and to empower our audience with the knowledge to deal with these situations. We’ll dive into insights on the tactics these unwelcome bots employ and the countermeasures we have deployed to tackle them – including analysing their infrastructure, blocking them with an application firewall, introducing API rate limiting and adapting the API design to impair their data collection capabilities.
-  - time: '18:50'
-    title: 'Our Data Platform Journey: Empowering Today''s Engineering Through Data Insights'
+  - title: 'Our Data Platform Journey: Empowering Today''s Engineering Through Data Insights'
     speakers:
       - name: 'Martin Wieser'
         role: 'Teamleader Cloud Applications'

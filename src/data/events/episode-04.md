@@ -10,8 +10,7 @@ venue:
   city: 'Bruneck/Brunico'
 attendees: 34
 talks:
-  - time: '18:15'
-    title: 'Monorepos: The Benefits, Challenges and Importance of Tooling Support'
+  - title: 'Monorepos: The Benefits, Challenges and Importance of Tooling Support'
     speakers:
       - name: 'Juri Strumpflohner'
         role: 'Sr. Director of Developer Experience'
@@ -23,8 +22,7 @@ talks:
 
       Monorepos come with many benefits but also a lot of challenges. Easy incremental adoption & getting started quickly are just one aspect. Maintaining a healthy monorepo in the long run and keeping it growing and beneficial is a whole other task.
       But luckily, there's tooling that can support you. In this talk, we're going to bring some clarity into the field of monorepos, what they are, why you might want to use one, and how to set them up to be successful in the long run.
-  - time: '18:50'
-    title: 'Striking the Balance: Navigating the Tech Takeover in Organizations'
+  - title: 'Striking the Balance: Navigating the Tech Takeover in Organizations'
     speakers:
       - name: 'Paul Mairl'
         role: 'Chief Digital Officer / Software Engineer'

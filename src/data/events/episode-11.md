@@ -10,8 +10,7 @@ venue:
   city: 'Bozen/Bolzano'
 attendees: 38
 talks:
-  - time: '18:15'
-    title: 'Cloud Development'
+  - title: 'Cloud Development'
     speakers:
       - name: 'Mattia Mancina'
         role: 'Senior Software Developer'
@@ -20,8 +19,7 @@ talks:
     slides: '/slides/episode-11/cloud-development.pdf'
     abstract: |
       Cloud development at ADDITIVE means constantly pushing technical boundaries. In this talk, we share insights into how we build and scale complex app infrastructures within a fast-growing software environment – from the challenges of a developer-only architecture to the strategic balance between flexibility and dependency. We explore the limitations of abstract service providers, discuss cost and runtime constraints, and show why, at the end of every scale-up process, you almost inevitably end up within one of the Big 3 cloud ecosystems. A look into the realities of modern cloud development at ADDITIVE.
-  - time: '18:50'
-    title: 'Intelligent Spring Boot Apps: Text, Images & Audio with Spring AI'
+  - title: 'Intelligent Spring Boot Apps: Text, Images & Audio with Spring AI'
     speakers:
       - name: 'Peter Unterthurner'
         role: 'Full Stack Software Engineer'

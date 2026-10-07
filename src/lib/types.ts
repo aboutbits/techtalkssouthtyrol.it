@@ -15,7 +15,6 @@ export type Speaker = {
 }
 
 export type Talk = {
-  time: string
   title: string
   speakers: Speaker[]
   abstract: string

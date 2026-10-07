@@ -10,8 +10,7 @@ venue:
   city: 'Brixen/Bressanone'
 attendees: 27
 talks:
-  - time: '18:15'
-    title: 'Data-Driven Analysis and Business Intelligence with Metabase: A Live Talk for Informed Decision-Making'
+  - title: 'Data-Driven Analysis and Business Intelligence with Metabase: A Live Talk for Informed Decision-Making'
     speakers:
       - name: 'Thomas Gruber'
         role: 'Managing Director'
@@ -20,8 +19,7 @@ talks:
     slides: '/slides/episode-07/metabase.pdf'
     abstract: |
       In this live talk, you'll learn how Metabase simplifies business data analysis and enables informed decision-making. We’ll provide a hands-on demonstration of how you can create interactive dashboards without any technical expertise, gain valuable insights, and fully leverage the potential of your business intelligence. Discover how Metabase, as a user-friendly BI tool, helps visualize data efficiently and implement data-driven analysis in your company.
-  - time: '18:50'
-    title: 'Copyright vs. License: Software Licensing for Developers'
+  - title: 'Copyright vs. License: Software Licensing for Developers'
     speakers:
       - name: 'Peter Moser'
         company: 'AboutBits'
@@ -29,8 +27,7 @@ talks:
     slides: '/slides/episode-07/licencing.pdf'
     abstract: |
       What is the difference between copyright and a license, and why is the author not always the copyright holder? This short talk explains the basics of software licensing for developers: permissive, copyleft and proprietary licenses, dual licensing, and inbound vs. outbound licenses. It also shows how the REUSE tool and SPDX identifiers help you to keep the license information of a project complete and correct.
-  - time: '19:15'
-    title: 'Our Style Of Project Management'
+  - title: 'Our Style Of Project Management'
     speakers:
       - name: 'Alex Lanz'
         role: 'CEO & Co-Founder'

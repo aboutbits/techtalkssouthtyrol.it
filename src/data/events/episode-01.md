@@ -10,16 +10,14 @@ venue:
   city: 'Klausen/Chiusa'
 attendees: 41
 talks:
-  - time: '18:10'
-    title: 'Streamlining Your Operations: Exploring Essential Tools'
+  - title: 'Streamlining Your Operations: Exploring Essential Tools'
     speakers:
       - name: 'Martin Tauber'
         company: 'Marketing Factory'
     slides: '/slides/episode-01/streamlining-your-operations-exploring-essential-tools.pdf'
     abstract: |
       Join us for an exploration of essential tools for streamlining your operations, based on our own experiences using them. From Jira, Service Desk, and Notion to Zendesk, Chargebee, and more. We'll share how these top productivity tools have transformed the way we work and helped us achieve greater efficiency and success.
-  - time: '18:50'
-    title: 'Infrastructure as code with automated credentials management using 1Password'
+  - title: 'Infrastructure as code with automated credentials management using 1Password'
     speakers:
       - name: 'Alex Lanz'
         role: 'CEO & Co-Founder'

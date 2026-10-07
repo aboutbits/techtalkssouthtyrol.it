@@ -86,8 +86,7 @@ venue:
   city: 'Bozen/Bolzano'
 attendees: 0
 talks:
-  - time: '18:15'
-    title: 'Title of the talk'
+  - title: 'Title of the talk'
     speakers:
       - name: 'Jane Doe'
         role: 'Software Engineer'          # optional
@@ -109,6 +108,7 @@ Optional Markdown content, for example arrival information. It is shown below th
 ```
 
 The home page shows an event as the "next event" until the end of the event day.
+The schedule of the next event is calculated from `startTime`: the first talk starts 15 minutes later, and every further talk starts 35 minutes after the talk before.
 After that day, the event moves to the past events.
 The pages are generated at build time, so a new deployment is necessary to move an event from "next" to "past".
 

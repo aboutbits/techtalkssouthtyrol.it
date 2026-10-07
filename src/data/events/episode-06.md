@@ -10,8 +10,7 @@ venue:
   city: 'Bozen/Bolzano'
 attendees: 48
 talks:
-  - time: '18:15'
-    title: 'Design Pattern: Hexagonal Architecture'
+  - title: 'Design Pattern: Hexagonal Architecture'
     speakers:
       - name: 'Samuel Runggaldier'
         role: 'Fullstack Software Developer'
@@ -29,8 +28,7 @@ talks:
 
       However, it is not a one-size-fits-all solution. We will also address the potential challenges and drawbacks of implementing this architecture, such as the risk of overengineering, the increase in codebase size and the difficulty of retrofitting into an existing codebase.
       Through the presentation, participants will gain a comprehensive understanding of hexagonal architecture, its benefits and potential challenges, so that they are able to make informed decisions about whether this design pattern is suitable for their software development projects.
-  - time: '18:50'
-    title: 'Mastering the mainframe - A developer in Wonderland: An Adventure in Coding'
+  - title: 'Mastering the mainframe - A developer in Wonderland: An Adventure in Coding'
     speakers:
       - name: 'Wolfgang Beikircher'
         role: 'Mainframe Development Lead'

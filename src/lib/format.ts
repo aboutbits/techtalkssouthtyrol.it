@@ -52,3 +52,14 @@ export function formatInitials(name: string) {
 
   return `${first}${last}`.toUpperCase()
 }
+
+/**
+ * Returns the start time of a talk. The first talk starts 15 minutes after the
+ * start of the event, and every further talk starts 35 minutes after the one before.
+ */
+export function formatTalkTime(eventStartTime: string, talkIndex: number) {
+  const [hours = 0, minutes = 0] = eventStartTime.split(':').map(Number)
+  const total = hours * 60 + minutes + 15 + talkIndex * 35
+
+  return `${String(Math.floor(total / 60) % 24).padStart(2, '0')}:${String(total % 60).padStart(2, '0')}`
+}

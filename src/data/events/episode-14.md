@@ -10,8 +10,7 @@ venue:
   city: 'Bozen/Bolzano'
 attendees: 37
 talks:
-  - time: '18:15'
-    title: 'Top 5 Spring Boot Testing Mistakes Developers Trap Into'
+  - title: 'Top 5 Spring Boot Testing Mistakes Developers Trap Into'
     speakers:
       - name: 'Philip Riecks'
         role: 'Managing Director'
@@ -25,8 +24,7 @@ talks:
 
       Through code examples and live debugging, you'll learn to write tests that actually catch bugs before production, shifting from hope to certainty. Perfect for developers burned by production issues despite "comprehensive" test suites.
       Joyful testing awaits!
-  - time: '18:50'
-    title: 'Code Was Never the Problem - How AI Sorts Your Team''s Practices'
+  - title: 'Code Was Never the Problem - How AI Sorts Your Team''s Practices'
     speakers:
       - name: 'Peter Gfader'
         role: 'Software Engineer & Technical Agile Coach'

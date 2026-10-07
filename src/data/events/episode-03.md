@@ -10,16 +10,14 @@ venue:
   city: 'Bozen/Bolzano'
 attendees: 60
 talks:
-  - time: '18:15'
-    title: 'Harnessing GPT-4: From Context to Perfect Prompts in Modern Software Integration'
+  - title: 'Harnessing GPT-4: From Context to Perfect Prompts in Modern Software Integration'
     speakers:
       - name: 'René Larch'
         company: 'LarchSys'
     slides: '/slides/episode-03/harnessing-gpt-4.pdf'
     abstract: |
       Dive into the evolving realm of AI as we explore the transformative power of Generative Pretrained Transformers, especially the GPT-4 model. This talk unravels the essence of context in guiding AI, shedding light on the art of crafting exemplary prompts, surpassing traditional instruction methods. We'll delve into the immense benefits and challenges of integrating AI into software, emphasizing the dynamic interactions enabled through various formats like JSON and Markdown. Without revealing too much, anticipate an introduction to a revolutionary tool that redefines text generation. Concluding, we'll gaze into the future of AI in software development, inviting discussions on its limitless potentials.
-  - time: '18:50'
-    title: 'Stop Coding and Advance in Seniority'
+  - title: 'Stop Coding and Advance in Seniority'
     speakers:
       - name: 'Wolfgang Gassler'
         company: 'Engineering Kiosk'

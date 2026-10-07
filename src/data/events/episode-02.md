@@ -10,8 +10,7 @@ venue:
   city: 'Brixen/Bressanone'
 attendees: 31
 talks:
-  - time: '18:10'
-    title: 'Empowering an omnichannel banking experience'
+  - title: 'Empowering an omnichannel banking experience'
     speakers:
       - name: 'Dietmar Wieser'
         company: 'Raiffeisen Information Service'
@@ -25,8 +24,7 @@ talks:
     slides: '/slides/episode-02/empowering-an-omnichannel-banking-experience.pdf'
     abstract: |
       Discover our advanced omnichannel process orchestration platform which seamlessly integrates multiple channels for a unified customer experience.
-  - time: '18:50'
-    title: 'Better developer experience (DX)'
+  - title: 'Better developer experience (DX)'
     speakers:
       - name: 'Patrick Puecher'
         company: 'Marketing Factory'

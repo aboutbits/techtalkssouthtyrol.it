@@ -10,8 +10,7 @@ venue:
   city: 'Bozen/Bolzano'
 attendees: 67
 talks:
-  - time: '18:15'
-    title: 'Powering modern data science with a cloud‑first data platform for RIS KonsGmbH'
+  - title: 'Powering modern data science with a cloud‑first data platform for RIS KonsGmbH'
     speakers:
       - name: 'Thomas Forer'
         role: 'Product Owner'
@@ -20,8 +19,7 @@ talks:
     slides: '/slides/episode-12/data-platform.pdf'
     abstract: |
       Our Data Team at RIS bridges the gap between legacy banking systems and modern analytics. With our cloud‑first data platform, we turn data into outcomes faster—for our organization and for our clients. I'll share the choices behind our approach, how we balance speed with governance, and what’s already working: quicker access to trusted data, smoother hand‑offs from data to dashboards and models, and lower run costs through automation and monitoring. You’ll hear what we’d repeat, what we’d change, and the road ahead. If you build data products or lead data teams, join this session to take concrete ideas you can apply the next day—bring your questions and challenges!
-  - time: '18:50'
-    title: 'So You Want to Be an Open Source Maintainer?'
+  - title: 'So You Want to Be an Open Source Maintainer?'
     speakers:
       - name: 'Matthias Endler'
         role: 'Rust Consultant'

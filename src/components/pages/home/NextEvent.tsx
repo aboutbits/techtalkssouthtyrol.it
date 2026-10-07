@@ -1,5 +1,9 @@
 import { site } from '../../../data/site'
-import { formatDate, formatSpeakerNames } from '../../../lib/format'
+import {
+  formatDate,
+  formatSpeakerNames,
+  formatTalkTime,
+} from '../../../lib/format'
 import { Event } from '../../../lib/types'
 import {
   IconArrowRight,
@@ -68,9 +72,11 @@ function NextEventDetails({ event }: { event: Event }) {
             <span className="text-sm text-slate-muted">{event.startTime}</span>
             <span>Welcome and introduction</span>
           </li>
-          {event.talks.map((talk) => (
+          {event.talks.map((talk, index) => (
             <li key={talk.title} className="flex flex-col">
-              <span className="text-sm text-slate-muted">{talk.time}</span>
+              <span className="text-sm text-slate-muted">
+                {formatTalkTime(event.startTime, index)}
+              </span>
               <span className="font-semibold">{talk.title}</span>
               <span className="text-sm text-slate-muted">
                 {formatSpeakerNames(talk.speakers.map((s) => s.name))}
@@ -112,7 +118,7 @@ function NextEventPlaceholder({ episode }: { episode: number }) {
           <IconX className="size-4" />
           Follow on X
         </ButtonLink>
-        <ButtonLink href={site.linkedInUrl} variant="outline-light" external>
+        <ButtonLink href={site.linkedInUrl} external>
           <IconLinkedIn className="size-4" />
           Join on LinkedIn
         </ButtonLink>

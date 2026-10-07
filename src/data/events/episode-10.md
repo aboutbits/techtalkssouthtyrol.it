@@ -10,8 +10,7 @@ venue:
   city: 'Brixen/Bressanone'
 attendees: 33
 talks:
-  - time: '18:15'
-    title: 'OpenTelemetry 101: Getting Started with Observability in your Backends'
+  - title: 'OpenTelemetry 101: Getting Started with Observability in your Backends'
     speakers:
       - name: 'Volkmar Rigo'
         role: 'Development Technical Leader'
@@ -20,8 +19,7 @@ talks:
     slides: '/slides/episode-10/opentelemetry101.pdf'
     abstract: |
       This talk is all about what OpenTelemetry is and why you should care (especially if you are a backend developer). We’ll take a look at why OpenTelemetry was created, what it is, and how traces, logs, and metrics fit into the picture. I’ll close the talk with a live demonstration of a simple Web API to show how I use OpenTelemetry for local development and in production.
-  - time: '18:50'
-    title: 'Learn, grow, teach -> repeat: how to be the senior that you needed when you were a junior engineer'
+  - title: 'Learn, grow, teach -> repeat: how to be the senior that you needed when you were a junior engineer'
     speakers:
       - name: 'Romedius Weiss'
         role: 'Senior Consultant - Backend Engineering'
