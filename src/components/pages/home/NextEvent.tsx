@@ -42,6 +42,10 @@ function NextEventDetails({ event }: { event: Event }) {
             Episode {event.episode}
           </span>
           <h3 className="text-h3 font-semibold">{formatDate(event.date)}</h3>
+          <p className="text-md text-slate-muted md:text-lg">
+            Hosted by{' '}
+            <span className="font-semibold text-sky">{event.host}</span>
+          </p>
         </div>
 
         <dl className="flex flex-col gap-4 text-md">
@@ -60,22 +64,6 @@ function NextEventDetails({ event }: { event: Event }) {
               <br />
               <span className="text-slate-muted">
                 {event.venue.address}, {event.venue.city}
-              </span>
-              <br />
-              <span className="text-slate-muted">
-                Hosted by{' '}
-                {event.hostUrl ? (
-                  <a
-                    href={event.hostUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="underline underline-offset-2 hover:text-white"
-                  >
-                    {event.host}
-                  </a>
-                ) : (
-                  event.host
-                )}
               </span>
             </dd>
           </div>
