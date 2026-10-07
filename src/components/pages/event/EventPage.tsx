@@ -10,6 +10,7 @@ import { TalkDetails } from '../../events/TalkDetails'
 import {
   IconArrowLeft,
   IconArrowRight,
+  IconBuilding,
   IconCalendar,
   IconPin,
 } from '../../icons/Icons'
@@ -19,6 +20,7 @@ import { Brace } from '../../shared/Brace'
 import { ButtonLink } from '../../shared/Button'
 import { Markdown } from '../../shared/Markdown'
 import { Pill } from '../../shared/Pill'
+import { Section, SectionHeader } from '../../shared/Section'
 
 type EventPageProps = {
   event: Event
@@ -61,26 +63,9 @@ export function EventPage({
           </Link>
           <div className="flex flex-col items-start gap-6">
             <Pill>{isUpcoming ? 'Next event' : 'Past event'}</Pill>
-            <div className="flex flex-col gap-3">
-              <h1 className="text-h1 font-normal">Episode {event.episode}</h1>
-              <p className="text-md text-slate-muted md:text-lg">
-                Hosted by{' '}
-                {event.hostUrl ? (
-                  <a
-                    href={event.hostUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-semibold text-sky underline decoration-sky/40 underline-offset-4 transition-colors hover:decoration-sky"
-                  >
-                    {event.host}
-                  </a>
-                ) : (
-                  <span className="font-semibold text-sky">{event.host}</span>
-                )}
-              </p>
-            </div>
+            <h1 className="text-h1 font-normal">Episode {event.episode}</h1>
           </div>
-          <dl className="grid gap-6 text-md md:grid-cols-2">
+          <dl className="flex flex-wrap gap-x-12 gap-y-6 text-md">
             <div className="flex gap-3">
               <dt className="sr-only">Date and time</dt>
               <IconCalendar className="mt-1 size-5 shrink-0 text-sky" />
@@ -90,6 +75,26 @@ export function EventPage({
                 <span className="text-slate-muted">
                   {event.startTime} – {event.endTime}
                 </span>
+              </dd>
+            </div>
+            <div className="flex gap-3">
+              <dt className="sr-only">Host</dt>
+              <IconBuilding className="mt-1 size-5 shrink-0 text-sky" />
+              <dd>
+                {event.hostUrl ? (
+                  <a
+                    href={event.hostUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline-offset-4 hover:underline"
+                  >
+                    {event.host}
+                  </a>
+                ) : (
+                  event.host
+                )}
+                <br />
+                <span className="text-slate-muted">Host</span>
               </dd>
             </div>
             <div className="flex gap-3">
@@ -116,72 +121,76 @@ export function EventPage({
         </div>
       </section>
 
-      <div className="bg-white text-navy">
-        <div className="mx-auto flex max-w-content flex-col gap-10 px-4 py-18 md:px-10 lg:py-24">
-          <h2 className="text-h2">Talks</h2>
-          <div className="flex flex-col divide-y divide-navy/10 border-t border-navy/10">
-            {event.talks.map((talk) => (
-              <TalkDetails key={talk.title} talk={talk} />
-            ))}
-          </div>
-
-          {event.notes && (
-            <div className="bg-pastel rounded-3xl p-6 md:p-10">
-              <Markdown className="text-md">{event.notes}</Markdown>
-            </div>
-          )}
-
-          {!isUpcoming && (
-            <nav
-              aria-label="Episodes"
-              className="flex flex-wrap justify-between gap-4 pt-8"
-            >
-              {previous ? (
-                <ButtonLink
-                  href={`/events/${previous.slug}`}
-                  variant="outline-dark"
-                >
-                  <IconArrowLeft className="size-5" />
-                  Episode {previous.episode}
-                </ButtonLink>
-              ) : (
-                <span />
-              )}
-              {next && (
-                <ButtonLink
-                  href={`/events/${next.slug}`}
-                  variant="outline-dark"
-                >
-                  Episode {next.episode}
-                  <IconArrowRight className="size-5" />
-                </ButtonLink>
-              )}
-            </nav>
-          )}
+      <Section id="talks" tone="white">
+        <h2 className="sr-only">Talks</h2>
+        <div className="flex flex-col divide-y divide-navy/10">
+          {event.talks.map((talk) => (
+            <TalkDetails key={talk.title} talk={talk} />
+          ))}
         </div>
-      </div>
+
+        {event.notes && (
+          <section className="bg-pastel mt-16 flex flex-col items-start gap-4 rounded-3xl p-6 md:p-10">
+            <div className="flex flex-col items-start gap-3">
+              <span className="rounded-full bg-navy/10 px-4 py-1.5 text-sm">
+                Good to know
+              </span>
+              <h2 className="text-h3 font-normal">Additional information</h2>
+            </div>
+            <Markdown className="text-base text-slate">{event.notes}</Markdown>
+          </section>
+        )}
+
+        {!isUpcoming && (
+          <nav
+            aria-label="Episodes"
+            className="mt-16 flex flex-wrap justify-between gap-4"
+          >
+            {previous ? (
+              <ButtonLink
+                href={`/events/${previous.slug}`}
+                variant="outline-dark"
+              >
+                <IconArrowLeft className="size-5" />
+                Episode {previous.episode}
+              </ButtonLink>
+            ) : (
+              <span />
+            )}
+            {next && (
+              <ButtonLink href={`/events/${next.slug}`} variant="outline-dark">
+                Episode {next.episode}
+                <IconArrowRight className="size-5" />
+              </ButtonLink>
+            )}
+          </nav>
+        )}
+      </Section>
 
       {isUpcoming && (
-        <section className="bg-pastel text-navy">
-          <div className="mx-auto flex max-w-content flex-col items-start gap-8 px-4 py-18 md:px-10 lg:flex-row lg:items-end lg:justify-between lg:py-24">
-            <div className="flex max-w-2xl flex-col gap-4">
-              <h2 className="text-h2">Will you be there?</h2>
-              <p className="text-md text-navy/80">
+        <Section id="join" tone="pastel" compact>
+          <SectionHeader
+            title="Will you be there?"
+            // Nothing follows the header in this section
+            className="!mb-0"
+            description={
+              <p className="max-w-2xl text-md text-navy/80">
                 Let us know if you join Episode {event.episode} on{' '}
                 {formatDate(event.date)}. It helps us and the host to plan the
                 room, the drinks and the snacks.
               </p>
-            </div>
+            }
+          >
             <ButtonLink
               href={`/api/calendar/${event.slug}`}
               variant="dark"
               download
-              className="shrink-0"
+              className="shrink-0 self-start lg:self-center"
             >
               <IconCalendar className="size-5" />I will attend
             </ButtonLink>
-          </div>
-        </section>
+          </SectionHeader>
+        </Section>
       )}
     </Layout>
   )

@@ -7,6 +7,7 @@ import {
 import { Event } from '../../../lib/types'
 import {
   IconArrowRight,
+  IconBuilding,
   IconCalendar,
   IconLinkedIn,
   IconPin,
@@ -42,10 +43,6 @@ function NextEventDetails({ event }: { event: Event }) {
             Episode {event.episode}
           </span>
           <h3 className="text-h3 font-semibold">{formatDate(event.date)}</h3>
-          <p className="text-md text-slate-muted md:text-lg">
-            Hosted by{' '}
-            <span className="font-semibold text-sky">{event.host}</span>
-          </p>
         </div>
 
         <dl className="flex flex-col gap-4 text-md">
@@ -54,6 +51,15 @@ function NextEventDetails({ event }: { event: Event }) {
             <IconCalendar className="mt-1 size-5 shrink-0 text-sky" />
             <dd>
               {event.startTime} – {event.endTime}
+            </dd>
+          </div>
+          <div className="flex gap-3">
+            <dt className="sr-only">Host</dt>
+            <IconBuilding className="mt-1 size-5 shrink-0 text-sky" />
+            <dd>
+              {event.host}
+              <br />
+              <span className="text-slate-muted">Host</span>
             </dd>
           </div>
           <div className="flex gap-3">

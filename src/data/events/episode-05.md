@@ -34,8 +34,6 @@ talks:
       Join us as we explore TechnoAlpin's data platform journey—a testament to the indispensable role of data engineering in modern business. Learn how TechnoAlpin leverages data to drive informed decision-making, enhance operational efficiency, and elevate customer experiences. Discover the architecture of our meticulously designed platform, powered by Azure services like Data Lake Storage and Databricks, enabling seamless data processing and analysis. Explore a compelling business case demonstrating the transformative impact of advanced analytics and machine learning on snowmaking processes and equipment performance. Gain insights into the critical role of data engineering, the significance of a well-architected data platform, and actionable strategies for leveraging data assets to drive business growth.
 ---
 
-## Arrival
+**Arrival by car:** At the entrance of the HGV / Unternehmerverband, press the bell of the "Gustelier". The barrier opens soon. Drive down the first ramp, turn right and park on floor -2. Follow the sign "zu den Büros" and leave the building on floor 0. The open door of the Gustelier is directly to the left.
 
-**By car:** At the entrance of the HGV / Unternehmerverband, press the bell of the "Gustelier". The barrier opens soon. Drive down the first ramp, turn right and park on floor -2. Follow the sign "zu den Büros" and leave the building on floor 0. The open door of the Gustelier is directly to the left.
-
-**By public transport:** The venue is a 10-minute walk from the Bolzano railway station. Follow the signs to Cineplexx. Bus line no. 1 of the city buses stops shortly after the entrance, in front of the Volksbank building.
+**Arrival by public transport:** The venue is a 10-minute walk from the Bolzano railway station. Follow the signs to Cineplexx. Bus line no. 1 of the city buses stops shortly after the entrance, in front of the Volksbank building.

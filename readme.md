@@ -104,7 +104,7 @@ talks:
       The abstract of the talk. Markdown is supported.
 ---
 
-Optional Markdown content, for example arrival information. It is shown below the talks.
+Optional Markdown content, for example arrival information. It is shown below the talks in the "Additional information" section. Use `###` for sub-headings.
 ```
 
 The home page shows an event as the "next event" until the end of the event day.

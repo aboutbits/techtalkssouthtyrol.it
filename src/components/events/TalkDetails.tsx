@@ -26,7 +26,7 @@ const socialLinks: {
 
 export function TalkDetails({ talk }: { talk: Talk }) {
   return (
-    <article className="grid gap-x-10 gap-y-6 py-10 lg:grid-cols-12 lg:grid-rows-[auto_1fr] lg:py-14">
+    <article className="grid gap-x-10 gap-y-6 py-10 first:pt-0 last:pb-0 lg:grid-cols-12 lg:grid-rows-[auto_1fr] lg:py-14">
       <h3 className="text-h3 font-semibold lg:col-span-8 lg:row-start-1">
         {talk.title}
       </h3>
