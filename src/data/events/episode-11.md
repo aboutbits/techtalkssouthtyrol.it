@@ -17,7 +17,7 @@ talks:
         role: 'Senior Software Developer'
         company: 'ADDITIVE'
         companyUrl: 'https://www.additive.eu'
-    slides: ''
+    slides: '/slides/episode-11/cloud-development.pdf'
     abstract: |
       Cloud development at ADDITIVE means constantly pushing technical boundaries. In this talk, we share insights into how we build and scale complex app infrastructures within a fast-growing software environment – from the challenges of a developer-only architecture to the strategic balance between flexibility and dependency. We explore the limitations of abstract service providers, discuss cost and runtime constraints, and show why, at the end of every scale-up process, you almost inevitably end up within one of the Big 3 cloud ecosystems. A look into the realities of modern cloud development at ADDITIVE.
   - time: '18:50'
@@ -27,7 +27,7 @@ talks:
         role: 'Full Stack Software Engineer'
         company: 'KONVERTO'
         companyUrl: 'https://konverto.eu'
-    slides: ''
+    slides: '/slides/episode-11/intelligent-spring-boot-apps.pdf'
     abstract: |
       The talk will focus on integrating AI into Spring applications through the Spring AI plugin, demonstrating in a hands-on example how to generate text, images and audio to enrich user experiences.
       The benefits of this approach, such as rapid content creation, more engaging interfaces and the ability to rethink established UX and commonly used patterns will be highlighted.

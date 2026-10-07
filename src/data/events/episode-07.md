@@ -17,7 +17,7 @@ talks:
         role: 'Managing Director'
         company: 'EMVA'
         companyUrl: 'https://emva.it'
-    slides: ''
+    slides: '/slides/episode-07/metabase.pdf'
     abstract: |
       In this live talk, you'll learn how Metabase simplifies business data analysis and enables informed decision-making. We’ll provide a hands-on demonstration of how you can create interactive dashboards without any technical expertise, gain valuable insights, and fully leverage the potential of your business intelligence. Discover how Metabase, as a user-friendly BI tool, helps visualize data efficiently and implement data-driven analysis in your company.
   - time: '18:50'

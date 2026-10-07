@@ -17,7 +17,7 @@ talks:
         role: 'Sr. Director of Developer Experience'
         company: 'Nx'
         companyUrl: 'https://nx.dev'
-    slides: ''
+    slides: '/slides/episode-04/monorepos.pdf'
     abstract: |
       Monorepos have been around for a while but only recently gained popularity in the frontend community. Many developers are being confronted with them now and end up overwhelmed by the terminology and tooling. What are monorepos? Is it just about code colocation? Do I even need one, or is it a large enterprise / corporate thing?
 
@@ -30,7 +30,7 @@ talks:
         role: 'Chief Digital Officer / Software Engineer'
         company: 'GKN Powder Metallurgy'
         companyUrl: 'https://www.gknpm.com'
-    slides: ''
+    slides: '/slides/episode-04/striking-the-balance.pdf'
     abstract: |
       Our presentation will delve into the ever-evolving landscape of technology and its profound impact on organizational structures. We aim to explore the challenges posed by the rapid pace of technological advancements and provide insights into strategies that can help organizations avoid being overwhelmed by technology.
 

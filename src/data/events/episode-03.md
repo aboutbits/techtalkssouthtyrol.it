@@ -15,7 +15,7 @@ talks:
     speakers:
       - name: 'René Larch'
         company: 'LarchSys'
-    slides: ''
+    slides: '/slides/episode-03/harnessing-gpt-4.pdf'
     abstract: |
       Dive into the evolving realm of AI as we explore the transformative power of Generative Pretrained Transformers, especially the GPT-4 model. This talk unravels the essence of context in guiding AI, shedding light on the art of crafting exemplary prompts, surpassing traditional instruction methods. We'll delve into the immense benefits and challenges of integrating AI into software, emphasizing the dynamic interactions enabled through various formats like JSON and Markdown. Without revealing too much, anticipate an introduction to a revolutionary tool that redefines text generation. Concluding, we'll gaze into the future of AI in software development, inviting discussions on its limitless potentials.
   - time: '18:50'
@@ -24,7 +24,7 @@ talks:
       - name: 'Wolfgang Gassler'
         company: 'Engineering Kiosk'
         companyUrl: 'https://engineeringkiosk.dev'
-    slides: ''
+    slides: '/slides/episode-03/stop-coding.pdf'
     abstract: |
       Are you a senior developer? Many of us proudly claim that title, but what does it really mean to be a senior or staff developer? Is it all about writing picture-perfect code, or is there more to the story?
 

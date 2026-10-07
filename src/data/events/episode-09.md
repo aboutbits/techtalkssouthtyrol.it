@@ -17,7 +17,7 @@ talks:
         role: 'Head of Frontend'
         company: 'Yanovis'
         companyUrl: 'https://www.yanovis.com'
-    slides: ''
+    slides: '/slides/episode-09/modernizing-legacy-apps.pdf'
     abstract: |
       Migrating a legacy monolithic application is a major challenge — especially when a full rewrite isn't realistic. In this talk, I'll share how we successfully transitioned a large Vue 2 monolith to a modern, scalable architecture using Microfrontends. By first migrating the architecture — not the framework — we allowed teams to progressively rebuild individual apps in Vue 3 without disrupting the whole system. I'll discuss why having a Core-Agnostic project for shared services like Authentication, i18n, Sockets, Settings, and Sentry was critical to support multiple framework versions seamlessly. We used Single-SPA and SystemJS to manage Microfrontends dynamically, while preparing for a future switch to native ESM as browser support matures. Microfrontends not only helped us split and modernize the app, but also empowered teams to own and innovate independently.
   - time: '18:50'
