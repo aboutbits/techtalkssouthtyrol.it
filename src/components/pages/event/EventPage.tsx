@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { formatDate, formatSpeakerNames } from '../../../lib/format'
+import { eventOgImagePath } from '../../../lib/og'
 import { Event } from '../../../lib/types'
 import { TalkCard } from '../../events/TalkCard'
 import {
@@ -41,7 +42,7 @@ export function EventPage({
       <Meta
         title={`Episode ${event.episode}`}
         description={description}
-        image={event.image}
+        image={eventOgImagePath(event)}
         path={`/events/${event.slug}`}
       />
 

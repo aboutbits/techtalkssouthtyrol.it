@@ -16,8 +16,7 @@ export function Meta({
 }: MetaProps) {
   const shouldBeIndexed = process.env.ALLOW_SEARCH_ENGINE_INDEXING === 'true'
   const baseUrl = String(process.env.BASE_URL)
-  const ogImage =
-    image !== undefined && image !== '' ? image : '/images/og/default.png'
+  const ogImage = image !== undefined && image !== '' ? image : '/api/og'
   const fullTitle = title ? `${title} | ${site.name}` : site.name
 
   return (

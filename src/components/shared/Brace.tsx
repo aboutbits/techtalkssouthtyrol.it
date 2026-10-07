@@ -1,5 +1,9 @@
 import { useId } from 'react'
 
+// The brace in a 480 x 1600 box.
+export const bracePath =
+  'M480 0C380 0 290 60 290 190V520C290 700 160 780 0 785V815C160 820 290 900 290 1080V1410C290 1540 380 1600 480 1600Z'
+
 type BraceProps = {
   className?: string
 }
@@ -31,14 +35,8 @@ export function Brace({ className }: BraceProps) {
           <stop offset="100%" stopColor="#fef3ce" stopOpacity="0" />
         </radialGradient>
       </defs>
-      <path
-        d="M480 0C380 0 290 60 290 190V520C290 700 160 780 0 785V815C160 820 290 900 290 1080V1410C290 1540 380 1600 480 1600Z"
-        fill={`url(#${id}-v)`}
-      />
-      <path
-        d="M480 0C380 0 290 60 290 190V520C290 700 160 780 0 785V815C160 820 290 900 290 1080V1410C290 1540 380 1600 480 1600Z"
-        fill={`url(#${id}-h)`}
-      />
+      <path d={bracePath} fill={`url(#${id}-v)`} />
+      <path d={bracePath} fill={`url(#${id}-h)`} />
     </svg>
   )
 }

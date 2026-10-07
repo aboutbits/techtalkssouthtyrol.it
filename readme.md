@@ -11,11 +11,30 @@ purposes.
 
 ### Setup
 
+#### GitHub Registry
+
+Some packages (`@aboutbits/eslint-config`, `@aboutbits/prettier-config` and `@aboutbits/ts-config`) are hosted on the
+GitHub registry.
+
+In order to get access to packages (public and private) hosted on the GitHub registry, generate a classic personal
+access token on GitHub with `read:packages` permissions: https://github.com/settings/tokens
+
+Next, you have to paste the following snippet including your generated token to the `~/.npmrc` file on your machine.
+
+```
+//npm.pkg.github.com/:_authToken=<YOUR_TOKEN>
+@aboutbits:registry=https://npm.pkg.github.com
+```
+
+#### Dependencies
+
 Install all dependencies by executing the following command:
 
 ```bash
 npm ci
 ```
+
+#### Execution
 
 Next, you can start the application:
 
@@ -96,27 +115,3 @@ A link to an external service (for example Speaker Deck or Google Slides) also w
 ### Team
 
 The organizers are in `src/data/team.ts`. The photos are in `public/images/team`.
-
-### General information
-
-The e-mail address and the social media links are in `src/data/site.ts`.
-
-### Logo
-
-All logo files are in `public/images/logo`. Use them for social media, Discord, slides and print.
-
-| File | Use |
-| --- | --- |
-| `logo.svg`, `logo-1024.png` | Square logo on navy. For avatars (social media, Discord, Meetup). |
-| `logo-pastel.svg`, `logo-pastel-1024.png` | Square logo on the pastel background. |
-| `logo-mark.svg`, `logo-mark-1024.png` | Braces and letters without a background. For dark backgrounds. |
-| `logo-mark-navy.svg`, `logo-mark-navy-1024.png` | Navy only, without a background. For light backgrounds and one-color print. |
-| `logo-mark-white.svg`, `logo-mark-white-1024.png` | White only, without a background. For photos and dark backgrounds. |
-| `logo-horizontal*.svg`, `logo-horizontal*-2000.png` | Logo with the name next to it. The same three color versions as the mark. |
-
-The script `scripts/generate-logo.mjs` generates all these files and the app icons in `public/images/icons`.
-After a change to the logo, run the following command and update the paths in `src/components/shared/Logo.tsx`:
-
-```bash
-npm run logo
-```

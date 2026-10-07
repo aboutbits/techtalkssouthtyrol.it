@@ -18,8 +18,6 @@
   },
   "prettier": "@aboutbits/prettier-config",
   "dependencies": {
-    "@aboutbits/internationalization": "^0.3.5",
-    "@aboutbits/react-toolbox": "^0.2.7",
     "@headlessui/react": "^2.2.0",
     "@vercel/og": "^0.6.4",
     "classnames": "^2.5.1",
