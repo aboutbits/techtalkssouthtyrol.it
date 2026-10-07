@@ -12,7 +12,7 @@ import {
 import { Layout } from '../../layout/Layout'
 import { Meta } from '../../layout/Meta'
 import { Brace } from '../../shared/Brace'
-import { ButtonLink } from '../../shared/Button'
+import { Button, ButtonLink } from '../../shared/Button'
 import { Markdown } from '../../shared/Markdown'
 import { Pill } from '../../shared/Pill'
 
@@ -91,7 +91,7 @@ export function EventPage({
       <div className="bg-white text-navy">
         <div className="mx-auto flex max-w-content flex-col gap-10 px-4 py-18 md:px-10 lg:py-24">
           <h2 className="text-h2">Talks</h2>
-          <div className="flex flex-col divide-y divide-navy/10 border-y border-navy/10">
+          <div className="flex flex-col divide-y divide-navy/10 border-t border-navy/10">
             {event.talks.map((talk) => (
               <TalkDetails key={talk.title} talk={talk} />
             ))}
@@ -103,30 +103,54 @@ export function EventPage({
             </div>
           )}
 
-          <nav
-            aria-label="Episodes"
-            className="flex flex-wrap justify-between gap-4 pt-8"
-          >
-            {previous ? (
-              <ButtonLink
-                href={`/events/${previous.slug}`}
-                variant="outline-dark"
-              >
-                <IconArrowLeft className="size-5" />
-                Episode {previous.episode}
-              </ButtonLink>
-            ) : (
-              <span />
-            )}
-            {next && (
-              <ButtonLink href={`/events/${next.slug}`} variant="outline-dark">
-                Episode {next.episode}
-                <IconArrowRight className="size-5" />
-              </ButtonLink>
-            )}
-          </nav>
+          {!isUpcoming && (
+            <nav
+              aria-label="Episodes"
+              className="flex flex-wrap justify-between gap-4 pt-8"
+            >
+              {previous ? (
+                <ButtonLink
+                  href={`/events/${previous.slug}`}
+                  variant="outline-dark"
+                >
+                  <IconArrowLeft className="size-5" />
+                  Episode {previous.episode}
+                </ButtonLink>
+              ) : (
+                <span />
+              )}
+              {next && (
+                <ButtonLink
+                  href={`/events/${next.slug}`}
+                  variant="outline-dark"
+                >
+                  Episode {next.episode}
+                  <IconArrowRight className="size-5" />
+                </ButtonLink>
+              )}
+            </nav>
+          )}
         </div>
       </div>
+
+      {isUpcoming && (
+        <section className="bg-pastel text-navy">
+          <div className="mx-auto flex max-w-content flex-col items-start gap-8 px-4 py-18 md:px-10 lg:flex-row lg:items-end lg:justify-between lg:py-24">
+            <div className="flex max-w-2xl flex-col gap-4">
+              <h2 className="text-h2">Will you be there?</h2>
+              <p className="text-md text-navy/80">
+                Let us know if you join Episode {event.episode} on{' '}
+                {formatDate(event.date)}. It helps us and the host to plan the
+                room, the drinks and the snacks.
+              </p>
+            </div>
+            {/* Placeholder: the attendance registration follows later. */}
+            <Button variant="dark" className="shrink-0">
+              <IconCalendar className="size-5" />I will attend
+            </Button>
+          </div>
+        </section>
+      )}
     </Layout>
   )
 }

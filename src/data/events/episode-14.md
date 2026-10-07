@@ -1,6 +1,6 @@
 ---
 episode: 14
-date: '2026-09-08'
+date: '2027-09-08'
 startTime: '18:00'
 endTime: '20:00'
 host: 'NOI Techpark & Free University of Bozen-Bolzano'

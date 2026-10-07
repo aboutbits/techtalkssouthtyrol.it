@@ -17,6 +17,33 @@ const variants = {
   'outline-dark': 'text-navy ring-1 ring-navy/30 hover:bg-navy/5',
 }
 
+const baseClasses =
+  'inline-flex items-center gap-2 rounded-full px-6 py-3 text-base font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current'
+
+type ButtonProps = {
+  children: ReactNode
+  variant?: keyof typeof variants
+  onClick?: () => void
+  className?: string
+}
+
+export function Button({
+  children,
+  variant = 'light',
+  onClick,
+  className,
+}: ButtonProps) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={classNames(baseClasses, variants[variant], className)}
+    >
+      {children}
+    </button>
+  )
+}
+
 export function ButtonLink({
   href,
   children,
@@ -24,11 +51,7 @@ export function ButtonLink({
   external = false,
   className,
 }: ButtonLinkProps) {
-  const classes = classNames(
-    'inline-flex items-center gap-2 rounded-full px-6 py-3 text-base font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current',
-    variants[variant],
-    className,
-  )
+  const classes = classNames(baseClasses, variants[variant], className)
 
   if (external) {
     return (
