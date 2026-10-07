@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import {
   formatDate,
   formatSpeakerNames,
@@ -54,13 +53,6 @@ export function EventPage({
       <section className="relative overflow-hidden bg-navy text-white">
         <Brace className="pointer-events-none absolute inset-y-0 right-0 h-full w-12 md:w-48 lg:w-72" />
         <div className="relative mx-auto flex max-w-content flex-col gap-10 py-12 pl-4 pr-16 md:px-10 md:pr-56 lg:py-18 lg:pr-80">
-          <Link
-            href="/events"
-            className="inline-flex items-center gap-2 self-start text-sm text-slate-muted hover:text-white"
-          >
-            <IconArrowLeft className="size-4" />
-            All events
-          </Link>
           <div className="flex flex-col items-start gap-6">
             <Pill>{isUpcoming ? 'Next event' : 'Past event'}</Pill>
             <h1 className="text-h1 font-normal">Episode {event.episode}</h1>

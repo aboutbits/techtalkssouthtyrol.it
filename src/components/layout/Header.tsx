@@ -6,7 +6,7 @@ import { defaultNextEventPath, useNextEventPath } from './NextEventPath'
 const navigation = [
   { href: '/', label: 'Home', mobile: true },
   { href: defaultNextEventPath, label: 'Next event', mobile: true },
-  { href: '/events', label: 'Past events', mobile: false },
+  { href: '/events', label: 'All events', mobile: false },
   { href: '/#get-involved', label: 'Get involved', mobile: false },
 ]
 

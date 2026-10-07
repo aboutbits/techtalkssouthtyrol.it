@@ -8,7 +8,7 @@ import { defaultNextEventPath, useNextEventPath } from './NextEventPath'
 const pages = [
   { href: '/', label: 'Home' },
   { href: defaultNextEventPath, label: 'Next event' },
-  { href: '/events', label: 'Past events' },
+  { href: '/events', label: 'All events' },
   { href: '/#community', label: 'Community' },
   { href: '/speaker-notes', label: 'Speaker notes' },
   { href: '/host-notes', label: 'Host notes' },
