@@ -1,4 +1,5 @@
 import { site } from '../../../data/site'
+import { trackEvent } from '../../../lib/analytics'
 import {
   formatDate,
   formatSpeakerNames,
@@ -97,7 +98,16 @@ function NextEventDetails({ event }: { event: Event }) {
         </ol>
 
         <div className="flex flex-wrap gap-3">
-          <ButtonLink href={`/api/calendar/${event.slug}`} download>
+          <ButtonLink
+            href={`/api/calendar/${event.slug}`}
+            onClick={() => {
+              trackEvent('Attending', {
+                episode: String(event.episode),
+                source: 'home page',
+              })
+            }}
+            download
+          >
             <IconCalendar className="size-5" />I will attend
           </ButtonLink>
           <ButtonLink href={`/events/${event.slug}`} variant="outline-light">

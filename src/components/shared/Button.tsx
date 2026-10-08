@@ -9,6 +9,7 @@ type ButtonLinkProps = {
   external?: boolean
   // Downloads the target, for example a calendar file, instead of opening it
   download?: boolean
+  onClick?: () => void
   className?: string
 }
 
@@ -28,13 +29,14 @@ export function ButtonLink({
   variant = 'light',
   external = false,
   download = false,
+  onClick,
   className,
 }: ButtonLinkProps) {
   const classes = classNames(baseClasses, variants[variant], className)
 
   if (download) {
     return (
-      <a href={href} download className={classes}>
+      <a href={href} download onClick={onClick} className={classes}>
         {children}
       </a>
     )
@@ -46,6 +48,7 @@ export function ButtonLink({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={onClick}
         className={classes}
       >
         {children}
@@ -54,7 +57,7 @@ export function ButtonLink({
   }
 
   return (
-    <Link href={href} className={classes}>
+    <Link href={href} onClick={onClick} className={classes}>
       {children}
     </Link>
   )

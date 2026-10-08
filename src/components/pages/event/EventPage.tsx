@@ -1,3 +1,4 @@
+import { trackEvent } from '../../../lib/analytics'
 import {
   formatDate,
   formatSpeakerNames,
@@ -181,6 +182,12 @@ export function EventPage({
           >
             <ButtonLink
               href={`/api/calendar/${event.slug}`}
+              onClick={() => {
+                trackEvent('Attending', {
+                  episode: String(event.episode),
+                  source: 'event page',
+                })
+              }}
               variant="dark"
               download
               className="shrink-0 self-start lg:self-center"
