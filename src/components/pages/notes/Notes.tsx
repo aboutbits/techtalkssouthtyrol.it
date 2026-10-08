@@ -35,9 +35,13 @@ export function NotesPage({
       <section className="relative overflow-hidden bg-navy text-white">
         <Brace className="pointer-events-none absolute inset-y-0 right-0 aspect-[2/5] h-full max-w-12 md:max-w-48 lg:max-w-72" />
         <div className="relative mx-auto flex max-w-content flex-col items-start gap-8 py-18 pl-4 pr-16 md:px-10 md:pr-56 lg:py-24 lg:pr-80">
-          <Pill>{label}</Pill>
-          <h1 className="text-h1 font-normal">{title}</h1>
-          <p className="max-w-2xl text-lg text-slate-muted">{intro}</p>
+          <Pill className="motion-safe:animate-enter">{label}</Pill>
+          <h1 className="text-h1 font-normal motion-safe:animate-enter motion-safe:[animation-delay:100ms]">
+            {title}
+          </h1>
+          <p className="max-w-2xl text-lg text-slate-muted motion-safe:animate-enter motion-safe:[animation-delay:200ms]">
+            {intro}
+          </p>
         </div>
       </section>
       {children}

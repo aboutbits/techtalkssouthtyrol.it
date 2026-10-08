@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import { useId } from 'react'
 
 // The brace in a 480 x 1600 box.
@@ -20,7 +21,7 @@ export function Brace({ className }: BraceProps) {
       viewBox="0 0 480 1600"
       preserveAspectRatio="none"
       aria-hidden="true"
-      className={className}
+      className={classNames('motion-safe:animate-brace-in', className)}
     >
       <defs>
         <linearGradient id={`${id}-v`} x1="0" y1="0" x2="0" y2="1">

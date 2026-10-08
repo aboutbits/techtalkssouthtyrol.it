@@ -64,6 +64,20 @@ const config: Config = {
       maxWidth: {
         content: '80rem',
       },
+      // The keyframes use "translate" and not "transform", so that they do not
+      // block transform utilities such as hover:-translate-y-1
+      keyframes: {
+        enter: {
+          from: { opacity: '0', translate: '0 1rem' },
+        },
+        'brace-in': {
+          from: { opacity: '0', translate: '30% 0' },
+        },
+      },
+      animation: {
+        enter: 'enter 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both',
+        'brace-in': 'brace-in 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both',
+      },
     },
   },
   plugins: [],

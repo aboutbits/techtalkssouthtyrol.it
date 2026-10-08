@@ -10,7 +10,7 @@ export function PastEvents({ events }: { events: Event[] }) {
       <SectionHeader label="Past events" title="Recent episodes">
         <ButtonLink href="/events" variant="outline-dark">
           All past events
-          <IconArrowRight className="size-5" />
+          <IconArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
         </ButtonLink>
       </SectionHeader>
       <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

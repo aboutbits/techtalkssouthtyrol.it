@@ -18,11 +18,13 @@ export default function Page() {
       <Meta title="Page not found" />
       <section className="flex min-h-[70vh] items-center bg-navy text-white">
         <div className="mx-auto flex w-full max-w-content flex-col items-start gap-8 px-4 py-24 md:px-10">
-          <Pill>404</Pill>
-          <h1 className="text-h1 font-normal">This page could not be found.</h1>
+          <Pill className="motion-safe:animate-enter">404</Pill>
+          <h1 className="text-h1 font-normal motion-safe:animate-enter motion-safe:[animation-delay:100ms]">
+            This page could not be found.
+          </h1>
           <ButtonLink href="/">
             Go to home
-            <IconArrowRight className="size-5" />
+            <IconArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
           </ButtonLink>
         </div>
       </section>

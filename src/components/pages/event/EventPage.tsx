@@ -53,10 +53,14 @@ export function EventPage({
         <Brace className="pointer-events-none absolute inset-y-0 right-0 aspect-[2/5] h-full max-w-12 md:max-w-48 lg:max-w-72" />
         <div className="relative mx-auto flex max-w-content flex-col gap-10 py-12 pl-4 pr-16 md:px-10 md:pr-56 lg:py-18 lg:pr-80">
           <div className="flex flex-col items-start gap-6">
-            <Pill>{isUpcoming ? 'Next event' : 'Past event'}</Pill>
-            <h1 className="text-h1 font-normal">Episode {event.episode}</h1>
+            <Pill className="motion-safe:animate-enter">
+              {isUpcoming ? 'Next event' : 'Past event'}
+            </Pill>
+            <h1 className="text-h1 font-normal motion-safe:animate-enter motion-safe:[animation-delay:100ms]">
+              Episode {event.episode}
+            </h1>
           </div>
-          <dl className="flex flex-wrap gap-x-12 gap-y-6 text-md">
+          <dl className="flex flex-wrap gap-x-12 gap-y-6 text-md motion-safe:animate-enter motion-safe:[animation-delay:200ms]">
             <div className="flex gap-3">
               <dt className="sr-only">Date and time</dt>
               <IconCalendar className="mt-1 size-5 shrink-0 text-sky" />
@@ -145,7 +149,7 @@ export function EventPage({
                 href={`/events/${previous.slug}`}
                 variant="outline-dark"
               >
-                <IconArrowLeft className="size-5" />
+                <IconArrowLeft className="size-5 transition-transform group-hover:-translate-x-1" />
                 Episode {previous.episode}
               </ButtonLink>
             ) : (
@@ -154,7 +158,7 @@ export function EventPage({
             {next && (
               <ButtonLink href={`/events/${next.slug}`} variant="outline-dark">
                 Episode {next.episode}
-                <IconArrowRight className="size-5" />
+                <IconArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
               </ButtonLink>
             )}
           </nav>

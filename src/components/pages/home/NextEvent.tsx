@@ -102,7 +102,7 @@ function NextEventDetails({ event }: { event: Event }) {
           </ButtonLink>
           <ButtonLink href={`/events/${event.slug}`} variant="outline-light">
             Event details
-            <IconArrowRight className="size-5" />
+            <IconArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
           </ButtonLink>
         </div>
       </div>

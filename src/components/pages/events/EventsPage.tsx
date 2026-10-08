@@ -25,12 +25,12 @@ export function EventsPage({ events, upcomingSlugs }: EventsPageProps) {
       <section className="relative overflow-hidden bg-navy text-white">
         <Brace className="pointer-events-none absolute inset-y-0 right-0 aspect-[2/5] h-full max-w-12 md:max-w-48 lg:max-w-72" />
         <div className="relative mx-auto flex max-w-content flex-col items-start gap-8 py-18 pl-4 pr-16 md:px-10 md:pr-56 lg:py-24 lg:pr-80">
-          <Pill>All events</Pill>
-          <h1 className="text-h1 font-normal">
+          <Pill className="motion-safe:animate-enter">All events</Pill>
+          <h1 className="text-h1 font-normal motion-safe:animate-enter motion-safe:[animation-delay:100ms]">
             {events.length} episodes,{' '}
             {events.reduce((sum, event) => sum + event.talks.length, 0)} talks
           </h1>
-          <p className="max-w-2xl text-lg text-slate-muted">
+          <p className="max-w-2xl text-lg text-slate-muted motion-safe:animate-enter motion-safe:[animation-delay:200ms]">
             Browse all episodes of Tech Talks South Tyrol, from the next one to
             the first one. Open an episode to read the abstracts and to get the
             slides of the talks.

@@ -19,7 +19,7 @@ export function EventCard({ event, isUpcoming = false }: EventCardProps) {
   return (
     <Link
       href={`/events/${event.slug}`}
-      className="bg-pastel relative flex flex-col rounded-3xl text-navy ring-1 ring-navy/10 transition-shadow hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy"
+      className="bg-pastel relative flex flex-col rounded-3xl text-navy ring-1 ring-navy/10 transition-[box-shadow,transform] duration-300 hover:-translate-y-1 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-navy"
     >
       {isUpcoming && (
         <CornerBadge label="Next event" className="bg-navy text-white">

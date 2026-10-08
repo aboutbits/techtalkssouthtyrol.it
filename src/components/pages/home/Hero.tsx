@@ -9,19 +9,19 @@ export function Hero() {
       <Brace className="pointer-events-none absolute inset-y-0 right-0 aspect-[2/5] h-full max-w-16 md:max-w-[min(26vw,28rem)]" />
       <div className="relative mx-auto flex min-h-[min(calc(100svh-4.25rem),56rem)] max-w-content flex-col justify-between gap-16 py-12 pl-4 pr-20 md:px-10 md:pr-[28vw] lg:py-18 xl:pr-[26rem]">
         <div className="flex flex-col items-start gap-10 lg:gap-14">
-          <Pill className="text-lg">Meetup</Pill>
-          <h1 className="text-display font-normal">
+          <Pill className="text-lg motion-safe:animate-enter">Meetup</Pill>
+          <h1 className="text-display font-normal motion-safe:animate-enter motion-safe:[animation-delay:100ms]">
             Tech Talks
             <br />
             South Tyrol
           </h1>
         </div>
         <div className="flex flex-col gap-10">
-          <p className="max-w-2xl text-h3 font-normal">
+          <p className="max-w-2xl text-h3 font-normal motion-safe:animate-enter motion-safe:[animation-delay:250ms]">
             Your quarterly tech event to <strong>connect</strong>,{' '}
             <strong>share</strong> and <strong>discuss</strong>.
           </p>
-          <ul className="flex flex-wrap gap-3">
+          <ul className="flex flex-wrap gap-3 motion-safe:animate-enter motion-safe:[animation-delay:350ms]">
             <li>
               <IconPillLink
                 href={`mailto:${site.email}`}
