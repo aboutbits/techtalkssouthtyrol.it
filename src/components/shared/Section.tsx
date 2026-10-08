@@ -61,7 +61,7 @@ export function SectionHeader({
   return (
     <div
       className={classNames(
-        'mb-12 flex flex-col gap-6 lg:mb-16 lg:flex-row lg:items-end lg:justify-between',
+        'mb-12 flex flex-col items-start gap-6 lg:mb-16 lg:flex-row lg:items-end lg:justify-between',
         className,
       )}
     >
