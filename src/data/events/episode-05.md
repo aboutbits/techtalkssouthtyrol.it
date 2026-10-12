@@ -15,10 +15,16 @@ talks:
         role: 'Head of Development'
         company: 'HGV'
         companyUrl: 'https://www.hgv.it'
+        image: '/images/speakers/david-mair-spiess.jpg'
+        social:
+          github: 'https://github.com/davidspiess'
       - name: 'Thomas Walter'
         role: 'Software Developer'
         company: 'HGV'
         companyUrl: 'https://www.hgv.it'
+        image: '/images/speakers/thomas-walter.jpg'
+        social:
+          linkedin: 'https://github.com/tomone'
     slides: '/slides/episode-05/building-defenses-against-malicious-bots.pdf'
     abstract: |
       In the battle against malicious bots and web scrapers, developers and DevOps engineers are on the front lines. In this talk, we at HGV will share our first-hand experiences with invasive data collectors that have targeted our web platforms on a significant scale, even causing temporary disruptions of our services. Our aim is to raise awareness of this potential threat and to empower our audience with the knowledge to deal with these situations. We’ll dive into insights on the tactics these unwelcome bots employ and the countermeasures we have deployed to tackle them – including analysing their infrastructure, blocking them with an application firewall, introducing API rate limiting and adapting the API design to impair their data collection capabilities.
@@ -28,6 +34,9 @@ talks:
         role: 'Teamleader Cloud Applications'
         company: 'TechnoAlpin'
         companyUrl: 'https://www.technoalpin.com'
+        image: '/images/speakers/martin-wieser.jpg'
+        social:
+          linkedin: 'https://www.linkedin.com/in/martin-wieser-23358aa2'
     slides: ''
     abstract: |
       Join us as we explore TechnoAlpin's data platform journey—a testament to the indispensable role of data engineering in modern business. Learn how TechnoAlpin leverages data to drive informed decision-making, enhance operational efficiency, and elevate customer experiences. Discover the architecture of our meticulously designed platform, powered by Azure services like Data Lake Storage and Databricks, enabling seamless data processing and analysis. Explore a compelling business case demonstrating the transformative impact of advanced analytics and machine learning on snowmaking processes and equipment performance. Gain insights into the critical role of data engineering, the significance of a well-architected data platform, and actionable strategies for leveraging data assets to drive business growth.

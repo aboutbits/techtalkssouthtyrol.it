@@ -12,7 +12,13 @@ talks:
   - title: 'Streamlining Your Operations: Exploring Essential Tools'
     speakers:
       - name: 'Martin Tauber'
-        company: 'Marketing Factory'
+        role: 'Managing Partner'
+        company: 'Factory'
+        companyUrl: 'https://factory.it'
+        image: '/images/speakers/martin-tauber.jpg'
+        social:
+          x: 'https://x.com/_martintauber'
+          linkedin: 'https://www.linkedin.com/in/martin-tauber'
     slides: '/slides/episode-01/streamlining-your-operations-exploring-essential-tools.pdf'
     abstract: |
       Join us for an exploration of essential tools for streamlining your operations, based on our own experiences using them. From Jira, Service Desk, and Notion to Zendesk, Chargebee, and more. We'll share how these top productivity tools have transformed the way we work and helped us achieve greater efficiency and success.
