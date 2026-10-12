@@ -23,6 +23,9 @@ talks:
       - name: 'Peter Moser'
         company: 'AboutBits'
         companyUrl: 'https://aboutbits.it'
+        image: '/images/speakers/peter-moser.jpg'
+        social:
+          linkedin: 'https://www.linkedin.com/in/peter-moser-4985a1103/'
     slides: '/slides/episode-07/licencing.pdf'
     abstract: |
       What is the difference between copyright and a license, and why is the author not always the copyright holder? This short talk explains the basics of software licensing for developers: permissive, copyleft and proprietary licenses, dual licensing, and inbound vs. outbound licenses. It also shows how the REUSE tool and SPDX identifiers help you to keep the license information of a project complete and correct.
@@ -32,6 +35,7 @@ talks:
         role: 'CEO & Co-Founder'
         company: 'AboutBits'
         companyUrl: 'https://aboutbits.it'
+        image: '/images/team/alex-lanz.jpg'
         social:
           x: 'https://x.com/alex__lanz'
           linkedin: 'https://www.linkedin.com/in/alex-lanz'

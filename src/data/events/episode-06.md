@@ -15,10 +15,14 @@ talks:
         role: 'Fullstack Software Developer'
         company: 'KONVERTO'
         companyUrl: 'https://konverto.eu'
+        image: '/images/speakers/samuel-runggaldier.jpg'
+        social:
+          website: 'https://samuelru.com/'
       - name: 'Peter Unterthurner'
         role: 'Fullstack Software Developer'
         company: 'KONVERTO'
         companyUrl: 'https://konverto.eu'
+        image: '/images/speakers/peter-unterthurner.jpg'
     slides: '/slides/episode-06/hexagonal-architecture.pdf'
     abstract: |
       Our presentation will focus on hexagonal architecture, a design pattern that promotes separation of concerns and results in applications that are easier to maintain, understand and develop.
@@ -33,6 +37,9 @@ talks:
         role: 'Mainframe Development Lead'
         company: 'Raiffeisen Information Service'
         companyUrl: 'https://www.ris.bz.it'
+        image: '/images/speakers/wolfgang-beikircher.png'
+        social:
+          linkedin: 'https://www.linkedin.com/in/wolfgang-beikircher'
     slides: '/slides/episode-06/mastering-the-mainframe.pdf'
     abstract: |
       Mainframes have a long history and are among the oldest platforms still in use globally whereas they see active development. RIS is likely the last company in South Tyrol to operate on a IBM mainframe. We will explore in this talk the differences and similarities between mainframes and server environments. Starting with a brief overview of the history and operation of mainframes, followed by their role in modern development settings. Through the software lifecycle at RIS, we'll demonstrate how development on a mainframe works, highlighting what to focus on and what can be overlooked. Additionally, we will emphasize the significance of mainframes in today’s world by presenting data and insights.

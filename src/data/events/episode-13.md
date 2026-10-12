@@ -15,6 +15,7 @@ talks:
         role: 'Product Owner & Project Manager'
         company: 'Progress Software Development'
         companyUrl: 'https://www.progress.group'
+        image: '/images/speakers/andreas-noeckler.jpg'
     slides: '/slides/episode-13/connecting-bim-and-erp.pdf'
     abstract: |
       In this talk, you'll learn how we at PROGRESS GROUP support the planning and coordination of large construction projects with our ahead Suite platform. Acting as a central planning and data hub, the platform combines large 3D building models (BIM) with operational data from various ERP systems to create a unified planning environment.
@@ -25,6 +26,11 @@ talks:
         role: 'CTO & Co-Founder'
         company: 'AboutBits'
         companyUrl: 'https://aboutbits.it'
+        image: '/images/team/martin-malfertheiner.jpg'
+        social:
+          x: 'https://x.com/mmalfertheiner1'
+          linkedin: 'https://www.linkedin.com/in/martin-malfertheiner-9a3485177/'
+          github: 'https://github.com/mmalfertheiner'
     slides: '/slides/episode-13/beyond-prompting.pdf'
     abstract: |
       AI is becoming part of everyday software development — but using it well means more than writing better prompts. In this talk, I’ll share how we currently approach AI as a software development company: where it helps, where human judgment is still essential, and how we integrate it responsibly into real project workflows. Using Claude Code as the main example, I’ll explain concepts like Claude.md, Skills, Commands, Hooks, and MCPs, and show how AI can connect with existing tools such as GitHub Actions and Linear to become a more structured and useful engineering tool.

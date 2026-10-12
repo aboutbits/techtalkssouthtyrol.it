@@ -3,9 +3,11 @@ import { ComponentType } from 'react'
 import { formatInitials } from '../../lib/format'
 import { Speaker, SpeakerSocial, Talk } from '../../lib/types'
 import {
+  IconBluesky,
   IconGitHub,
   IconGlobe,
   IconLinkedIn,
+  IconMastodon,
   IconPlay,
   IconSlides,
   IconX,
@@ -21,6 +23,8 @@ const socialLinks: {
   { key: 'x', label: 'X', Icon: IconX },
   { key: 'linkedin', label: 'LinkedIn', Icon: IconLinkedIn },
   { key: 'github', label: 'GitHub', Icon: IconGitHub },
+  { key: 'mastodon', label: 'Mastodon', Icon: IconMastodon },
+  { key: 'bluesky', label: 'Bluesky', Icon: IconBluesky },
   { key: 'website', label: 'Website', Icon: IconGlobe },
 ]
 
@@ -77,7 +81,7 @@ function SpeakerProfile({ speaker }: { speaker: Speaker }) {
             alt=""
             fill
             sizes="4rem"
-            className="object-cover"
+            className="object-cover grayscale"
           />
         ) : (
           <span aria-hidden="true">

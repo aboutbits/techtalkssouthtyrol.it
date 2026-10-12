@@ -22,6 +22,7 @@ talks:
         role: 'CEO & Co-Founder'
         company: 'AboutBits'
         companyUrl: 'https://aboutbits.it'
+        image: '/images/team/alex-lanz.jpg'
         social:
           x: 'https://x.com/alex__lanz'
           linkedin: 'https://www.linkedin.com/in/alex-lanz'

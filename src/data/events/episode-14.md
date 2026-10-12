@@ -15,6 +15,10 @@ talks:
         role: 'Managing Director'
         company: 'PragmaTech'
         companyUrl: 'https://pragmatech.digital'
+        image: '/images/speakers/philip-riecks.jpg'
+        social:
+          linkedin: 'https://www.linkedin.com/in/rieckpil/'
+          website: 'https://rieckpil.de/'
     slides: '/slides/episode-14/top-5-spring-boot-testing-mistakes.pdf'
     abstract: |
       Your Spring Boot tests are passing, but can you trust them? This session reveals five critical mistakes that silently undermine your test suite's reliability and your confidence in deployments.
@@ -29,6 +33,10 @@ talks:
         role: 'Software Engineer & Technical Agile Coach'
         company: 'Beyond Agility'
         companyUrl: 'https://beyond-agility.com'
+        image: '/images/speakers/peter-gfader.png'
+        social:
+          mastodon: 'https://tyrol.social/@Peter'
+          bluesky: 'https://peitor.blu.ski/'
     slides: '/slides/episode-14/code-was-never-the-problem.pdf'
     abstract: |
       Code was never the bottleneck — and AI just made that impossible to ignore. Writing code is now cheap, which changes everything *except* the code. This interactive session takes one uncomfortable claim seriously: good engineering practices don't die under AI, they get sorted.

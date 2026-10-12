@@ -17,9 +17,11 @@ talks:
       - name: 'Andreas Unterhauser'
         company: 'Raiffeisen Information Service'
         companyUrl: 'https://www.ris.bz.it'
+        image: '/images/speakers/andreas-unterhauser.png'
       - name: 'Johannes Gurndin'
         company: 'Raiffeisen Information Service'
         companyUrl: 'https://www.ris.bz.it'
+        image: '/images/speakers/johannes-gurndin.jpg'
     slides: '/slides/episode-02/empowering-an-omnichannel-banking-experience.pdf'
     abstract: |
       Discover our advanced omnichannel process orchestration platform which seamlessly integrates multiple channels for a unified customer experience.

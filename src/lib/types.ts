@@ -2,6 +2,8 @@ export type SpeakerSocial = {
   x?: string
   linkedin?: string
   github?: string
+  mastodon?: string
+  bluesky?: string
   website?: string
 }
 

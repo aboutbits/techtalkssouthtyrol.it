@@ -15,6 +15,7 @@ talks:
         role: 'Development Technical Leader'
         company: 'Infominds'
         companyUrl: 'https://infominds.eu'
+        image: '/images/speakers/volkmar-rigo.jpg'
     slides: '/slides/episode-10/opentelemetry101.pdf'
     abstract: |
       This talk is all about what OpenTelemetry is and why you should care (especially if you are a backend developer). We’ll take a look at why OpenTelemetry was created, what it is, and how traces, logs, and metrics fit into the picture. I’ll close the talk with a live demonstration of a simple Web API to show how I use OpenTelemetry for local development and in production.
@@ -24,6 +25,7 @@ talks:
         role: 'Senior Consultant - Backend Engineering'
         company: 'Reply'
         companyUrl: 'https://www.reply.com'
+        image: '/images/speakers/romedius-weiss.jpg'
     slides: '/slides/episode-10/learn-grow-teach-repeat.pdf'
     abstract: |
       As an engineer, when joining a new company/project we mostly face similar challenges: We join teams where existing members are faced with a high workload and lack the time to properly onboard new members.
