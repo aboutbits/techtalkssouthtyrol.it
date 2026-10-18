@@ -23,7 +23,7 @@ jobs:
     secrets: inherit
 
   comment-link:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 5
     if: ${{ github.event.action == 'opened' || github.event.action == 'reopened' }}
     steps:
@@ -32,14 +32,14 @@ jobs:
           comment: 'Preview link: [https://${{ github.event.pull_request.number }}.${{ env.PREVIEW_DOMAIN }}](https://${{ github.event.pull_request.number }}.${{ env.PREVIEW_DOMAIN }})'
 
   deploy-preview:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 20
     if: ${{ github.event.action == 'opened' || github.event.action == 'reopened' || github.event.action == 'synchronize' }}
     concurrency:
       group: ${{ github.ref }}-deploy
       cancel-in-progress: true
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - uses: aboutbits/github-actions-node/setup-and-install@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
@@ -61,11 +61,11 @@ jobs:
           preview-domain: ${{ github.event.pull_request.number }}.${{ env.PREVIEW_DOMAIN }}
 
   unlink-domain:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 10
     if: ${{ github.event.action == 'closed' }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - uses: aboutbits/github-actions-node/setup-and-install@v3
         with:
           node-version: ${{ env.NODE_VERSION }}

@@ -21,7 +21,7 @@ jobs:
     secrets: inherit
 
   deploy:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 20
     concurrency:
       group: ${{ github.ref }}-deploy
@@ -29,7 +29,7 @@ jobs:
     needs:
       - test
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
       - uses: aboutbits/github-actions-node/setup-and-install@v3
         with:
           node-version: ${{ env.NODE_VERSION }}
@@ -48,12 +48,12 @@ jobs:
           deploy-arguments: --prod
 
   tag:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     timeout-minutes: 5
     needs:
       - deploy
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
       - uses: aboutbits/github-actions-base/git-setup@v2
