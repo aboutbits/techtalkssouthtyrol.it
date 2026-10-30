@@ -120,3 +120,27 @@ A link to an external service (for example Speaker Deck or Google Slides) also w
 ### Team
 
 The organizers are in `src/data/team.ts`. The photos are in `public/images/team`.
+
+## Newsletter
+
+The newsletter runs on [Buttondown](https://buttondown.com).
+The forms on the website send the email address to `/api/subscribe`, and this API route adds the person to Buttondown.
+
+- The newsletter section (on the home page and on the events page) only adds the person to the newsletter.
+- "I will attend" on an upcoming event downloads the calendar file and opens a dialog. In the dialog, the person can subscribe to the newsletter.
+  These subscribers get the tag of the episode, for example `episode-15`. To see them, filter the subscribers by this tag in Buttondown.
+  Tags need a paid plan of Buttondown. Without tags, the person is only added to the newsletter.
+
+Buttondown sends a confirmation email (double opt-in) to new subscribers.
+A person who unsubscribed does not get the newsletter again after a registration for an event.
+
+The API route needs the environment variable `BUTTONDOWN_API_KEY`.
+Get the API key in Buttondown under Settings → API, and add it to the environment variables of the Vercel project.
+For local development, put it in `.env.local`:
+
+```
+BUTTONDOWN_API_KEY=<YOUR_API_KEY>
+```
+
+The website sends the Plausible events `Attending` and `Newsletter`.
+Add them as goals in Plausible to see them.

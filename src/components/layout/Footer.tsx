@@ -10,6 +10,7 @@ const pages = [
   { href: defaultNextEventPath, label: 'Next event' },
   { href: '/events', label: 'All events' },
   { href: '/#community', label: 'Community' },
+  { href: '/#newsletter', label: 'Newsletter' },
   { href: '/speaker-notes', label: 'Speaker notes' },
   { href: '/host-notes', label: 'Host notes' },
 ]

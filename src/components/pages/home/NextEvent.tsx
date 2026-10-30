@@ -1,5 +1,4 @@
 import { site } from '../../../data/site'
-import { trackEvent } from '../../../lib/analytics'
 import {
   formatDate,
   formatSpeakerNames,
@@ -7,10 +6,12 @@ import {
   getVenueName,
 } from '../../../lib/format'
 import { Event } from '../../../lib/types'
+import { AttendButton } from '../../events/AttendButton'
 import {
   IconArrowRight,
   IconCalendar,
   IconLinkedIn,
+  IconMail,
   IconPin,
   IconX,
 } from '../../icons/Icons'
@@ -98,18 +99,7 @@ function NextEventDetails({ event }: { event: Event }) {
         </ol>
 
         <div className="flex flex-wrap gap-3">
-          <ButtonLink
-            href={`/api/calendar/${event.slug}`}
-            onClick={() => {
-              trackEvent('Attending', {
-                episode: String(event.episode),
-                source: 'home page',
-              })
-            }}
-            download
-          >
-            <IconCalendar className="size-5" />I will attend
-          </ButtonLink>
+          <AttendButton event={event} source="home page" />
           <ButtonLink href={`/events/${event.slug}`} variant="outline-light">
             Event details
             <IconArrowRight className="size-5 transition-transform group-hover:translate-x-1" />
@@ -129,16 +119,20 @@ function NextEventPlaceholder({ episode }: { episode: number }) {
         </h3>
         <p className="text-md text-slate-muted">
           We meet about once per quarter. The date, the location and the
-          speakers of the next episode follow soon. Follow us on X or LinkedIn,
-          or write us an email to stay up to date.
+          speakers of the next episode follow soon. Subscribe to our newsletter
+          to get an email when we announce the episode.
         </p>
       </div>
       <div className="flex shrink-0 flex-wrap gap-3">
-        <ButtonLink href={site.twitterUrl} external>
+        <ButtonLink href="#newsletter">
+          <IconMail className="size-4" />
+          Subscribe
+        </ButtonLink>
+        <ButtonLink href={site.twitterUrl} variant="outline-light" external>
           <IconX className="size-4" />
           Follow on X
         </ButtonLink>
-        <ButtonLink href={site.linkedInUrl} external>
+        <ButtonLink href={site.linkedInUrl} variant="outline-light" external>
           <IconLinkedIn className="size-4" />
           Join on LinkedIn
         </ButtonLink>
