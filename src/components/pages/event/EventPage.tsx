@@ -1,4 +1,3 @@
-import { trackEvent } from '../../../lib/analytics'
 import {
   formatDate,
   formatSpeakerNames,
@@ -6,6 +5,7 @@ import {
 } from '../../../lib/format'
 import { eventOgImagePath } from '../../../lib/og'
 import { Event } from '../../../lib/types'
+import { AttendButton } from '../../events/AttendButton'
 import { TalkDetails } from '../../events/TalkDetails'
 import {
   IconArrowLeft,
@@ -180,20 +180,12 @@ export function EventPage({
               </p>
             }
           >
-            <ButtonLink
-              href={`/api/calendar/${event.slug}`}
-              onClick={() => {
-                trackEvent('Attending', {
-                  episode: String(event.episode),
-                  source: 'event page',
-                })
-              }}
+            <AttendButton
+              event={event}
+              source="event page"
               variant="dark"
-              download
               className="shrink-0 self-start lg:self-center"
-            >
-              <IconCalendar className="size-5" />I will attend
-            </ButtonLink>
+            />
           </SectionHeader>
         </Section>
       )}

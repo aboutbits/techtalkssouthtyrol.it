@@ -3,6 +3,7 @@ import { EventCard } from '../../events/EventCard'
 import { Layout } from '../../layout/Layout'
 import { Meta } from '../../layout/Meta'
 import { Brace } from '../../shared/Brace'
+import { Newsletter } from '../../shared/Newsletter'
 import { Pill } from '../../shared/Pill'
 
 export type EventsPageProps = {
@@ -58,6 +59,7 @@ export function EventsPage({ events, upcomingSlugs }: EventsPageProps) {
           ))}
         </div>
       </div>
+      <Newsletter source="events page" />
     </Layout>
   )
 }

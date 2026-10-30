@@ -18,6 +18,12 @@ export default function App({
 }: AppProps<{ nextEventPath?: string }>) {
   return (
     <div className={`${inter.variable} font-sans`}>
+      {/* Dialogs render outside of this element, directly in the body */}
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `:root { --font-inter: ${inter.style.fontFamily}; }`,
+        }}
+      />
       <NextEventPathContext.Provider
         value={pageProps.nextEventPath ?? defaultNextEventPath}
       >

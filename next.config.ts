@@ -16,6 +16,7 @@ const nextConfig: NextConfig = {
     '/*': ['./src/data/events/**/*'],
     '/events/*': ['./src/data/events/**/*'],
     '/api/calendar/*': ['./src/data/events/**/*'],
+    '/api/subscribe': ['./src/data/events/**/*'],
   },
   webpack: (config) => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
