@@ -31,6 +31,29 @@ export type Venue = {
   city: string
 }
 
+/**
+ * A slide of the presentation at /events/<slug>/slides.
+ * The front matter can use the short form, for example "title" instead of
+ * "{ type: 'title' }".
+ */
+export type SlideConfig =
+  | { type: 'title' }
+  | { type: 'about' }
+  | { type: 'agenda' }
+  | { type: 'host' }
+  // The number of the talk, starting with 1
+  | { type: 'talk'; talk: number }
+  | { type: 'next-event' }
+  | { type: 'get-involved' }
+  | {
+      type: 'custom'
+      label?: string
+      title?: string
+      // Markdown
+      content?: string
+      tone?: 'navy' | 'white' | 'pastel'
+    }
+
 export type EventMeta = {
   episode: number
   date: string
@@ -40,6 +63,8 @@ export type EventMeta = {
   hostUrl?: string
   venue: Venue
   talks: Talk[]
+  // The slides of the presentation. Without it, the default slides are used.
+  presentation?: (SlideConfig | SlideConfig['type'])[]
 }
 
 export type Event = EventMeta & {

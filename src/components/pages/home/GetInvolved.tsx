@@ -3,7 +3,7 @@ import { IconMail } from '../../icons/Icons'
 import { ButtonLink } from '../../shared/Button'
 import { Section, SectionHeader } from '../../shared/Section'
 
-const options = [
+export const options = [
   {
     title: 'Give a talk',
     text: 'Would you like to give a presentation at one of our meetups? Share your experience with a project, a technology or a practice with the tech community in South Tyrol. Get in touch with one of our hosts or write us an email.',

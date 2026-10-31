@@ -18,6 +18,15 @@ const nextConfig: NextConfig = {
     '/api/calendar/*': ['./src/data/events/**/*'],
     '/api/subscribe': ['./src/data/events/**/*'],
   },
+  // The slides of an event are not for search engines. The page also has a
+  // robots meta tag, and next-sitemap.config.js excludes it from the sitemap.
+  // eslint-disable-next-line @typescript-eslint/require-await
+  headers: async () => [
+    {
+      source: '/events/:slug/slides',
+      headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }],
+    },
+  ],
   webpack: (config) => {
     // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
     config.module.rules.push({

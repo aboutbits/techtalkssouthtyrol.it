@@ -117,6 +117,45 @@ The pages are generated at build time, so a new deployment is necessary to move 
 Put the slide files in `public/slides/<episode>/` and set the `slides` field of the talk.
 A link to an external service (for example Speaker Deck or Google Slides) also works.
 
+### Presentation of the evening
+
+Each event has a presentation at `/events/<episode>/slides`, for example `/events/episode-15/slides`.
+On the day of the event, open the page in the browser and share the screen.
+No page links to the presentation, and search engines do not index it.
+
+The slides use the data of the event. Without further configuration, the presentation has these slides:
+
+1. `title`: Tech Talks South Tyrol, the episode, the date and the location
+2. `about`: what the meetup is about
+3. `agenda`: welcome and introduction, presenting the host, the talks with their start times, closing remarks, and networking
+4. `get-involved`: give a talk or host a meetup
+5. `next-event`: the next episode. If the file of the next episode exists, the slide shows its date, location and talks.
+
+To change the slides, add the `presentation` field to the front matter of the event.
+The field replaces the default list, so it must contain all slides in the correct order:
+
+```yaml
+presentation:
+  - title
+  - about
+  - agenda
+  - host                 # optional: the name of the host, before the host presents the company
+  - type: talk           # optional: the title and the speakers of a talk
+    talk: 1              # the number of the talk, starting with 1
+  - type: custom         # a slide with your own content
+    label: 'Thank you'   # optional, the pill above the title
+    title: 'Our sponsor' # optional
+    tone: pastel         # optional: navy, white (default) or pastel
+    content: |           # optional, Markdown. Images must be in public/, for example ![](/images/...)
+      Thanks to **Company** for the drinks and the snacks.
+  - get-involved
+  - next-event
+```
+
+Navigate with the arrow keys, the space key or a remote clicker. Press `F` for the fullscreen mode.
+The number of the slide is in the URL (`#3`), so a reload keeps the slide.
+To save the slides as a PDF, print the page in Chrome and select "Save as PDF".
+
 ### Team
 
 The organizers are in `src/data/team.ts`. The photos are in `public/images/team`.
