@@ -150,3 +150,54 @@ export function SlideHeading({
     </div>
   )
 }
+
+export type SlidePoint = {
+  title: string
+  text?: string
+}
+
+type SlidePointListProps = {
+  points: SlidePoint[]
+  tone?: SlideTone
+  className?: string
+}
+
+/**
+ * A list of short points with lines between them, for example on the right
+ * side of a slide with two columns.
+ */
+export function SlidePointList({
+  points,
+  tone = 'white',
+  className,
+}: SlidePointListProps) {
+  return (
+    <ul
+      className={classNames(
+        'flex flex-col divide-y border-y',
+        tone === 'navy'
+          ? 'divide-white/15 border-white/15'
+          : 'divide-navy/10 border-navy/10',
+        className,
+      )}
+    >
+      {points.map((point) => (
+        <li key={point.title} className="flex flex-col gap-[4px] py-[32px]">
+          <h3 className="text-[44px] font-semibold leading-tight">
+            {point.title}
+          </h3>
+          {point.text && (
+            <p
+              className={classNames(
+                'text-balance text-[32px]',
+                tone === 'navy' ? 'text-slate-muted' : 'text-slate',
+              )}
+            >
+              {point.text}
+            </p>
+          )}
+        </li>
+      ))}
+    </ul>
+  )
+}

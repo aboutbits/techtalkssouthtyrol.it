@@ -49,7 +49,10 @@ export type SlideConfig =
       type: 'custom'
       label?: string
       title?: string
-      // Markdown
+      subtitle?: string
+      // Short points on the right side of the slide, with the heading on the left
+      points?: { title: string; text?: string }[]
+      // Markdown, below the heading. Not shown if the slide has points.
       content?: string
       tone?: 'navy' | 'white' | 'pastel'
     }

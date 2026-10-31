@@ -20,7 +20,7 @@ import {
   IconX,
 } from '../icons/Icons'
 import { Markdown } from '../shared/Markdown'
-import { Slide, SlideHeading, SlideLabel } from './Slide'
+import { Slide, SlideHeading, SlideLabel, SlidePointList } from './Slide'
 
 export type EventSlidesContext = {
   event: Event
@@ -168,18 +168,7 @@ function AboutSlide({ event }: { event: Event }) {
         subtitle="Bringing the tech community of South Tyrol together"
         className={enter}
       />
-      <ul
-        className={`flex flex-col divide-y divide-navy/10 border-y border-navy/10 ${enterLate}`}
-      >
-        {aboutPoints.map((point) => (
-          <li key={point.title} className="flex flex-col gap-[4px] py-[32px]">
-            <h3 className="text-[44px] font-semibold leading-tight">
-              {point.title}
-            </h3>
-            <p className="text-[32px] text-slate">{point.text}</p>
-          </li>
-        ))}
-      </ul>
+      <SlidePointList points={aboutPoints} className={enterLate} />
     </Slide>
   )
 }
@@ -534,18 +523,7 @@ function GetInvolvedSlide({ event }: { event: Event }) {
           </span>
         </p>
       </div>
-      <ul
-        className={`flex flex-col divide-y divide-navy/10 border-y border-navy/10 ${enterLater}`}
-      >
-        {getInvolvedOptions.map((option) => (
-          <li key={option.title} className="flex flex-col gap-[4px] py-[32px]">
-            <h3 className="text-[44px] font-semibold leading-tight">
-              {option.title}
-            </h3>
-            <p className="text-[32px] text-slate">{option.text}</p>
-          </li>
-        ))}
-      </ul>
+      <SlidePointList points={getInvolvedOptions} className={enterLater} />
     </Slide>
   )
 }
@@ -558,17 +536,37 @@ function CustomSlide({
   slide: Extract<SlideConfig, { type: 'custom' }>
 }) {
   const tone = slide.tone ?? 'white'
+  const heading = (Boolean(slide.label) || Boolean(slide.title)) && (
+    <SlideHeading
+      label={slide.label}
+      title={slide.title}
+      subtitle={slide.subtitle}
+      tone={tone}
+      className={enter}
+    />
+  )
+
+  // With points: the heading on the left, the points on the right
+  if (slide.points) {
+    return (
+      <Slide
+        episode={event.episode}
+        tone={tone}
+        className="grid grid-cols-2 items-center gap-[120px]"
+      >
+        {heading}
+        <SlidePointList
+          points={slide.points}
+          tone={tone}
+          className={enterLate}
+        />
+      </Slide>
+    )
+  }
 
   return (
     <Slide episode={event.episode} tone={tone} className="gap-[64px]">
-      {(Boolean(slide.label) || Boolean(slide.title)) && (
-        <SlideHeading
-          label={slide.label}
-          title={slide.title}
-          tone={tone}
-          className={enter}
-        />
-      )}
+      {heading}
       {slide.content && (
         <Markdown
           className={`min-h-0 flex-1 !space-y-[32px] text-[40px] leading-snug [&_h2]:text-[56px] [&_h3]:text-[48px] [&_img]:max-h-[560px] [&_img]:rounded-[32px] [&_ol]:!space-y-[16px] [&_ol]:!pl-[56px] [&_ul]:!space-y-[16px] [&_ul]:!pl-[56px] ${

@@ -38,6 +38,13 @@ export function getSlides(event: Event): SlideConfig[] {
       )
     }
 
+    if (
+      slide.type === 'custom' &&
+      slide.points?.some((point) => typeof point.title !== 'string')
+    ) {
+      throw new Error(`Each point in ${position} must have a title.`)
+    }
+
     // A missing number gives NaN, and talks[NaN] is undefined
     if (slide.type === 'talk' && event.talks[slide.talk - 1] === undefined) {
       throw new Error(

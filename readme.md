@@ -146,12 +146,21 @@ presentation:
   - type: custom         # a slide with your own content
     label: 'Thank you'   # optional, the pill above the title
     title: 'Our sponsor' # optional
+    subtitle: 'Company'  # optional, the grey text below the title
     tone: pastel         # optional: navy, white (default) or pastel
     content: |           # optional, Markdown. Images must be in public/, for example ![](/images/...)
       Thanks to **Company** for the drinks and the snacks.
+  - type: custom         # a custom slide with points: the heading on the left, the points on the right
+    label: "What's new"
+    title: 'A new website'
+    points:              # replaces content: about 3 or 4 short points fit on a slide
+      - title: 'Open source'
+        text: 'Everyone can contribute' # optional
   - get-involved
   - next-event
 ```
+
+Episode 15 has an example with four custom slides.
 
 Navigate with the arrow keys, the space key or a remote clicker. Press `F` for the fullscreen mode.
 The number of the slide is in the URL (`#3`), so a reload keeps the slide.

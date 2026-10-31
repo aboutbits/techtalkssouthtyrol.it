@@ -8,6 +8,60 @@ hostUrl: 'https://konverto.eu'
 venue:
   address: 'Bruno-Buozzi-Straße 8'
   city: 'Bozen/Bolzano'
+presentation:
+  - title
+  - about
+  - agenda
+  - type: custom
+    label: "What's new"
+    title: 'A new website'
+    subtitle: 'techtalkssouthtyrol.it'
+    points:
+      - title: 'Our own structure'
+        text: 'Information organized the way we want'
+      - title: 'All episodes in one place'
+        text: 'Every talk with its slides'
+      - title: 'Add to your calendar'
+        text: 'One click on "I will attend"'
+      - title: 'Everyone can contribute'
+        text: 'github.com/aboutbits/techtalkssouthtyrol.it'
+  - type: custom
+    label: "What's new"
+    title: 'Our Discord server'
+    subtitle: 'Connect with the community, also between two events'
+    points:
+      - title: '# daily-insights'
+        text: 'Articles, tools and learnings from the job'
+      - title: '# ask-the-community'
+        text: 'Ask the developers and engineers of South Tyrol'
+      - title: '# meetups'
+        text: 'News about the next episodes'
+      - title: 'Join us'
+        text: 'discord.gg/Paj6HE9y6D'
+  - type: custom
+    label: "What's new"
+    title: 'Our own newsletter'
+    subtitle: 'Subscribe on techtalkssouthtyrol.it'
+    points:
+      - title: 'First to know'
+        text: 'The date, the host and the talks of the next episode'
+      - title: 'Easy registration'
+        text: 'Subscribe on the website'
+      - title: 'Our next step'
+        text: 'Move completely from Meetup.com to our website'
+  - type: custom
+    label: "What's new"
+    title: 'Organize an episode'
+    subtitle: 'Take over the organization of one event'
+    points:
+      - title: 'Your part'
+        text: 'Find the speakers and the host'
+      - title: 'We support you'
+        text: 'With our experience and our network'
+      - title: 'Interested?'
+        text: 'Talk to us tonight'
+  - get-involved
+  - next-event
 talks:
   - title: 'We have LLM at home'
     speakers:
