@@ -19,7 +19,6 @@ import {
   IconPin,
   IconX,
 } from '../icons/Icons'
-import { options } from '../pages/home/GetInvolved'
 import { Markdown } from '../shared/Markdown'
 import { Slide, SlideLabel } from './Slide'
 
@@ -153,7 +152,7 @@ const aboutPoints = [
   { title: 'Community', text: 'Developers, engineers and tech enthusiasts' },
   { title: 'Knowledge', text: 'Insights, best practices and new technologies' },
   { title: 'Every quarter', text: 'Two talks, drinks and snacks' },
-  { title: 'Always new', text: 'Changing locations and speakers' },
+  { title: 'Different every time', text: 'Changing locations and speakers' },
 ]
 
 function AboutSlide({ event }: { event: Event }) {
@@ -165,9 +164,12 @@ function AboutSlide({ event }: { event: Event }) {
     >
       <div className={`flex flex-col gap-[40px] ${enter}`}>
         <SlideLabel>About us</SlideLabel>
-        <h2 className="text-[96px] leading-none tracking-[-0.03em]">
-          Connect, share and discuss.
+        <h2 className="text-balance text-[96px] leading-none tracking-[-0.03em]">
+          A group of tech lovers
         </h2>
+        <p className="text-balance text-[40px] leading-snug text-slate">
+          Bringing the tech community of South Tyrol together
+        </p>
       </div>
       <ul
         className={`flex flex-col divide-y divide-navy/10 border-y border-navy/10 ${enterLate}`}
@@ -445,6 +447,18 @@ function ChannelList() {
   )
 }
 
+// The ways to take part, short enough for a slide
+const getInvolvedOptions = [
+  {
+    title: 'Give a talk',
+    text: 'Share your experience with the community',
+  },
+  {
+    title: 'Host a meetup',
+    text: 'Welcome the community in your rooms',
+  },
+]
+
 function GetInvolvedSlide({ event }: { event: Event }) {
   return (
     <Slide
@@ -470,14 +484,12 @@ function GetInvolvedSlide({ event }: { event: Event }) {
       <ul
         className={`flex flex-col divide-y divide-navy/10 border-y border-navy/10 ${enterLater}`}
       >
-        {options.map((option) => (
-          <li key={option.title} className="flex flex-col gap-[16px] py-[40px]">
-            <h3 className="text-[48px] font-semibold leading-tight">
+        {getInvolvedOptions.map((option) => (
+          <li key={option.title} className="flex flex-col gap-[4px] py-[32px]">
+            <h3 className="text-[44px] font-semibold leading-tight">
               {option.title}
             </h3>
-            <p className="text-[28px] leading-normal text-navy/80">
-              {option.text}
-            </p>
+            <p className="text-[32px] text-slate">{option.text}</p>
           </li>
         ))}
       </ul>
