@@ -1,15 +1,15 @@
 import classNames from 'classnames'
 import Image from 'next/image'
-import { ReactNode } from 'react'
 import { site } from '../../data/site'
 import {
+  addMinutes,
   formatDate,
   formatInitials,
   formatSpeakerNames,
   formatTalkTime,
   getVenueName,
 } from '../../lib/format'
-import { Event, SlideConfig, Speaker } from '../../lib/types'
+import { Event, SlideConfig, Speaker, Talk } from '../../lib/types'
 import {
   IconCalendar,
   IconDiscord,
@@ -20,7 +20,7 @@ import {
   IconX,
 } from '../icons/Icons'
 import { Markdown } from '../shared/Markdown'
-import { Slide, SlideLabel } from './Slide'
+import { Slide, SlideHeading, SlideLabel } from './Slide'
 
 export type EventSlidesContext = {
   event: Event
@@ -162,15 +162,12 @@ function AboutSlide({ event }: { event: Event }) {
       tone="white"
       className="grid grid-cols-2 items-center gap-[120px]"
     >
-      <div className={`flex flex-col gap-[40px] ${enter}`}>
-        <SlideLabel>About us</SlideLabel>
-        <h2 className="text-balance text-[96px] leading-none tracking-[-0.03em]">
-          A group of tech lovers
-        </h2>
-        <p className="text-balance text-[40px] leading-snug text-slate">
-          Bringing the tech community of South Tyrol together
-        </p>
-      </div>
+      <SlideHeading
+        label="About us"
+        title="A group of tech lovers"
+        subtitle="Bringing the tech community of South Tyrol together"
+        className={enter}
+      />
       <ul
         className={`flex flex-col divide-y divide-navy/10 border-y border-navy/10 ${enterLate}`}
       >
@@ -187,74 +184,128 @@ function AboutSlide({ event }: { event: Event }) {
   )
 }
 
+/**
+ * The job title and the company of a speaker, for example "Co-Founder · Evopilot".
+ */
+function formatSpeakerJob(speaker: Speaker) {
+  return [speaker.role, speaker.company].filter(Boolean).join(' · ')
+}
+
+/**
+ * The name, the job title and the company of a speaker.
+ */
+function SpeakerName({ speaker }: { speaker: Speaker }) {
+  return (
+    <span className="flex flex-col">
+      <span className="text-[24px] font-semibold leading-tight">
+        {speaker.name}
+      </span>
+      {formatSpeakerJob(speaker) && (
+        <span className="text-[22px] leading-tight text-slate">
+          {formatSpeakerJob(speaker)}
+        </span>
+      )}
+    </span>
+  )
+}
+
+/**
+ * A talk with its title, its start time and a chip for each speaker.
+ */
+function TalkCard({ talk, time }: { talk: Talk; time: string }) {
+  return (
+    <li className="flex flex-col gap-[16px] rounded-[32px] bg-navy/5 p-[28px]">
+      <div className="flex items-start justify-between gap-[24px]">
+        <span className="text-[30px] font-semibold leading-tight">
+          {talk.title}
+        </span>
+        <span className="shrink-0 rounded-full bg-navy px-[20px] py-[6px] text-[24px] font-semibold tabular-nums text-white">
+          {time}
+        </span>
+      </div>
+      <ul className="flex flex-wrap gap-x-[32px] gap-y-[12px]">
+        {talk.speakers.map((speaker) => (
+          <li key={speaker.name} className="flex items-center gap-[16px]">
+            <SpeakerPhoto speaker={speaker} size={64} />
+            <SpeakerName speaker={speaker} />
+          </li>
+        ))}
+      </ul>
+    </li>
+  )
+}
+
+/**
+ * The program of the evening as a timeline on the left, the talks with the
+ * speakers on the right.
+ */
 function AgendaSlide({ event }: { event: Event }) {
-  // The detail shows on the same line as the title, the content below it
-  const items: { title: string; detail?: string; content?: ReactNode }[] = [
+  // The host speaks 5 minutes after the start, the closing remarks follow the
+  // time slot of the last talk, and the networking starts 5 minutes later.
+  const closingTime = formatTalkTime(event.startTime, event.talks.length)
+  const program: { time: string; title: string; detail?: string }[] = [
+    { time: event.startTime, title: 'Welcome and introduction' },
     {
-      title: 'Welcome and introduction',
-      detail: event.startTime,
-    },
-    {
+      time: addMinutes(event.startTime, 5),
       title: 'Presenting the host',
       detail: event.host,
     },
     {
+      time: formatTalkTime(event.startTime, 0),
       title: event.talks.length === 1 ? 'Talk' : 'Talks',
-      content: (
-        <ul className="flex flex-col gap-[10px]">
-          {event.talks.map((talk, index) => (
-            <li key={talk.title} className="flex gap-[32px]">
-              <span className="w-[112px] shrink-0 tabular-nums">
-                {formatTalkTime(event.startTime, index)}
-              </span>
-              <span className="flex flex-col">
-                <span className="font-semibold text-navy">{talk.title}</span>
-                {formatSpeakerNames(talk.speakers.map((s) => s.name))}
-              </span>
-            </li>
-          ))}
-        </ul>
-      ),
     },
+    { time: closingTime, title: 'Closing remarks' },
     {
-      title: 'Closing remarks',
-      detail: 'Get involved and next event',
-    },
-    {
+      time: addMinutes(closingTime, 5),
       title: 'Networking',
       detail: 'Drinks and snacks',
     },
   ]
 
   return (
-    <Slide episode={event.episode} tone="white" className="gap-[40px]">
-      <h2 className={`text-[80px] leading-none tracking-[-0.03em] ${enter}`}>
-        Agenda
-      </h2>
-      <ol className={`flex flex-col gap-[20px] ${enterLate}`}>
-        {items.map((item, index) => (
-          <li key={item.title} className="flex gap-[40px]">
-            <span className="flex size-[64px] shrink-0 items-center justify-center rounded-full bg-navy text-[28px] font-semibold text-white">
-              {index + 1}
-            </span>
-            <div className="flex flex-1 flex-col gap-[12px] pt-[4px]">
-              <div className="flex items-baseline gap-[24px]">
-                <h3 className="text-[40px] font-semibold leading-tight">
+    <Slide
+      episode={event.episode}
+      tone="white"
+      className="grid grid-cols-[1fr_1.4fr] items-center gap-[96px]"
+    >
+      <div className={`flex flex-col gap-[48px] ${enter}`}>
+        <SlideLabel>Agenda</SlideLabel>
+        <ol className="flex flex-col gap-[24px]">
+          {program.map((item, index) => (
+            <li key={item.title} className="flex items-center gap-[28px]">
+              <span className="flex shrink-0 items-center gap-[20px] self-stretch">
+                <span className="w-[88px] text-right text-[28px] font-semibold tabular-nums">
+                  {item.time}
+                </span>
+                <span className="relative flex w-[20px] justify-center self-stretch">
+                  {/* The line to the dot of the next item */}
+                  {index < program.length - 1 && (
+                    <span className="absolute left-1/2 top-1/2 h-[calc(100%+24px)] w-[3px] -translate-x-1/2 bg-navy/30" />
+                  )}
+                  <span className="relative my-auto size-[20px] rounded-full bg-navy" />
+                </span>
+              </span>
+              <span className="flex flex-col">
+                <span className="text-[36px] font-semibold leading-tight">
                   {item.title}
-                </h3>
+                </span>
                 {item.detail && (
-                  <span className="text-[32px] text-slate">{item.detail}</span>
+                  <span className="text-[26px] text-slate">{item.detail}</span>
                 )}
-              </div>
-              {item.content && (
-                <div className="text-[28px] leading-snug text-slate">
-                  {item.content}
-                </div>
-              )}
-            </div>
-          </li>
+              </span>
+            </li>
+          ))}
+        </ol>
+      </div>
+      <ul className={`flex flex-col gap-[24px] ${enterLate}`}>
+        {event.talks.map((talk, index) => (
+          <TalkCard
+            key={talk.title}
+            talk={talk}
+            time={formatTalkTime(event.startTime, index)}
+          />
         ))}
-      </ol>
+      </ul>
     </Slide>
   )
 }
@@ -338,15 +389,25 @@ function TalkSlide({ event, number }: { event: Event; number: number }) {
   )
 }
 
-function SpeakerPhoto({ speaker }: { speaker: Speaker }) {
+function SpeakerPhoto({
+  speaker,
+  size = 200,
+}: {
+  speaker: Speaker
+  // The width and the height in pixels
+  size?: number
+}) {
   return (
-    <div className="relative flex size-[200px] shrink-0 items-center justify-center overflow-hidden rounded-full bg-navy text-[64px] font-semibold tracking-tight text-white">
+    <div
+      className="relative flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-navy font-semibold tracking-tight text-white ring-[6px] ring-white"
+      style={{ width: size, height: size, fontSize: size * 0.32 }}
+    >
       {speaker.image ? (
         <Image
           src={speaker.image}
           alt=""
           fill
-          sizes="200px"
+          sizes={`${size}px`}
           // The slides are hidden until they show, so the browser must not wait with the download
           loading="eager"
           className="object-cover grayscale"
@@ -375,19 +436,12 @@ function NextEventSlide({
       tone="white"
       className="grid grid-cols-2 items-center gap-[120px]"
     >
-      <div className="flex flex-col gap-[48px]">
-        <SlideLabel className={enter}>Next event</SlideLabel>
-        <h2
-          className={`text-[160px] font-normal leading-[0.95] tracking-[-0.04em] ${enterLate}`}
-        >
-          Episode {event.episode + 1}
-        </h2>
-        {!nextEvent && (
-          <p className={`text-[48px] leading-tight ${enterLater}`}>
-            Coming soon.
-          </p>
-        )}
-      </div>
+      <SlideHeading
+        label="Next event"
+        title={`Episode ${event.episode + 1}`}
+        subtitle={nextEvent ? undefined : 'Coming soon'}
+        className={enter}
+      />
       {nextEvent ? (
         <div className={`flex flex-col gap-[56px] ${enterLater}`}>
           {nextEvent.talks.length > 0 && (
@@ -467,12 +521,11 @@ function GetInvolvedSlide({ event }: { event: Event }) {
       className="grid grid-cols-[1fr_1.2fr] items-center gap-[120px]"
     >
       <div className="flex flex-col gap-[72px]">
-        <div className={`flex flex-col gap-[40px] ${enter}`}>
-          <SlideLabel>Get involved</SlideLabel>
-          <h2 className="text-[96px] leading-none tracking-[-0.03em]">
-            Make the next episode
-          </h2>
-        </div>
+        <SlideHeading
+          label="Get involved"
+          title="Make the next episode"
+          className={enter}
+        />
         <p className={`flex flex-col gap-[8px] ${enterLate}`}>
           <span className="text-[28px] text-slate">Write us an email</span>
           <span className="flex items-center gap-[16px] text-[40px] font-semibold">
@@ -509,14 +562,12 @@ function CustomSlide({
   return (
     <Slide episode={event.episode} tone={tone} className="gap-[64px]">
       {(Boolean(slide.label) || Boolean(slide.title)) && (
-        <div className={`flex flex-col gap-[40px] ${enter}`}>
-          {slide.label && <SlideLabel tone={tone}>{slide.label}</SlideLabel>}
-          {slide.title && (
-            <h2 className="text-[96px] leading-none tracking-[-0.03em]">
-              {slide.title}
-            </h2>
-          )}
-        </div>
+        <SlideHeading
+          label={slide.label}
+          title={slide.title}
+          tone={tone}
+          className={enter}
+        />
       )}
       {slide.content && (
         <Markdown

@@ -127,7 +127,8 @@ The slides use the data of the event. Without further configuration, the present
 
 1. `title`: Tech Talks South Tyrol, the episode, the date and the location
 2. `about`: what the meetup is about
-3. `agenda`: welcome and introduction, presenting the host, the talks with their start times, closing remarks, and networking
+3. `agenda`: the program of the evening as a timeline (welcome and introduction, presenting the host, talks, closing remarks, networking), and each talk with its start time and its speakers (photo, name, job title and company).
+   The times come from `startTime`: the host presents 5 minutes after the start, the closing remarks follow the time slot of the last talk, and the networking starts 5 minutes later.
 4. `get-involved`: give a talk or host a meetup
 5. `next-event`: the next episode. If the file of the next episode exists, the slide shows its date, location and talks.
 

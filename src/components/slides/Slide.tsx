@@ -109,3 +109,44 @@ export function SlideLabel({
     </span>
   )
 }
+
+type SlideHeadingProps = {
+  label?: string
+  title?: ReactNode
+  subtitle?: ReactNode
+  tone?: SlideTone
+  className?: string
+}
+
+/**
+ * The label, the title and the subtitle of a slide. Use it on all slides with
+ * a heading, so that the headings look the same.
+ */
+export function SlideHeading({
+  label,
+  title,
+  subtitle,
+  tone = 'white',
+  className,
+}: SlideHeadingProps) {
+  return (
+    <div className={classNames('flex flex-col gap-[40px]', className)}>
+      {label && <SlideLabel tone={tone}>{label}</SlideLabel>}
+      {title && (
+        <h2 className="text-balance text-[96px] leading-none tracking-[-0.03em]">
+          {title}
+        </h2>
+      )}
+      {subtitle && (
+        <p
+          className={classNames(
+            'text-balance text-[40px] leading-snug',
+            tone === 'navy' ? 'text-slate-muted' : 'text-slate',
+          )}
+        >
+          {subtitle}
+        </p>
+      )}
+    </div>
+  )
+}
