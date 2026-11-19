@@ -83,3 +83,11 @@ talks:
     abstract: |
       Self-driving cars are arriving on public roads, and the same core technology is finding its way into agriculture. At Evopilot, we retrofit tracked carrier machines with a sensor kit and software stack that lets them drive autonomously through apple orchards and vineyards while mulching and spraying. In this talk, we trace how the system evolved from early prototypes to rovers working in the field: what we built first, what broke, and how each round of field testing reshaped the hardware and software. Along the way, we share the engineering challenges we faced, from keeping a tracked vehicle on narrow paths to making it safe to operate around people, and the lessons that shaped today’s design.
 ---
+**Arrival by car:** Parking is available at Messe Bozen / Fiera Bolzano. From there, it is a 3–4 minute walk to the KONVERTO office.
+
+**Arrival by public transport:** Take the train to Bozen Süd / Bolzano Sud station.
+
+**Access:** The KONVERTO office is on the fourth floor. You can reach it in two ways:
+
+- Enter through the garage and take the elevator or stairs to the fourth floor.
+- Take the outdoor stairs to the second floor, follow the hallway to the central staircase, and continue to the fourth floor.
