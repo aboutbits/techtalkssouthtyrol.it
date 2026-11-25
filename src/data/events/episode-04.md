@@ -8,6 +8,7 @@ hostUrl: 'https://noi.bz.it'
 venue:
   address: 'Europastraße 9'
   city: 'Bruneck/Brunico'
+meetupUrl: 'https://www.meetup.com/tech-talks-south-tyrol/events/298950884/'
 talks:
   - title: 'Monorepos: The Benefits, Challenges and Importance of Tooling Support'
     speakers:

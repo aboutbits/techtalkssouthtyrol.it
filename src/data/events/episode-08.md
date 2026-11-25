@@ -9,6 +9,7 @@ venue:
   name: 'Four Points by Sheraton'
   address: 'Bruno-Buozzi-Straße 35'
   city: 'Bozen/Bolzano'
+meetupUrl: 'https://www.meetup.com/tech-talks-south-tyrol/events/305718747/'
 talks:
   - title: 'A Deep Dive into Smart Dato’s Laravel Architecture'
     speakers:

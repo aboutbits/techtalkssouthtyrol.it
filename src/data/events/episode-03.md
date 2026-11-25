@@ -8,6 +8,7 @@ hostUrl: 'https://www.ris.bz.it'
 venue:
   address: 'Raiffeisenstraße 2'
   city: 'Bozen/Bolzano'
+meetupUrl: 'https://www.meetup.com/tech-talks-south-tyrol/events/296270566/'
 talks:
   - title: 'Harnessing GPT-4: From Context to Perfect Prompts in Modern Software Integration'
     speakers:

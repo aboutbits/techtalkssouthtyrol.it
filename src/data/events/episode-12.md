@@ -8,6 +8,7 @@ hostUrl: 'https://www.ris.bz.it'
 venue:
   address: 'Raiffeisenstraße 2'
   city: 'Bozen/Bolzano'
+meetupUrl: 'https://www.meetup.com/tech-talks-south-tyrol/events/313169425/'
 talks:
   - title: 'Powering modern data science with a cloud‑first data platform for RIS KonsGmbH'
     speakers:

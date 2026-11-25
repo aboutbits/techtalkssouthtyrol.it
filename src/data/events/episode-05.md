@@ -8,6 +8,7 @@ hostUrl: 'https://www.hgv.it'
 venue:
   address: 'Schlachthofstraße 59'
   city: 'Bozen/Bolzano'
+meetupUrl: 'https://www.meetup.com/tech-talks-south-tyrol/events/300856522/'
 talks:
   - title: 'Thwarting the Scraper Horde: Building Defenses Against Malicious Bots'
     speakers:

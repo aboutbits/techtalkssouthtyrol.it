@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { site } from '../../../data/site'
-import { IconLinkedIn, IconMail, IconX } from '../../icons/Icons'
+import { IconLinkedIn, IconMail, IconUsers, IconX } from '../../icons/Icons'
 import { Brace } from '../../shared/Brace'
 import { IconPillLink, Pill } from '../../shared/Pill'
 
@@ -82,6 +82,15 @@ export function Hero() {
                 icon={<IconX className="size-4" />}
                 label="X / Twitter"
                 detail={site.twitterHandle}
+                external
+              />
+            </li>
+            <li>
+              <IconPillLink
+                href={site.meetupUrl}
+                icon={<IconUsers className="size-5" />}
+                label="Meetup"
+                detail={site.meetupName}
                 external
               />
             </li>

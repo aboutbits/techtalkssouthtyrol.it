@@ -2,14 +2,13 @@ import classNames from 'classnames'
 import Link from 'next/link'
 import { ReactNode } from 'react'
 
+export type ButtonVariant = 'light' | 'dark' | 'outline-light' | 'outline-dark'
+
 type ButtonLinkProps = {
   href: string
   children: ReactNode
-  variant?: 'light' | 'dark' | 'outline-light' | 'outline-dark'
+  variant?: ButtonVariant
   external?: boolean
-  // Downloads the target, for example a calendar file, instead of opening it
-  download?: boolean
-  onClick?: () => void
   className?: string
 }
 
@@ -23,24 +22,21 @@ const variants = {
 const baseClasses =
   'group inline-flex items-center gap-2 rounded-full px-6 py-3 text-base font-semibold transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current'
 
+/**
+ * The classes of a button, for a link that ButtonLink cannot render.
+ */
+export function buttonClasses(variant: ButtonVariant, className?: string) {
+  return classNames(baseClasses, variants[variant], className)
+}
+
 export function ButtonLink({
   href,
   children,
   variant = 'light',
   external = false,
-  download = false,
-  onClick,
   className,
 }: ButtonLinkProps) {
-  const classes = classNames(baseClasses, variants[variant], className)
-
-  if (download) {
-    return (
-      <a href={href} download onClick={onClick} className={classes}>
-        {children}
-      </a>
-    )
-  }
+  const classes = buttonClasses(variant, className)
 
   if (external) {
     return (
@@ -48,7 +44,6 @@ export function ButtonLink({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
-        onClick={onClick}
         className={classes}
       >
         {children}
@@ -57,7 +52,7 @@ export function ButtonLink({
   }
 
   return (
-    <Link href={href} onClick={onClick} className={classes}>
+    <Link href={href} className={classes}>
       {children}
     </Link>
   )

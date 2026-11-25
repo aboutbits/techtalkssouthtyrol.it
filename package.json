@@ -18,7 +18,6 @@
   },
   "prettier": "@aboutbits/prettier-config",
   "dependencies": {
-    "@headlessui/react": "^2.2.0",
     "@vercel/og": "^0.6.4",
     "classnames": "^2.5.1",
     "gray-matter": "^4.0.3",

@@ -1,7 +1,6 @@
 import { Event } from '../../../lib/types'
 import { Layout } from '../../layout/Layout'
 import { Meta } from '../../layout/Meta'
-import { Newsletter } from '../../shared/Newsletter'
 import { About } from './About'
 import { Community } from './Community'
 import { GetInvolved } from './GetInvolved'
@@ -37,7 +36,6 @@ export function HomePage({
       <PastEvents events={recentEvents} />
       <Team />
       <Community />
-      <Newsletter source="home page" />
       <GetInvolved />
     </Layout>
   )

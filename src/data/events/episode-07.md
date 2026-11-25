@@ -8,6 +8,7 @@ hostUrl: 'https://www.duka.it'
 venue:
   address: 'Duka-Straße 2'
   city: 'Brixen/Bressanone'
+meetupUrl: 'https://www.meetup.com/tech-talks-south-tyrol/events/304454170/'
 talks:
   - title: 'Data-Driven Analysis and Business Intelligence with Metabase: A Live Talk for Informed Decision-Making'
     speakers:

@@ -8,6 +8,7 @@ hostUrl: 'https://www.factory.it'
 venue:
   address: 'Dantestraße 24'
   city: 'Brixen/Bressanone'
+meetupUrl: 'https://www.meetup.com/tech-talks-south-tyrol/events/294176178/'
 talks:
   - title: 'Empowering an omnichannel banking experience'
     speakers:

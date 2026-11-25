@@ -13,10 +13,10 @@ import { Event, SlideConfig, Speaker, Talk } from '../../lib/types'
 import {
   IconCalendar,
   IconDiscord,
-  IconGlobe,
   IconLinkedIn,
   IconMail,
   IconPin,
+  IconUsers,
   IconX,
 } from '../icons/Icons'
 import { Markdown } from '../shared/Markdown'
@@ -465,7 +465,7 @@ function NextEventSlide({
 }
 
 const channels = [
-  { label: 'Newsletter', detail: site.website, Icon: IconGlobe },
+  { label: 'Meetup', detail: site.meetupName, Icon: IconUsers },
   { label: 'LinkedIn', detail: site.linkedInName, Icon: IconLinkedIn },
   { label: 'X', detail: site.twitterHandle, Icon: IconX },
   { label: 'Discord', detail: 'Join the community', Icon: IconDiscord },

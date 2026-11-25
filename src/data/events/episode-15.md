@@ -8,6 +8,7 @@ hostUrl: 'https://konverto.eu'
 venue:
   address: 'Bruno-Buozzi-Straße 8'
   city: 'Bozen/Bolzano'
+meetupUrl: 'https://www.meetup.com/tech-talks-south-tyrol/events/317091926/'
 presentation:
   - title
   - about
@@ -21,7 +22,7 @@ presentation:
         text: 'Information organized the way we want'
       - title: 'All episodes in one place'
         text: 'Every talk with its slides'
-      - title: 'Add to your calendar'
+      - title: 'Register on Meetup.com'
         text: 'One click on "I will attend"'
       - title: 'Everyone can contribute'
         text: 'github.com/aboutbits/techtalkssouthtyrol.it'
@@ -38,17 +39,6 @@ presentation:
         text: 'News about the next episodes'
       - title: 'Join us'
         text: 'discord.gg/Paj6HE9y6D'
-  - type: custom
-    label: "What's new"
-    title: 'Our own newsletter'
-    subtitle: 'Subscribe on techtalkssouthtyrol.it'
-    points:
-      - title: 'First to know'
-        text: 'The date, the host and the talks of the next episode'
-      - title: 'Easy registration'
-        text: 'Subscribe on the website'
-      - title: 'Our next step'
-        text: 'Move completely from Meetup.com to our website'
   - type: custom
     label: "What's new"
     title: 'Organize an episode'

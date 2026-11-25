@@ -174,7 +174,7 @@ export function EventPage({
             className="!mb-0"
             description={
               <p className="max-w-2xl text-md text-navy/80">
-                Let us know if you join Episode {event.episode} on{' '}
+                Register on Meetup.com if you join Episode {event.episode} on{' '}
                 {formatDate(event.date)}. It helps us and the host to plan the
                 room, the drinks and the snacks.
               </p>

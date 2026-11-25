@@ -8,6 +8,7 @@ hostUrl: 'https://aboutbits.it'
 venue:
   address: 'Färbergasse 12'
   city: 'Klausen/Chiusa'
+meetupUrl: 'https://www.meetup.com/tech-talks-south-tyrol/events/292872759/'
 talks:
   - title: 'Streamlining Your Operations: Exploring Essential Tools'
     speakers:

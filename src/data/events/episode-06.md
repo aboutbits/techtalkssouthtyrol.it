@@ -8,6 +8,7 @@ hostUrl: 'https://konverto.eu'
 venue:
   address: 'Bruno-Buozzi-Straße 8'
   city: 'Bozen/Bolzano'
+meetupUrl: 'https://www.meetup.com/tech-talks-south-tyrol/events/302697095/'
 talks:
   - title: 'Design Pattern: Hexagonal Architecture'
     speakers:

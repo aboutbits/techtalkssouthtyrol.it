@@ -85,6 +85,7 @@ venue:
   name: 'Name of the venue'               # optional, only if the event does not take place at the host
   address: 'Street 1'
   city: 'Bozen/Bolzano'
+meetupUrl: 'https://www.meetup.com/tech-talks-south-tyrol/events/123456789/'  # optional, the event on Meetup.com
 talks:
   - title: 'Title of the talk'
     speakers:
@@ -160,7 +161,7 @@ presentation:
   - next-event
 ```
 
-Episode 15 has an example with four custom slides.
+Episode 15 has an example with three custom slides.
 
 Navigate with the arrow keys, the space key or a remote clicker. Press `F` for the fullscreen mode.
 The number of the slide is in the URL (`#3`), so a reload keeps the slide.
@@ -170,26 +171,11 @@ To save the slides as a PDF, print the page in Chrome and select "Save as PDF".
 
 The organizers are in `src/data/team.ts`. The photos are in `public/images/team`.
 
-## Newsletter
+## Registration
 
-The newsletter runs on [Buttondown](https://buttondown.com).
-The forms on the website send the email address to `/api/subscribe`, and this API route adds the person to Buttondown.
+People register for an event on [Meetup.com](https://www.meetup.com/tech-talks-south-tyrol/).
+Create the event on Meetup.com first, and set its URL in the `meetupUrl` field of the event.
 
-- The newsletter section (on the home page and on the events page) only adds the person to the newsletter.
-- "I will attend" on an upcoming event downloads the calendar file and opens a dialog. In the dialog, the person can subscribe to the newsletter.
-  These subscribers get the tag of the episode, for example `episode-15`. To see them, filter the subscribers by this tag in Buttondown.
-  Tags need a paid plan of Buttondown. Without tags, the person is only added to the newsletter.
-
-Buttondown sends a confirmation email (double opt-in) to new subscribers.
-A person who unsubscribed does not get the newsletter again after a registration for an event.
-
-The API route needs the environment variable `BUTTONDOWN_API_KEY`.
-Get the API key in Buttondown under Settings → API, and add it to the environment variables of the Vercel project.
-For local development, put it in `.env.local`:
-
-```
-BUTTONDOWN_API_KEY=<YOUR_API_KEY>
-```
-
-The website sends the Plausible events `Attending` and `Newsletter`.
-Add them as goals in Plausible to see them.
+"I will attend" on an upcoming event sends the Plausible event `Attending`, and then opens the event on Meetup.com.
+Without `meetupUrl`, the button opens the group on Meetup.com.
+Add `Attending` as a goal in Plausible to see it.

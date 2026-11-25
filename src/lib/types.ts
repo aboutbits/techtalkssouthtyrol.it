@@ -65,6 +65,8 @@ export type EventMeta = {
   host: string
   hostUrl?: string
   venue: Venue
+  // The page of the event on Meetup.com, where people register
+  meetupUrl?: string
   talks: Talk[]
   // The slides of the presentation. Without it, the default slides are used.
   presentation?: (SlideConfig | SlideConfig['type'])[]

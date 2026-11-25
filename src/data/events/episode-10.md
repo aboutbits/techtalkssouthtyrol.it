@@ -8,6 +8,7 @@ hostUrl: 'https://www.guest.net'
 venue:
   address: 'Dantestraße 24'
   city: 'Brixen/Bressanone'
+meetupUrl: 'https://www.meetup.com/tech-talks-south-tyrol/events/310385870/'
 talks:
   - title: 'OpenTelemetry 101: Getting Started with Observability in your Backends'
     speakers:

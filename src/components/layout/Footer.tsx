@@ -1,7 +1,13 @@
 import Link from 'next/link'
 import { ReactNode } from 'react'
 import { site } from '../../data/site'
-import { IconDiscord, IconLinkedIn, IconMail, IconX } from '../icons/Icons'
+import {
+  IconDiscord,
+  IconLinkedIn,
+  IconMail,
+  IconUsers,
+  IconX,
+} from '../icons/Icons'
 import { Logo } from '../shared/Logo'
 import { defaultNextEventPath, useNextEventPath } from './NextEventPath'
 
@@ -10,7 +16,6 @@ const pages = [
   { href: defaultNextEventPath, label: 'Next event' },
   { href: '/events', label: 'All events' },
   { href: '/#community', label: 'Community' },
-  { href: '/#newsletter', label: 'Newsletter' },
   { href: '/speaker-notes', label: 'Speaker notes' },
   { href: '/host-notes', label: 'Host notes' },
 ]
@@ -27,6 +32,12 @@ const channels = [
     ),
     icon: <IconMail className="size-4" />,
     external: false,
+  },
+  {
+    href: site.meetupUrl,
+    label: 'Meetup',
+    icon: <IconUsers className="size-4" />,
+    external: true,
   },
   {
     href: site.discordUrl,

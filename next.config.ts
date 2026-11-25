@@ -15,8 +15,6 @@ const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
     '/*': ['./src/data/events/**/*'],
     '/events/*': ['./src/data/events/**/*'],
-    '/api/calendar/*': ['./src/data/events/**/*'],
-    '/api/subscribe': ['./src/data/events/**/*'],
   },
   // The slides of an event are not for search engines. The page also has a
   // robots meta tag, and next-sitemap.config.js excludes it from the sitemap.

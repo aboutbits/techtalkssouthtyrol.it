@@ -8,6 +8,7 @@ hostUrl: 'https://www.additive.eu'
 venue:
   address: 'Bruno-Buozzi-Straße 2'
   city: 'Bozen/Bolzano'
+meetupUrl: 'https://www.meetup.com/tech-talks-south-tyrol/events/311629600/'
 talks:
   - title: 'Cloud Development'
     speakers:

@@ -11,8 +11,8 @@ import {
   IconArrowRight,
   IconCalendar,
   IconLinkedIn,
-  IconMail,
   IconPin,
+  IconUsers,
   IconX,
 } from '../../icons/Icons'
 import { ButtonLink } from '../../shared/Button'
@@ -119,14 +119,14 @@ function NextEventPlaceholder({ episode }: { episode: number }) {
         </h3>
         <p className="text-md text-slate-muted">
           We meet about once per quarter. The date, the location and the
-          speakers of the next episode follow soon. Subscribe to our newsletter
-          to get an email when we announce the episode.
+          speakers of the next episode follow soon. Join our group on Meetup to
+          get a notification when we announce the episode.
         </p>
       </div>
       <div className="flex shrink-0 flex-wrap gap-3">
-        <ButtonLink href="#newsletter">
-          <IconMail className="size-4" />
-          Subscribe
+        <ButtonLink href={site.meetupUrl} external>
+          <IconUsers className="size-4" />
+          Join on Meetup
         </ButtonLink>
         <ButtonLink href={site.twitterUrl} variant="outline-light" external>
           <IconX className="size-4" />

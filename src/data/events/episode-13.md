@@ -8,6 +8,7 @@ hostUrl: 'https://www.progress.group'
 venue:
   address: 'Julius-Durst-Straße 100'
   city: 'Brixen/Bressanone'
+meetupUrl: 'https://www.meetup.com/tech-talks-south-tyrol/events/314623440/'
 talks:
   - title: 'Connecting BIM and ERP: A Unified Planning Platform for Large Construction Projects'
     speakers:

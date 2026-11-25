@@ -8,6 +8,7 @@ hostUrl: 'https://www.unibz.it'
 venue:
   address: 'Bruno-Buozzi-Straße 1'
   city: 'Bozen/Bolzano'
+meetupUrl: 'https://www.meetup.com/tech-talks-south-tyrol/events/316166165/'
 talks:
   - title: 'Top 5 Spring Boot Testing Mistakes Developers Trap Into'
     speakers:

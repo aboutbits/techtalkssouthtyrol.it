@@ -8,6 +8,7 @@ hostUrl: 'https://www.brandnamic.com'
 venue:
   address: 'Satzlstraße 4'
   city: 'Brixen/Bressanone'
+meetupUrl: 'https://www.meetup.com/tech-talks-south-tyrol/events/307524204/'
 talks:
   - title: 'Modernizing Legacy Apps: Microfrontends Architecture, and Core-Agnostic Design'
     speakers:
